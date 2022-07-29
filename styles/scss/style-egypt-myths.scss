@@ -1,0 +1,110 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers/hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+    color: $text;
+
+    a {
+        text-decoration: none;
+        color: $text-darkbg;
+    }
+    
+    img {
+        max-width: 1000px;
+        max-height: 800px;
+    }
+
+
+
+    /*** H E A D E R ***/
+
+    .main-header {
+        @include create-header(url(../../img/index/egy-myth.webp), movil);
+
+        h2 {
+            font-family: $font;
+            font-size: calculate-rem(30);
+        }
+    }
+
+
+
+    /*** N A V ***/
+
+    nav {
+        @include create-nav(movil)
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+
+
+    /*** F O O T E R ***/
+
+    footer {
+        @include create-footer(url(../../img/index/duat-footer.webp));
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+    
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            @include create-header(url(../../img/index/egy-myth.webp), tablet);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(40);
+            }
+        }
+
+        .nav {
+            @include create-nav(tablet);
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .main-header {
+            @include create-header(url(../../img/index/egy-myth.webp), pc);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(50);
+            }
+        }
+
+        .nav {
+            @include create-nav(pc);
+        }
+    }
+}

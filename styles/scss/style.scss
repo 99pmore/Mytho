@@ -104,7 +104,8 @@ body {
             height: 100px;
             margin: 50px 0;
         
-            background-color: $details;
+            background: linear-gradient(rgba(130, 115, 151, 0.95), rgba(130, 115, 151, 0.95)), url(../../img/index/pattern.webp) no-repeat center / cover;
+            background-attachment: fixed;
             box-shadow: 0 0 20px $details;
         }
 

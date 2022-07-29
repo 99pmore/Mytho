@@ -111,7 +111,7 @@ body {
     max-width: 1000px;
     max-height: 800px; }
   body .main-header {
-    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/odin.webp) no-repeat center/cover;
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/egy-myth.webp) no-repeat center/cover;
     font-family: "Harman Sans", sans-serif;
     font-size: 1.875rem;
     letter-spacing: 5px;
@@ -124,9 +124,7 @@ body {
     height: 100vh;
     margin-bottom: 50px;
     flex-direction: column;
-    box-shadow: 0 0 20px #363062;
-    background: linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6));
-    background-position: 0% 25%; }
+    box-shadow: 0 0 20px #363062; }
     body .main-header .logo {
       display: flex;
       justify-content: center;
@@ -142,37 +140,16 @@ body {
       display: flex;
       justify-content: center;
       align-items: center; }
-    body .main-header .birds {
-      width: 100%;
-      height: 100vh;
-      background: url(../../img/index/birds.webp) no-repeat center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 825; }
-      body .main-header .birds .fog {
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/index/fog.webp) repeat-x bottom;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 850; }
-  body .nav {
+    body .main-header h2 {
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.875rem; }
+  body nav {
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 500;
     transition: all 0.5s; }
-    body .nav .nav-mob {
+    body nav .nav-mob {
       height: 50px;
       width: 100%;
       padding: 10px 20px;
@@ -184,7 +161,7 @@ body {
       align-items: center;
       position: relative;
       z-index: 900; }
-    body .nav .nav-pc {
+    body nav .nav-pc {
       font-size: 1.375rem;
       background: rgba(54, 48, 98, 0.85);
       backdrop-filter: blur(4px);
@@ -200,95 +177,22 @@ body {
       align-items: center;
       flex-direction: column;
       transition: all 0.5s; }
-      body .nav .nav-pc .nav-logo {
+      body nav .nav-pc .nav-logo {
         display: none; }
-      body .nav .nav-pc .nav-links {
+      body nav .nav-pc .nav-links {
         height: 60%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column; }
-    body .nav .menu-open {
+    body nav .menu-open {
       left: 0;
       transition: all 0.5s;
       width: 100vw; }
   body main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; }
-    body main #mitologia {
-      padding: 80px 0; }
-      body main #mitologia .content {
-        width: 85%;
-        padding: 40px 0;
-        font-size: 16px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column; }
-    body main .separator {
-      width: 100%;
-      height: 100px;
-      margin: 50px 0;
-      background: linear-gradient(rgba(130, 115, 151, 0.95), rgba(130, 115, 151, 0.95)), url(../../img/index/pattern.webp) no-repeat center/cover;
-      background-attachment: fixed;
-      box-shadow: 0 0 20px #827397; }
-    body main .mytho-container {
-      width: 100%;
-      padding: 50px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; }
-      body main .mytho-container h2 {
-        color: #4D4C7D;
-        text-shadow: 0 0 8px white;
-        font-size: 4rem;
-        text-align: center; }
-      body main .mytho-container .cards-box {
-        overflow: hidden;
-        padding: 40px 40px 50px 40px;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-        gap: 40px; }
-        body main .mytho-container .cards-box .card {
-          background: linear-gradient(#363062, black);
-          box-shadow: 0 50px 50px -50px #827397;
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer; }
-          body main .mytho-container .cards-box .card img {
-            width: 100%;
-            height: 100%;
-            opacity: 0.75;
-            aspect-ratio: 3/2;
-            object-fit: cover;
-            object-position: center center;
-            filter: brightness(90%) grayscale(40%) blur(2px);
-            transform: scale(1.03);
-            transition: transform 0.3s; }
-            body main .mytho-container .cards-box .card img:hover {
-              opacity: 0.85;
-              filter: grayscale(5%);
-              transform: scale(1.1); }
-          body main .mytho-container .cards-box .card .card-text {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; }
-            body main .mytho-container .cards-box .card .card-text h3 {
-              font-size: 2.625rem;
-              color: white; }
-            body main .mytho-container .cards-box .card .card-text .lord-icon {
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-    body main .arrow-to-top {
-      display: none; }
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 20px; }
   body footer {
     background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/duat-footer.webp) no-repeat center/cover;
     color: white;
@@ -309,7 +213,7 @@ body {
       background-color: #d38045; }
   @media only screen and (min-width: 600px) {
     body .main-header {
-      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/odin.webp) no-repeat center/cover;
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/egy-myth.webp) no-repeat center/cover;
       font-family: "Harman Sans", sans-serif;
       font-size: 1.875rem;
       letter-spacing: 5px;
@@ -341,6 +245,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; }
+      body .main-header h2 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 2.5rem; }
     body .nav {
       width: 100%;
       position: fixed;
@@ -386,49 +293,10 @@ body {
       body .nav .menu-open {
         left: 0;
         transition: all 0.5s;
-        width: 420px; }
-    body main .mytho-container .cards-box .card {
-      background: linear-gradient(#363062, black);
-      box-shadow: 0 50px 50px -50px #827397;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer; }
-      body main .mytho-container .cards-box .card img {
-        width: 100%;
-        height: 100%;
-        opacity: 0.75;
-        aspect-ratio: 3/2;
-        object-fit: cover;
-        object-position: center center;
-        filter: brightness(90%) grayscale(40%) blur(2px);
-        transform: scale(1.03);
-        transition: transform 0.3s; }
-        body main .mytho-container .cards-box .card img:hover {
-          opacity: 0.85;
-          filter: grayscale(5%);
-          transform: scale(1.1); }
-      body main .mytho-container .cards-box .card .card-text {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; }
-        body main .mytho-container .cards-box .card .card-text h3 {
-          font-size: 2.625rem;
-          color: white; }
-        body main .mytho-container .cards-box .card .card-text .lord-icon {
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-      body main .mytho-container .cards-box .card:first-child {
-        animation: img-entry-l 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); }
-      body main .mytho-container .cards-box .card:last-child {
-        animation: img-entry-r 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); } }
+        width: 420px; } }
   @media only screen and (min-width: 900px) {
     body .main-header {
-      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/odin.webp) no-repeat center/cover;
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/egy-myth.webp) no-repeat center/cover;
       font-family: "Harman Sans", sans-serif;
       font-size: 1.875rem;
       letter-spacing: 5px;
@@ -461,11 +329,9 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; }
-      body .main-header .birds {
-        animation: birds 4s linear; }
-        body .main-header .birds .fog {
-          animation: fog 10s linear infinite;
-          background-attachment: fixed; }
+      body .main-header h2 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 3.125rem; }
     body .nav {
       width: 100%;
       position: fixed;
@@ -544,86 +410,6 @@ body {
         left: 0;
         transition: all 0.5s;
         width: 0px;
-        left: -420px; }
-    body main {
-      /*** T O  T O P ***/ }
-      body main #mitologia .content {
-        width: 70%;
-        font-size: 1.125rem; }
-      body main .mytho-container .cards-box {
-        width: 90%; }
-        body main .mytho-container .cards-box .card {
-          background: linear-gradient(#363062, black);
-          box-shadow: 0 50px 50px -50px #827397;
-          overflow: hidden;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer; }
-          body main .mytho-container .cards-box .card img {
-            width: 100%;
-            height: 100%;
-            opacity: 0.75;
-            aspect-ratio: 3/2;
-            object-fit: cover;
-            object-position: center center;
-            filter: brightness(90%) grayscale(40%) blur(2px);
-            transform: scale(1.03);
-            transition: transform 0.3s; }
-            body main .mytho-container .cards-box .card img:hover {
-              opacity: 0.85;
-              filter: grayscale(5%);
-              transform: scale(1.1); }
-          body main .mytho-container .cards-box .card .card-text {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; }
-            body main .mytho-container .cards-box .card .card-text h3 {
-              font-size: 2.625rem;
-              color: white; }
-            body main .mytho-container .cards-box .card .card-text .lord-icon {
-              display: flex;
-              justify-content: center;
-              align-items: center; }
-          body main .mytho-container .cards-box .card:first-child {
-            animation: img-entry-l 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); }
-          body main .mytho-container .cards-box .card:last-child {
-            animation: img-entry-r 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); }
-      body main .arrow-to-top {
-        display: block;
-        position: fixed;
-        bottom: 40px;
-        right: 30px;
-        z-index: 100; } }
+        left: -420px; } }
 
-/*** A N I M A C I O N E S ***/
-@keyframes fog {
-  from {
-    background-position: -500px bottom; }
-  to {
-    background-position: 500px bottom; } }
-@keyframes birds {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@keyframes logo {
-  from {
-    transform: translateX(-1000px); } }
-@keyframes title {
-  from {
-    transform: translateY(-1000px); } }
-@keyframes img-entry-l {
-  from {
-    transform: translateX(-500px); }
-  to {
-    transform: translateX(0); } }
-@keyframes img-entry-r {
-  from {
-    transform: translateX(500px); }
-  to {
-    transform: translateX(0); } }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style-egypt-myths.css.map */
