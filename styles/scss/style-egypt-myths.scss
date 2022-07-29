@@ -54,6 +54,10 @@ body {
         display: grid;
         grid-template-columns: repeat(1, minmax(200px, 1fr));
         gap: 20px;
+
+        .myth-section {
+            @include create-myth();
+        }
     }
 
 
