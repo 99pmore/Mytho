@@ -1,0 +1,288 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers/hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+    color: $text;
+
+    a {
+        text-decoration: none;
+        color: $text-darkbg;
+    }
+    
+    img {
+        max-width: 1000px;
+        max-height: 800px;
+    }
+
+
+
+    /*** H E A D E R ***/
+
+    .main-header {
+        @include create-header(url(../../img/index/odin.webp), movil);
+        background: linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6));
+        background-position: 0% 25%;
+
+        .birds {
+            width: 100%;
+            height: 100vh;
+            background: url(../../img/index/birds.webp) no-repeat center / cover;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 825;
+
+            .fog {
+                width: 100%;
+                height: 100vh;
+                background: linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/index/fog.webp) repeat-x bottom;
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 850;
+            }
+        }
+    }
+
+
+
+    /*** N A V ***/
+
+    .nav {
+        @include create-nav(movil);
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        #mitologia {
+            padding: 80px 0;
+
+            .content {
+                width: 85%;
+                padding: 40px 0;
+                font-size: 16px;
+            
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
+        .separator {
+            width: 100%;
+            height: 100px;
+            margin: 50px 0;
+        
+            background-color: $details;
+            box-shadow: 0 0 20px $details;
+        }
+
+        .mytho-container {
+            width: 100%;
+            padding: 50px 0;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h2 {
+                color: $title;
+                text-shadow: 0 0 8px white;
+                font-size: 4rem;
+                text-align: center;
+            }
+
+            .cards-box {
+                overflow: hidden;
+                padding: 40px 40px 50px 40px;
+                width: 100%;
+            
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+                gap: 40px;
+
+                .card {
+                    @include create-card-link(movil);
+                }
+            }
+        }
+
+        .arrow-to-top {
+            display: none;
+        }
+    }
+
+
+
+    /*** F O O T E R ***/
+
+    footer {
+        @include create-footer(url(../../img/index/duat-footer.webp))
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+    
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            @include create-header(url(../../img/index/odin.webp), tablet);
+        }
+
+        .nav {
+            @include create-nav(tablet);
+        }
+
+        main {
+            .mytho-container {
+                .cards-box {
+                    .card {
+                        @include create-card-link(tablet);
+                    }
+                }
+            }
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .main-header {
+            @include create-header(url(../../img/index/odin.webp), pc);
+            .birds {
+                animation: birds 4s linear;
+
+                .fog {
+                    animation: fog 10s linear infinite;
+                    background-attachment: fixed;
+                }
+            }
+        }
+
+        .nav {
+            @include create-nav(pc);
+        }
+
+        main {
+            #mitologia {
+                .content {
+                    width: 70%;
+                    font-size: calculate-rem(18);
+                }
+            }
+
+            .mytho-container {
+                .cards-box {
+                    width: 90%;
+
+                    .card {
+                        @include create-card-link(pc);
+                    }
+                }
+            }
+
+            /*** T O  T O P ***/
+
+            .arrow-to-top {
+                display: block;
+                position: fixed;
+                bottom: 40px;
+                right: 30px;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+
+
+/*** A N I M A C I O N E S ***/
+
+@keyframes fog {
+    from {
+        background-position:  -500px bottom;
+    }
+      
+    to {
+        background-position:  500px bottom;
+    }
+}
+
+@keyframes birds {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes logo {
+    from {
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes title {
+    from {
+        transform: translateY(-1000px);
+    }
+}
+
+@keyframes img-entry-l {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes img-entry-r {
+    from {
+        transform: translateX(500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

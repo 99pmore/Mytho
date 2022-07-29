@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: 'Harman Sans';
+  src: url("../../fonts/Harman-Sans.otf");
+  font-display: swap; }
+@font-face {
+  font-family: 'Harman Sans';
+  src: url("../../fonts/Harman-Sans.otf");
+  font-display: swap; }
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+@use "sass:math";
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #fbfbfb; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #fbfbfb;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+ * Arrow
+ */
+.hamburger--arrow.is-active .hamburger-inner::before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+.hamburger--arrow.is-active .hamburger-inner::after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+ * Minus
+ */
+.hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+.hamburger--minus.is-active .hamburger-inner::before {
+  top: 0; }
+.hamburger--minus.is-active .hamburger-inner::after {
+  bottom: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #fbfbfb;
+  color: #1b1b1b;
+  /*** H E A D E R ***/
+  /*** N A V ***/
+  /*** M A I N ***/
+  /*** F O O T E R ***/
+  /*** S C R O L L ***/
+  /*** M E D I A  Q U E R I E S ***/
+  /** Tablet **/
+  /** PC **/ }
+  body a {
+    text-decoration: none;
+    color: #fbfbfb; }
+  body img {
+    max-width: 1000px;
+    max-height: 800px; }
+  body .main-header {
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/odin.webp) no-repeat center/cover;
+    font-family: "Harman Sans", sans-serif;
+    font-size: 1.875rem;
+    letter-spacing: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 800;
+    height: 100vh;
+    margin-bottom: 50px;
+    flex-direction: column;
+    box-shadow: 0 0 20px #363062;
+    background: linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6));
+    background-position: 0% 25%; }
+    body .main-header .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      body .main-header .logo img {
+        animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+      body .main-header .logo h1 {
+        animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+    body .main-header .arrow {
+      position: absolute;
+      bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body .main-header .birds {
+      width: 100%;
+      height: 100vh;
+      background: url(../../img/index/birds.webp) no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 825; }
+      body .main-header .birds .fog {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6)), url(../../img/index/fog.webp) repeat-x bottom;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 850; }
+  body .nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    transition: all 0.5s; }
+    body .nav .nav-mob {
+      height: 50px;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: rgba(54, 48, 98, 0.75);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 900; }
+    body .nav .nav-pc {
+      font-size: 1.375rem;
+      background: rgba(54, 48, 98, 0.85);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      width: 0;
+      height: 100vh;
+      position: fixed;
+      z-index: 700;
+      left: -100vw;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: all 0.5s; }
+      body .nav .nav-pc .nav-logo {
+        display: none; }
+      body .nav .nav-pc .nav-links {
+        height: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column; }
+    body .nav .menu-open {
+      left: 0;
+      transition: all 0.5s;
+      width: 100vw; }
+  body main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    body main #mitologia {
+      padding: 80px 0; }
+      body main #mitologia .content {
+        width: 85%;
+        padding: 40px 0;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column; }
+    body main .separator {
+      width: 100%;
+      height: 100px;
+      margin: 50px 0;
+      background-color: #827397;
+      box-shadow: 0 0 20px #827397; }
+    body main .mytho-container {
+      width: 100%;
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      body main .mytho-container h2 {
+        color: #4D4C7D;
+        text-shadow: 0 0 8px white;
+        font-size: 4rem;
+        text-align: center; }
+      body main .mytho-container .cards-box {
+        overflow: hidden;
+        padding: 40px 40px 50px 40px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        gap: 40px; }
+        body main .mytho-container .cards-box .card {
+          background: linear-gradient(#363062, black);
+          box-shadow: 0 50px 50px -50px #827397;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer; }
+          body main .mytho-container .cards-box .card img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.75;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            object-position: center center;
+            filter: brightness(90%) grayscale(40%) blur(2px);
+            transform: scale(1.03);
+            transition: transform 0.3s; }
+            body main .mytho-container .cards-box .card img:hover {
+              opacity: 0.85;
+              filter: grayscale(5%);
+              transform: scale(1.1); }
+          body main .mytho-container .cards-box .card .card-text {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; }
+            body main .mytho-container .cards-box .card .card-text h3 {
+              font-size: 2.625rem;
+              color: white; }
+            body main .mytho-container .cards-box .card .card-text .lord-icon {
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+    body main .arrow-to-top {
+      display: none; }
+  body footer {
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/duat-footer.webp) no-repeat center/cover;
+    color: white;
+    box-shadow: 0 0 20px #363062;
+    height: 150px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 500; }
+  body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px; }
+  body::-webkit-scrollbar-thumb {
+    background-color: #ff9d59; }
+    body::-webkit-scrollbar-thumb:hover {
+      background-color: #d38045; }
+  @media only screen and (min-width: 600px) {
+    body .main-header {
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/odin.webp) no-repeat center/cover;
+      font-family: "Harman Sans", sans-serif;
+      font-size: 1.875rem;
+      letter-spacing: 5px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      z-index: 800;
+      height: 100vh;
+      margin-bottom: 50px;
+      flex-direction: column;
+      box-shadow: 0 0 20px #363062;
+      font-size: 2.5rem; }
+      body .main-header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; }
+        body .main-header .logo h1 {
+          margin-left: 35px; }
+        body .main-header .logo img {
+          animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+        body .main-header .logo h1 {
+          animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+      body .main-header .arrow {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+    body .nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 500;
+      transition: all 0.5s; }
+      body .nav .nav-mob {
+        height: 50px;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: rgba(54, 48, 98, 0.75);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        color: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 900; }
+      body .nav .nav-pc {
+        font-size: 1.375rem;
+        background: rgba(54, 48, 98, 0.85);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        z-index: 700;
+        left: -100vw;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s; }
+        body .nav .nav-pc .nav-logo {
+          display: none; }
+        body .nav .nav-pc .nav-links {
+          height: 60%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column; }
+      body .nav .menu-open {
+        left: 0;
+        transition: all 0.5s;
+        width: 420px; }
+    body main .mytho-container .cards-box .card {
+      background: linear-gradient(#363062, black);
+      box-shadow: 0 50px 50px -50px #827397;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+      body main .mytho-container .cards-box .card img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        object-position: center center;
+        filter: brightness(90%) grayscale(40%) blur(2px);
+        transform: scale(1.03);
+        transition: transform 0.3s; }
+        body main .mytho-container .cards-box .card img:hover {
+          opacity: 0.85;
+          filter: grayscale(5%);
+          transform: scale(1.1); }
+      body main .mytho-container .cards-box .card .card-text {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        body main .mytho-container .cards-box .card .card-text h3 {
+          font-size: 2.625rem;
+          color: white; }
+        body main .mytho-container .cards-box .card .card-text .lord-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      body main .mytho-container .cards-box .card:first-child {
+        animation: img-entry-l 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); }
+      body main .mytho-container .cards-box .card:last-child {
+        animation: img-entry-r 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); } }
+  @media only screen and (min-width: 900px) {
+    body .main-header {
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/odin.webp) no-repeat center/cover;
+      font-family: "Harman Sans", sans-serif;
+      font-size: 1.875rem;
+      letter-spacing: 5px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      z-index: 800;
+      height: 100vh;
+      margin-bottom: 50px;
+      flex-direction: column;
+      box-shadow: 0 0 20px #363062;
+      font-size: 3.125rem;
+      background-attachment: fixed; }
+      body .main-header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; }
+        body .main-header .logo h1 {
+          margin-left: 35px; }
+        body .main-header .logo img {
+          animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+        body .main-header .logo h1 {
+          animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+      body .main-header .arrow {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      body .main-header .birds {
+        animation: birds 4s linear; }
+        body .main-header .birds .fog {
+          animation: fog 10s linear infinite;
+          background-attachment: fixed; }
+    body .nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 500;
+      transition: all 0.5s; }
+      body .nav .nav-mob {
+        height: 50px;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: rgba(54, 48, 98, 0.75);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        color: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 900;
+        display: none; }
+      body .nav .nav-pc {
+        font-size: 1.375rem;
+        background: rgba(54, 48, 98, 0.85);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        z-index: 700;
+        left: -100vw;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s;
+        font-size: 1.0625rem;
+        height: 50px;
+        width: 100%;
+        padding: 10px 30px;
+        background-color: rgba(54, 48, 98, 0.75);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        color: white;
+        position: sticky;
+        justify-content: space-between;
+        flex-direction: row;
+        transition: none; }
+        body .nav .nav-pc .nav-logo {
+          display: none;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          cursor: pointer; }
+          body .nav .nav-pc .nav-logo h2 {
+            font-family: "Harman Sans", sans-serif;
+            color: white;
+            font-size: 1.25rem;
+            letter-spacing: 2.5px;
+            margin-left: 8px; }
+        body .nav .nav-pc .nav-links {
+          height: 60%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
+          width: 60%;
+          justify-content: space-between;
+          flex-direction: row; }
+          body .nav .nav-pc .nav-links a {
+            color: white;
+            text-decoration: none; }
+            body .nav .nav-pc .nav-links a:hover {
+              text-shadow: 0 0 6px #363062;
+              transform: scale(1.075); }
+      body .nav .menu-open {
+        left: 0;
+        transition: all 0.5s;
+        width: 0px;
+        left: -420px; }
+    body main {
+      /*** T O  T O P ***/ }
+      body main #mitologia .content {
+        width: 70%;
+        font-size: 1.125rem; }
+      body main .mytho-container .cards-box {
+        width: 90%; }
+        body main .mytho-container .cards-box .card {
+          background: linear-gradient(#363062, black);
+          box-shadow: 0 50px 50px -50px #827397;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer; }
+          body main .mytho-container .cards-box .card img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.75;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            object-position: center center;
+            filter: brightness(90%) grayscale(40%) blur(2px);
+            transform: scale(1.03);
+            transition: transform 0.3s; }
+            body main .mytho-container .cards-box .card img:hover {
+              opacity: 0.85;
+              filter: grayscale(5%);
+              transform: scale(1.1); }
+          body main .mytho-container .cards-box .card .card-text {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; }
+            body main .mytho-container .cards-box .card .card-text h3 {
+              font-size: 2.625rem;
+              color: white; }
+            body main .mytho-container .cards-box .card .card-text .lord-icon {
+              display: flex;
+              justify-content: center;
+              align-items: center; }
+          body main .mytho-container .cards-box .card:first-child {
+            animation: img-entry-l 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); }
+          body main .mytho-container .cards-box .card:last-child {
+            animation: img-entry-r 1s cubic-bezier(0.175, 0.885, 0.32, 1.065); }
+      body main .arrow-to-top {
+        display: block;
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 100; } }
+
+/*** A N I M A C I O N E S ***/
+@keyframes fog {
+  from {
+    background-position: -500px bottom; }
+  to {
+    background-position: 500px bottom; } }
+@keyframes birds {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes logo {
+  from {
+    transform: translateX(-1000px); } }
+@keyframes title {
+  from {
+    transform: translateY(-1000px); } }
+@keyframes img-entry-l {
+  from {
+    transform: translateX(-500px); }
+  to {
+    transform: translateX(0); } }
+@keyframes img-entry-r {
+  from {
+    transform: translateX(500px); }
+  to {
+    transform: translateX(0); } }
+
+/*# sourceMappingURL=style.css.map */

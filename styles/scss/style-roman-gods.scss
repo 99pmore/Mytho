@@ -1,0 +1,140 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers/hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+    color: $text;
+
+    a {
+        text-decoration: none;
+        color: $text-darkbg;
+    }
+    
+    img {
+        max-width: 1000px;
+        max-height: 800px;
+    }
+
+
+
+    /*** H E A D E R ***/
+
+    .main-header {
+        @include create-header(url(../../img/index/rom-gods.webp), movil);
+
+        h2 {
+            font-family: $font;
+            font-size: calculate-rem(30);
+        }
+    }
+
+
+
+    /*** N A V ***/
+
+    nav {
+        @include create-nav(movil)
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        padding: 40px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 225px);
+        grid-auto-rows: 350px;
+        gap: 40px;
+        justify-content: space-evenly;
+
+        .card {
+            @include create-card();
+        }
+
+        #jupiter { background: white url(../../img/roman/gods/jupiter.webp) no-repeat center / cover; }
+        #juno { background: white url(../../img/roman/gods/juno.webp) no-repeat center / cover; }
+        #neptuno { background: white url(../../img/roman/gods/neptuno.webp) no-repeat center / cover; }
+        #minerva { background: white url(../../img/roman/gods/minerva.webp) no-repeat center / cover; }
+        #marte { background: white url(../../img/roman/gods/marte.webp) no-repeat center / cover; }
+        #venus { background: white url(../../img/roman/gods/venus.webp) no-repeat center / cover; }
+        #febo { background: white url(../../img/roman/gods/febo.webp) no-repeat center / cover; }
+        #diana { background: white url(../../img/roman/gods/diana.webp) no-repeat center / cover; }
+        #mercurio { background: white url(../../img/roman/gods/mercurio.webp) no-repeat center / cover; }
+        #baco { background: white url(../../img/roman/gods/baco.webp) no-repeat center / cover; }
+        #vulcano { background: white url(../../img/roman/gods/vulcano.webp) no-repeat center / cover; }
+        #pluton { background: white url(../../img/roman/gods/pluton.webp) no-repeat center / cover; }
+        #saturno { background: white url(../../img/roman/gods/saturno.webp) no-repeat center / cover; }
+        #ceres { background: white url(../../img/roman/gods/ceres.webp) no-repeat center / cover; }
+        #vesta { background: white url(../../img/roman/gods/vesta.webp) no-repeat center / cover; }
+        #proserpina { background: white url(../../img/roman/gods/proserpina.webp) no-repeat center / cover; }
+        #cupido { background: white url(../../img/roman/gods/cupido.webp) no-repeat center / cover; }
+        #cibeles { background: white url(../../img/roman/gods/cibeles.webp) no-repeat center / cover; }
+        #flora { background: white url(../../img/roman/gods/flora.webp) no-repeat center / cover; }
+        #jano { background: white url(../../img/roman/gods/jano.webp) no-repeat center / cover; }
+        #juventas { background: white url(../../img/roman/gods/juventas.webp) no-repeat center / cover; }
+    }
+
+
+
+    /*** F O O T E R ***/
+
+    footer {
+        @include create-footer(url(../../img/roman/caronte.webp));
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+    
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            @include create-header(url(../../img/index/rom-gods.webp), tablet);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(40);
+            }
+        }
+
+        .nav {
+            @include create-nav(tablet);
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .main-header {
+            @include create-header(url(../../img/index/rom-gods.webp), pc);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(50);
+            }
+        }
+
+        .nav {
+            @include create-nav(pc);
+        }
+    }
+}

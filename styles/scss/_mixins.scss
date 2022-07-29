@@ -1,0 +1,393 @@
+@import "variables";
+@import "functions";
+
+@mixin create-header($image: "url()", $device: "movil") {
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), $image no-repeat center / cover;
+    
+    font-family: $font-logo;
+    font-size: calculate-rem(30);
+    letter-spacing: 5px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: sticky;
+    z-index: 800;
+
+    height: 100vh;
+    margin-bottom: 50px;
+
+    flex-direction: column;
+
+    box-shadow: 0 0 20px $main;
+
+    @if $device == "pc" {
+        font-size: calculate-rem(50);
+        background-attachment: fixed;
+    }
+
+    @if $device == "tablet" {
+        font-size: calculate-rem(40);
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @if $device == "pc" or $device == "tablet" {
+            flex-direction: row;
+
+            h1 {
+                margin-left: 35px;
+            }
+        }
+
+        @if $device == "movil" {
+            flex-direction: column;
+        }
+
+        img {
+            animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07);
+        }
+        
+        h1 {
+            animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07);
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 40px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+}
+
+
+
+@mixin create-nav($device: "movil") {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    
+    transition: all 0.5s;
+
+    .nav-mob {
+        height: 50px;
+        width: 100%;
+        padding: 10px 20px;
+    
+        background-color: rgba(54, 48, 98, 0.75);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        color: white;
+    
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 900;
+
+        @if $device == "pc" {
+            display: none;
+        }
+    }
+    
+    .nav-pc {
+        font-size: calculate-rem(22);
+        background: rgba(54, 48, 98, 0.85);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        width: 0;
+        height: 100vh;
+    
+        position: fixed;
+        z-index: 700;
+        left: -100vw;
+        top: 0;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        transition: all 0.5s;
+
+        .nav-logo {
+            display: none;
+
+            @if $device == "pc" {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                cursor: pointer;
+
+                h2 {
+                    font-family: $font-logo;
+                    color: white;
+                    font-size: calculate-rem(20);
+                    letter-spacing: 2.5px;
+                    margin-left: 8px;
+                }
+            }
+        }
+        
+        .nav-links {
+            height: 60%;
+        
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+
+            @if $device == "pc" {
+                width: 60%;
+
+                justify-content: space-between;
+                flex-direction: row;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-shadow: 0 0 6px $main;
+                        transform: scale(1.075);
+                    }
+                }
+            }
+        }
+
+        @if $device == "pc" {
+            font-size: calculate-rem(17);
+            height: 50px;
+            width: 100%;
+            padding: 10px 30px;
+        
+            background-color: rgba(54, 48, 98, 0.75);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            color: white;
+    
+            position: sticky;
+    
+            justify-content: space-between;
+            flex-direction: row;
+    
+            transition: none;
+        }
+    }
+
+    .menu-open {
+        left: 0;
+        transition: all 0.5s;
+
+        @if $device == "movil" {
+            width: 100vw;
+        }
+
+        @if $device == "tablet" {
+            width: 420px;
+        }
+
+        @if $device == "pc" {
+            width: 0px;
+            left: -420px;
+        }
+
+    }
+}
+
+
+
+@mixin create-footer($image: "url()") {
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), $image no-repeat center / cover;
+    // background-attachment: fixed;
+    color: white;
+    box-shadow: 0 0 20px $main;
+    height: 150px;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: sticky;
+    z-index: 500;
+}
+
+
+
+@mixin scroll {
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $orange;
+
+        &:hover {
+            background-color: $orange-hover;
+        }
+    }
+}
+
+
+@mixin create-card-link($device: "movil") {
+    background: linear-gradient($main, black);
+    box-shadow: 0 50px 50px -50px $details;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+    
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        object-position: center center;
+    
+        filter: brightness(90%) grayscale(40%) blur(2px);
+        transform: scale(1.03);
+        transition: transform 0.3s;
+
+        &:hover {
+            opacity: 0.85;
+        
+            filter: grayscale(5%);
+            transform: scale(1.1);
+        }
+    }
+
+    .card-text {
+        position: absolute;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h3 {
+            font-size: calculate-rem(42);
+            color: white;
+        }
+
+        .lord-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    @if $device == "pc" or $device == "tablet" {
+        &:first-child {
+            animation: img-entry-l 1s cubic-bezier(0.175, 0.885, 0.32, 1.065);
+        }
+        
+        &:last-child {
+            animation: img-entry-r 1s cubic-bezier(0.175, 0.885, 0.32, 1.065);
+        }
+    }
+}
+
+
+
+@mixin create-card() {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0 50px 50px -60px var(--details);
+
+    transition: 0.4s ease-out;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+    
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    
+        display: flex;
+    
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transform: translateY(2.5%);
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    .card-info {
+        width: 100%; height: 100%;
+        padding: 10px;
+    
+        position: relative;
+        z-index: 3;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        background: rgba(130, 115, 151, 0.6);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        color: white;
+        opacity: 0;
+    
+        transform: translateY(10%);
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h3 {
+            text-shadow: 0 0 10px $main;
+            font-size: 2rem;
+            text-align: center;
+        }
+           
+        p {
+            text-shadow: 0 0 14px $main;
+            font-size: 1.1rem;
+            margin: 5px 0 15px 0;
+            text-align: center;
+        }
+
+        .card-button {
+            padding: 10px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            background-color: $bg;
+            color: $text;
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: white;
+                color: $text;
+                text-shadow: 0 0 0.1px $details;
+            }
+        }
+    }
+}

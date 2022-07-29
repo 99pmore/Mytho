@@ -1,0 +1,134 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers/hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+    color: $text;
+
+    a {
+        text-decoration: none;
+        color: $text-darkbg;
+    }
+    
+    img {
+        max-width: 1000px;
+        max-height: 800px;
+    }
+
+
+
+    /*** H E A D E R ***/
+
+    .main-header {
+        @include create-header(url(../../img/index/nor-gods.webp), movil);
+
+        h2 {
+            font-family: $font;
+            font-size: calculate-rem(30);
+        }
+    }
+
+
+
+    /*** N A V ***/
+
+    nav {
+        @include create-nav(movil)
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        padding: 40px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 225px);
+        grid-auto-rows: 350px;
+        gap: 40px;
+        justify-content: space-evenly;
+
+        .card {
+            @include create-card();
+        }
+
+        #odin { background: white url(../../img/norse/gods/odin.webp) no-repeat center / cover; }
+        #thor { background: white url(../../img/norse/gods/thor.webp) no-repeat center / cover; }
+        #freyr { background: white url(../../img/norse/gods/freyr.webp) no-repeat center / cover; }
+        #freyja { background: white url(../../img/norse/gods/freyja.webp) no-repeat center / cover; }
+        #loki { background: white url(../../img/norse/gods/loki.webp) no-repeat center / cover; }
+        #baldr { background: white url(../../img/norse/gods/baldr.webp) no-repeat center / cover; }
+        #bragi { background: white url(../../img/norse/gods/bragi.webp) no-repeat center / cover; }
+        #frigg { background: white url(../../img/norse/gods/frigg.webp) no-repeat center / cover; }
+        #tyr { background: white url(../../img/norse/gods/tyr.webp) no-repeat center / cover; }
+        #heimdal { background: white url(../../img/norse/gods/heimdal.webp) no-repeat center / cover; }
+        #hela { background: white url(../../img/norse/gods/hela.webp) no-repeat center / cover; }
+        #idunn { background: white url(../../img/norse/gods/idunn.webp) no-repeat center / cover; }
+        #njordr { background: white url(../../img/norse/gods/njordr.webp) no-repeat center / cover; }
+        #skadi { background: white url(../../img/norse/gods/skadi.webp) no-repeat center / cover; }
+        #ullr { background: white url(../../img/norse/gods/ullr.webp) no-repeat center / cover; }
+    }
+
+
+
+    /*** F O O T E R ***/
+
+    footer {
+        @include create-footer(url(../../img/norse/helheim.webp));
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+    
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            @include create-header(url(../../img/index/nor-gods.webp), tablet);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(40);
+            }
+        }
+
+        .nav {
+            @include create-nav(tablet);
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .main-header {
+            @include create-header(url(../../img/index/nor-gods.webp), pc);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(50);
+            }
+        }
+
+        .nav {
+            @include create-nav(pc);
+        }
+    }
+}

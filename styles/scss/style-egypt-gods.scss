@@ -1,0 +1,144 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers/hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+    color: $text;
+
+    a {
+        text-decoration: none;
+        color: $text-darkbg;
+    }
+    
+    img {
+        max-width: 1000px;
+        max-height: 800px;
+    }
+
+
+
+    /*** H E A D E R ***/
+
+    .main-header {
+        @include create-header(url(../../img/index/egy-gods.webp), movil);
+
+        h2 {
+            font-family: $font;
+            font-size: calculate-rem(30);
+        }
+    }
+
+
+
+    /*** N A V ***/
+
+    nav {
+        @include create-nav(movil)
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        padding: 40px;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 225px);
+        grid-auto-rows: 350px;
+        gap: 40px;
+        justify-content: space-evenly;
+
+        .card {
+            @include create-card();
+        }
+
+        #ra { background: white url(../../img/egypt/gods/ra.webp) no-repeat center / contain; }
+        #osiris { background: white url(../../img/egypt/gods/osiris.webp) no-repeat center / contain; }
+        #isis { background: white url(../../img/egypt/gods/isis.webp) no-repeat center / contain; }
+        #neftis { background: white url(../../img/egypt/gods/neftis.webp) no-repeat center / contain; }
+        #horus { background: white url(../../img/egypt/gods/horus.webp) no-repeat center / contain; }
+        #seth { background: white url(../../img/egypt/gods/seth.webp) no-repeat center / contain; }
+        #bastet { background: white url(../../img/egypt/gods/bastet.webp) no-repeat center / contain; }
+        #hathor { background: white url(../../img/egypt/gods/hathor.webp) no-repeat center / contain; }
+        #anubis { background: white url(../../img/egypt/gods/anubis.webp) no-repeat center / contain; }
+        #thot { background: white url(../../img/egypt/gods/thot.webp) no-repeat center / contain; }
+        #tauret { background: white url(../../img/egypt/gods/tauret.webp) no-repeat center / contain; }
+        #sejmet { background: white url(../../img/egypt/gods/sejmet.webp) no-repeat center / contain; }
+        #hapi { background: white url(../../img/egypt/gods/hapi.webp) no-repeat center / contain; }
+        #sobek { background: white url(../../img/egypt/gods/sobek.webp) no-repeat center / contain; }
+        #geb { background: white url(../../img/egypt/gods/geb.webp) no-repeat center / contain; }
+        #nut { background: white url(../../img/egypt/gods/nut.webp) no-repeat center / contain; }
+        #shu { background: white url(../../img/egypt/gods/shu.webp) no-repeat center / contain; }
+        #ptah { background: white url(../../img/egypt/gods/ptah.webp) no-repeat center / contain; }
+        #maat { background: white url(../../img/egypt/gods/maat.webp) no-repeat center / contain; }
+        #jepri { background: white url(../../img/egypt/gods/jepri.webp) no-repeat center / contain; }
+        #jnum { background: white url(../../img/egypt/gods/jnum.webp) no-repeat center / contain; }
+        #amon { background: white url(../../img/egypt/gods/amon.webp) no-repeat center / contain; }
+        #atum { background: white url(../../img/egypt/gods/atum.webp) no-repeat center / contain; }
+        #jonsu { background: white url(../../img/egypt/gods/jonsu.webp) no-repeat center / contain; }
+        #apofis { background: white url(../../img/egypt/gods/apofis.webp) no-repeat right / cover; }
+    }
+
+
+
+    /*** F O O T E R ***/
+
+    footer {
+        @include create-footer(url(../../img/index/duat-footer.webp));
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+    
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            @include create-header(url(../../img/index/egy-gods.webp), tablet);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(40);
+            }
+        }
+
+        .nav {
+            @include create-nav(tablet);
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .main-header {
+            @include create-header(url(../../img/index/egy-gods.webp), pc);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(50);
+            }
+        }
+
+        .nav {
+            @include create-nav(pc);
+        }
+    }
+}

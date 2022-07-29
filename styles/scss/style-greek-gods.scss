@@ -1,0 +1,184 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers/hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+    color: $text;
+
+    a {
+        text-decoration: none;
+        color: $text-darkbg;
+    }
+    
+    img {
+        max-width: 1000px;
+        max-height: 800px;
+    }
+
+
+
+    /*** H E A D E R ***/
+
+    .main-header {
+        @include create-header(url(../../img/index/gre-gods.webp), movil);
+
+        h2 {
+            font-family: $font;
+            font-size: calculate-rem(30);
+        }
+    }
+
+
+
+    /*** N A V ***/
+
+    nav {
+        @include create-nav(movil)
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        padding: 40px;
+
+        .sub-header {
+            text-align: center;
+            margin-bottom: 50px;
+
+            h2 {
+                font-size: 64px;
+                color: $title;
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 225px);
+            grid-auto-rows: 350px;
+            gap: 40px;
+            justify-content: space-evenly;
+
+            &:not(:last-child) {
+                margin-bottom: 90px;
+            }
+
+            .card {
+                @include create-card();
+            }
+            
+        }
+
+        #zeus { background: white url(../../img/greek/gods/zeus.webp) no-repeat center / cover; }
+        #poseidon { background: white url(../../img/greek/gods/poseidon.webp) no-repeat center / cover; }
+        #hades { background: white url(../../img/greek/gods/hades.webp) no-repeat center / cover; }
+        #hermes { background: white url(../../img/greek/gods/hermes.webp) no-repeat center / cover; }
+        #hera { background: white url(../../img/greek/gods/hera.webp) no-repeat center / cover; }
+        #hefesto { background: white url(../../img/greek/gods/hefesto.webp) no-repeat center / cover; }
+        #dioniso { background: white url(../../img/greek/gods/dioniso.webp) no-repeat center / cover; }
+        #atenea { background: white url(../../img/greek/gods/atenea.webp) no-repeat center / cover; }
+        #apolo { background: white url(../../img/greek/gods/apolo.webp) no-repeat center / cover; }
+        #artemisa { background: white url(../../img/greek/gods/artemisa.webp) no-repeat center / cover; }
+        #ares { background: white url(../../img/greek/gods/ares.webp) no-repeat center / cover; }
+        #afrodita { background: white url(../../img/greek/gods/afrodita.webp) no-repeat center / cover; }
+        #demeter { background: white url(../../img/greek/gods/demeter.webp) no-repeat center / cover; }
+        #hestia { background: white url(../../img/greek/gods/hestia.webp) no-repeat center / cover; }
+        #persefone { background: white url(../../img/greek/gods/persefone.webp) no-repeat center / cover; }
+        #tanatos { background: white url(../../img/greek/gods/tanatos.webp) no-repeat center / cover; }
+        #morfeo { background: white url(../../img/greek/gods/morfeo.webp) no-repeat center / cover; }
+        #pan { background: white url(../../img/greek/gods/pan.webp) no-repeat center / cover; }
+        #hebe { background: white url(../../img/greek/gods/hebe.webp) no-repeat center / cover; }
+        #eirene { background: white url(../../img/greek/gods/eirene.webp) no-repeat center / cover; }
+        #nike { background: white url(../../img/greek/gods/nike.webp) no-repeat center / cover; }
+        
+        #caos { background: white url(../../img/greek/gods/caos.webp) no-repeat center / cover; }
+        #gea { background: white url(../../img/greek/gods/gea.webp) no-repeat center / cover; }
+        #tartaro { background: white url(../../img/greek/gods/tartaro.webp) no-repeat center / cover; }
+        #eros { background: white url(../../img/greek/gods/eros.webp) no-repeat center / cover; }
+        #urano { background: white url(../../img/greek/gods/urano.webp) no-repeat center / cover; }
+        
+        #oceano { background: white url(../../img/greek/gods/oceano.webp) no-repeat center / cover; }
+        #ceo { background: white url(../../img/greek/gods/ceo.webp) no-repeat center / cover; }
+        #crio { background: white url(../../img/greek/gods/crio.webp) no-repeat top / cover; }
+        #hiperion { background: white url(../../img/greek/gods/hiperion.webp) no-repeat left / cover; }
+        #japeto { background: white url(../../img/greek/gods/japeto.webp) no-repeat center / cover; }
+        #crono { background: white url(../../img/greek/gods/crono.webp) no-repeat center / cover; }
+        #febe { background: white url(../../img/greek/gods/febe.webp) no-repeat center / cover; }
+        #mnemosine { background: white url(../../img/greek/gods/mnemosine.webp) no-repeat center / cover; }
+        #rea { background: white url(../../img/greek/gods/rea.webp) no-repeat center / cover; }
+        #temis { background: white url(../../img/greek/gods/temis.webp) no-repeat center / cover; }
+        #tetis { background: white url(../../img/greek/gods/tetis.webp) no-repeat center / cover; }
+        #tea { background: white url(../../img/greek/gods/tea.webp) no-repeat center / cover; }
+        
+        #atlas { background: white url(../../img/greek/gods/atlas.webp) no-repeat center / cover; }
+        #circe { background: white url(../../img/greek/gods/circe.webp) no-repeat center / cover; }
+        #hecate { background: white url(../../img/greek/gods/hecate.webp) no-repeat center / cover; }
+        #helios { background: white url(../../img/greek/gods/helios.webp) no-repeat center / cover; }
+        #selene { background: white url(../../img/greek/gods/selene.webp) no-repeat center / cover; }
+        #leto { background: white url(../../img/greek/gods/leto.webp) no-repeat center / cover; }
+        #prometeo { background: white url(../../img/greek/gods/prometeo.webp) no-repeat center / cover; }
+    }
+
+
+
+    /*** F O O T E R ***/
+
+    footer {
+        @include create-footer(url(../../img/greek/hades.webp));
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+    
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            @include create-header(url(../../img/index/gre-gods.webp), tablet);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(40);
+            }
+        }
+
+        .nav {
+            @include create-nav(tablet);
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .main-header {
+            @include create-header(url(../../img/index/gre-gods.webp), pc);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(50);
+            }
+        }
+
+        .nav {
+            @include create-nav(pc);
+        }
+    }
+}
