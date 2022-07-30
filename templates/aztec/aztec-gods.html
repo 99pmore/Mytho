@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azteca Deidades</title>
+
     <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
-    <link rel="stylesheet" href="../../css/style-aztec-gods.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/css/style-aztec-gods.css">
+    <link href="../styles/css/hamburgers.css" rel="stylesheet">
+
+    <script async src="../../js/script.js"></script>
 </head>
 <body>
 
@@ -20,7 +21,7 @@
         </div>
         <h2>Deidades</h2>
         <div class="arrow">
-            <a href="#mitologia">
+            <a href="#main">
                 <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
                 <lord-icon src="https://cdn.lordicon.com/xhdhjyqy.json" trigger="loop" delay="2500"
                     colors="primary:#ffffff" style="width:50px;height:50px">
@@ -29,8 +30,146 @@
         </div>
     </header>
 
-    <main>
-        
+    <nav id="nav" class="nav">
+        <div class="nav-mob">
+            <button id="burger" class="hamburger hamburger--arrow" type="button" onclick="toggleMenu()">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+
+        <div id="nav-pc" class="nav-pc">
+            <div class="nav-logo" onclick="location.href='../index.html'">
+                <img src="../../img/logo.png" alt="Logo del sitio web" height="40px" width="24.44">
+                <h2>Mytho</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#egipcia">Egipcia</a>
+                <a href="#nordica">Nórdica</a>
+                <a href="#griega">Griega</a>
+                <a href="#romana">Romana</a>
+                <a href="#azteca">Azteca</a>
+                <a href="#maya">Maya</a>
+                <a href="#sumeria">Sumeria</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+
+        <div class="card" id="huitzilopochtli">
+            <div class="card-info">
+                <h3>Huitzilopochtli</h3>
+                <p>Dios principal</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="tlaloc">
+            <div class="card-info">
+                <h3>Tláloc</h3>
+                <p>Dios de la lluvia</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="tezcatlipoca">
+            <div class="card-info">
+                <h3>Tezcatlipoca</h3>
+                <p>Dios del cielo y la tierra</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="tonatiuh">
+            <div class="card-info">
+                <h3>Tonatiuh</h3>
+                <p>Dios del sol</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="centeotl">
+            <div class="card-info">
+                <h3>Centéotl</h3>
+                <p>Dios del maíz</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="chalchiuhtlicue">
+            <div class="card-info">
+                <h3>Chalchiuhtlicue</h3>
+                <p>Diosa del agua y los nacimientos</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="xipetotec">
+            <div class="card-info">
+                <h3>Xipe Totec</h3>
+                <p>Dios de la fertilidad agrícola</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="quetzalcoatl">
+            <div class="card-info">
+                <h3>Quetzalcoatl</h3>
+                <p>Dios del viento y el aprendizaje</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="tlaltecuhtli">
+            <div class="card-info">
+                <h3>Tlaltecuhtli</h3>
+                <p>Dios de la tierra</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="mayahuel">
+            <div class="card-info">
+                <h3>Mayahuel</h3>
+                <p>Diosa de la fecundidad</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="metzli">
+            <div class="card-info">
+                <h3>Metzli</h3>
+                <p>Diosa de la luna</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="yacatecuhtli">
+            <div class="card-info">
+                <h3>Yacatecuhtli</h3>
+                <p>Dios del comercio y los viajeros</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="ixtlilton">
+            <div class="card-info">
+                <h3>Ixtlilton</h3>
+                <p>Dios de la medicina</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
+        <div class="card" id="mictlantecuhtli">
+            <div class="card-info">
+                <h3>Mictlantecuhtli</h3>
+                <p>Dios del inframundo</p>
+                <button class="card-button">Más</button>
+            </div>
+        </div>
+
     </main>
 
     <footer>

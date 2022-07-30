@@ -1,6 +1,10 @@
 @import "variables";
 @import "functions";
 
+
+
+/*** H E A D E R ***/
+
 @mixin create-header($image: "url()", $device: "movil") {
     background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), $image no-repeat center / cover;
     
@@ -67,6 +71,8 @@
 }
 
 
+
+/*** N A V ***/
 
 @mixin create-nav($device: "movil") {
     width: 100%;
@@ -200,6 +206,8 @@
 
 
 
+/*** F O O T E R ***/
+
 @mixin create-footer($image: "url()") {
     background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), $image no-repeat center / cover;
     // background-attachment: fixed;
@@ -217,6 +225,8 @@
 
 
 
+/*** S C R O L L ***/
+
 @mixin scroll {
     &::-webkit-scrollbar {
         background-color: transparent;
@@ -232,6 +242,9 @@
     }
 }
 
+
+
+/*** C A R D  L I N K ***/
 
 @mixin create-card-link($device: "movil") {
     background: linear-gradient($main, black);
@@ -297,6 +310,8 @@
 }
 
 
+
+/*** C A R D ***/
 
 @mixin create-card() {
     position: relative;
@@ -386,6 +401,10 @@
         }
     }
 }
+
+
+
+/*** M Y T H ***/
 
 @mixin create-myth($device: "movil") {
     background-color: white;

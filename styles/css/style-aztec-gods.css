@@ -118,7 +118,7 @@ body {
     max-width: 1000px;
     max-height: 800px; }
   body .main-header {
-    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/egy-gods.webp) no-repeat center/cover;
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/azt-gods.webp) no-repeat center/cover;
     font-family: "Harman Sans", sans-serif;
     font-size: 1.875rem;
     letter-spacing: 5px;
@@ -264,58 +264,36 @@ body {
             background-color: white;
             color: #1b1b1b;
             text-shadow: 0 0 0.1px #827397; }
-    body main #ra {
-      background: white url(../../img/egypt/gods/ra.webp) no-repeat center/contain; }
-    body main #osiris {
-      background: white url(../../img/egypt/gods/osiris.webp) no-repeat center/contain; }
-    body main #isis {
-      background: white url(../../img/egypt/gods/isis.webp) no-repeat center/contain; }
-    body main #neftis {
-      background: white url(../../img/egypt/gods/neftis.webp) no-repeat center/contain; }
-    body main #horus {
-      background: white url(../../img/egypt/gods/horus.webp) no-repeat center/contain; }
-    body main #seth {
-      background: white url(../../img/egypt/gods/seth.webp) no-repeat center/contain; }
-    body main #bastet {
-      background: white url(../../img/egypt/gods/bastet.webp) no-repeat center/contain; }
-    body main #hathor {
-      background: white url(../../img/egypt/gods/hathor.webp) no-repeat center/contain; }
-    body main #anubis {
-      background: white url(../../img/egypt/gods/anubis.webp) no-repeat center/contain; }
-    body main #thot {
-      background: white url(../../img/egypt/gods/thot.webp) no-repeat center/contain; }
-    body main #tauret {
-      background: white url(../../img/egypt/gods/tauret.webp) no-repeat center/contain; }
-    body main #sejmet {
-      background: white url(../../img/egypt/gods/sejmet.webp) no-repeat center/contain; }
-    body main #hapi {
-      background: white url(../../img/egypt/gods/hapi.webp) no-repeat center/contain; }
-    body main #sobek {
-      background: white url(../../img/egypt/gods/sobek.webp) no-repeat center/contain; }
-    body main #geb {
-      background: white url(../../img/egypt/gods/geb.webp) no-repeat center/contain; }
-    body main #nut {
-      background: white url(../../img/egypt/gods/nut.webp) no-repeat center/contain; }
-    body main #shu {
-      background: white url(../../img/egypt/gods/shu.webp) no-repeat center/contain; }
-    body main #ptah {
-      background: white url(../../img/egypt/gods/ptah.webp) no-repeat center/contain; }
-    body main #maat {
-      background: white url(../../img/egypt/gods/maat.webp) no-repeat center/contain; }
-    body main #jepri {
-      background: white url(../../img/egypt/gods/jepri.webp) no-repeat center/contain; }
-    body main #jnum {
-      background: white url(../../img/egypt/gods/jnum.webp) no-repeat center/contain; }
-    body main #amon {
-      background: white url(../../img/egypt/gods/amon.webp) no-repeat center/contain; }
-    body main #atum {
-      background: white url(../../img/egypt/gods/atum.webp) no-repeat center/contain; }
-    body main #jonsu {
-      background: white url(../../img/egypt/gods/jonsu.webp) no-repeat center/contain; }
-    body main #apofis {
-      background: white url(../../img/egypt/gods/apofis.webp) no-repeat right/cover; }
+    body main #huitzilopochtli {
+      background: white url(../../img/aztec/gods/huitzilopochtli.webp) no-repeat center/cover; }
+    body main #tlaloc {
+      background: white url(../../img/aztec/gods/tlaloc.webp) no-repeat center/cover; }
+    body main #tezcatlipoca {
+      background: white url(../../img/aztec/gods/tezcatlipoca.webp) no-repeat center/cover; }
+    body main #tonatiuh {
+      background: white url(../../img/aztec/gods/tonatiuh.webp) no-repeat center/cover; }
+    body main #centeotl {
+      background: white url(../../img/aztec/gods/centeotl.webp) no-repeat center/cover; }
+    body main #chalchiuhtlicue {
+      background: white url(../../img/aztec/gods/chalchiuhtlicue.webp) no-repeat left/cover; }
+    body main #xipetotec {
+      background: white url(../../img/aztec/gods/xipetotec.webp) no-repeat center/cover; }
+    body main #quetzalcoatl {
+      background: white url(../../img/aztec/gods/quetzalcoatl.webp) no-repeat center/cover; }
+    body main #tlaltecuhtli {
+      background: white url(../../img/aztec/gods/tlaltecuhtli.webp) no-repeat center/cover; }
+    body main #mayahuel {
+      background: white url(../../img/aztec/gods/mayahuel.webp) no-repeat center/cover; }
+    body main #metzli {
+      background: white url(../../img/aztec/gods/metzli.webp) no-repeat center/cover; }
+    body main #yacatecuhtli {
+      background: white url(../../img/aztec/gods/yacatecuhtli.webp) no-repeat center/cover; }
+    body main #ixtlilton {
+      background: white url(../../img/aztec/gods/ixtlilton.webp) no-repeat center/cover; }
+    body main #mictlantecuhtli {
+      background: white url(../../img/aztec/gods/mictlantecuhtli.webp) no-repeat center/cover; }
   body footer {
-    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/duat-footer.webp) no-repeat center/cover;
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/aztec/mictlan.webp) no-repeat center/cover;
     color: white;
     box-shadow: 0 0 20px #363062;
     height: 150px;
@@ -324,7 +302,8 @@ body {
     justify-content: center;
     align-items: center;
     position: sticky;
-    z-index: 500; }
+    z-index: 500;
+    background-position: 0 80%; }
   body::-webkit-scrollbar {
     background-color: transparent;
     width: 8px; }
@@ -334,7 +313,7 @@ body {
       background-color: #d38045; }
   @media only screen and (min-width: 600px) {
     body .main-header {
-      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/egy-gods.webp) no-repeat center/cover;
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/azt-gods.webp) no-repeat center/cover;
       font-family: "Harman Sans", sans-serif;
       font-size: 1.875rem;
       letter-spacing: 5px;
@@ -419,7 +398,7 @@ body {
         width: 420px; } }
   @media only screen and (min-width: 900px) {
     body .main-header {
-      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/egy-gods.webp) no-repeat center/cover;
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/azt-gods.webp) no-repeat center/cover;
       font-family: "Harman Sans", sans-serif;
       font-size: 1.875rem;
       letter-spacing: 5px;
@@ -537,4 +516,4 @@ body {
         width: 0px;
         left: -420px; } }
 
-/*# sourceMappingURL=style-egypt-gods.css.map */
+/*# sourceMappingURL=style-aztec-gods.css.map */
