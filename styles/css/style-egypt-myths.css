@@ -193,6 +193,35 @@ body {
     display: grid;
     grid-template-columns: repeat(1, minmax(200px, 1fr));
     gap: 20px; }
+    body main .myth-section {
+      background-color: white;
+      padding: 50px 0;
+      box-shadow: 0 0 8px #E9D5DA;
+      width: 100%;
+      margin: auto; }
+      body main .myth-section header {
+        padding: 40px; }
+        body main .myth-section header h2 {
+          color: #4D4C7D;
+          text-align: center;
+          font-size: 2.5rem; }
+      body main .myth-section .myth-info {
+        overflow: hidden;
+        padding: 40px;
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        body main .myth-section .myth-info .myth-info-img {
+          margin-top: 20px; }
+          body main .myth-section .myth-info .myth-info-img img {
+            opacity: 0.9;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center; }
+            body main .myth-section .myth-info .myth-info-img img:hover {
+              opacity: 1; }
   body footer {
     background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/duat-footer.webp) no-repeat center/cover;
     color: white;
@@ -232,6 +261,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         flex-direction: row; }
         body .main-header .logo h1 {
           margin-left: 35px; }
@@ -293,7 +323,39 @@ body {
       body .nav .menu-open {
         left: 0;
         transition: all 0.5s;
-        width: 420px; } }
+        width: 100vw;
+        width: 420px; }
+    body main .myth-section {
+      background-color: white;
+      padding: 50px 0;
+      box-shadow: 0 0 8px #E9D5DA;
+      width: 100%;
+      margin: auto;
+      width: 90%; }
+      body main .myth-section header {
+        padding: 40px; }
+        body main .myth-section header h2 {
+          color: #4D4C7D;
+          text-align: center;
+          font-size: 2.5rem;
+          font-size: 3.125rem; }
+      body main .myth-section .myth-info {
+        overflow: hidden;
+        padding: 40px;
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        body main .myth-section .myth-info .myth-info-img {
+          margin-top: 20px; }
+          body main .myth-section .myth-info .myth-info-img img {
+            opacity: 0.9;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center; }
+            body main .myth-section .myth-info .myth-info-img img:hover {
+              opacity: 1; } }
   @media only screen and (min-width: 900px) {
     body .main-header {
       background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/egy-myth.webp) no-repeat center/cover;
@@ -316,6 +378,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         flex-direction: row; }
         body .main-header .logo h1 {
           margin-left: 35px; }
@@ -409,7 +472,39 @@ body {
       body .nav .menu-open {
         left: 0;
         transition: all 0.5s;
+        width: 100vw;
         width: 0px;
-        left: -420px; } }
+        left: -420px; }
+    body main .myth-section {
+      background-color: white;
+      padding: 50px 0;
+      box-shadow: 0 0 8px #E9D5DA;
+      width: 100%;
+      margin: auto;
+      width: 75%; }
+      body main .myth-section header {
+        padding: 40px; }
+        body main .myth-section header h2 {
+          color: #4D4C7D;
+          text-align: center;
+          font-size: 2.5rem;
+          font-size: 3.75rem; }
+      body main .myth-section .myth-info {
+        overflow: hidden;
+        padding: 40px;
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        body main .myth-section .myth-info .myth-info-img {
+          margin-top: 20px; }
+          body main .myth-section .myth-info .myth-info-img img {
+            opacity: 0.9;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center; }
+            body main .myth-section .myth-info .myth-info-img img:hover {
+              opacity: 1; } }
 
 /*# sourceMappingURL=style-egypt-myths.css.map */

@@ -31,7 +31,7 @@ body {
 
     .main-header {
         @include create-header(url(../../img/index/odin.webp), movil);
-        background: linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6));
+        background: url(../../img/index/odin.webp) linear-gradient(rgba(54, 48, 98, 0.6), rgba(0, 0, 0, 0.6));
         background-position: 0% 25%;
 
         .birds {

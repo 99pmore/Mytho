@@ -58,7 +58,7 @@ body {
             margin-bottom: 50px;
 
             h2 {
-                font-size: 64px;
+                font-size: calculate-rem(40);
                 color: $title;
             }
         }
@@ -163,6 +163,14 @@ body {
         .nav {
             @include create-nav(tablet);
         }
+
+        main {
+            .sub-header {
+                h2 {
+                    font-size: calculate-rem(50);
+                }
+            }
+        }
     }
 
     /** PC **/
@@ -179,6 +187,14 @@ body {
 
         .nav {
             @include create-nav(pc);
+        }
+
+        main {
+            .sub-header {
+                h2 {
+                    font-size: calculate-rem(60);
+                }
+            }
         }
     }
 }

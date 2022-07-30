@@ -37,16 +37,14 @@
         justify-content: center;
         align-items: center;
 
+        flex-direction: column;
+
         @if $device == "pc" or $device == "tablet" {
             flex-direction: row;
 
             h1 {
                 margin-left: 35px;
             }
-        }
-
-        @if $device == "movil" {
-            flex-direction: column;
         }
 
         img {
@@ -186,10 +184,7 @@
     .menu-open {
         left: 0;
         transition: all 0.5s;
-
-        @if $device == "movil" {
-            width: 100vw;
-        }
+        width: 100vw;
 
         @if $device == "tablet" {
             width: 420px;
@@ -308,7 +303,7 @@
     display: flex;
     align-items: center;
 
-    box-shadow: 0 50px 50px -60px var(--details);
+    box-shadow: 0 50px 50px -60px $details;
 
     transition: 0.4s ease-out;
 
@@ -392,18 +387,36 @@
     }
 }
 
-@mixin create-myth() {
+@mixin create-myth($device: "movil") {
     background-color: white;
     padding: 50px 0;
     box-shadow: 0 0 8px $sec;
+    width: 100%;
+    margin: auto;
+
+    @if $device == "tablet" {
+        width: 90%;
+    }
+
+    @if $device == "pc" {
+        width: 75%;
+    }
 
     header {
         padding: 40px;
 
         h2 {
             color: $title;
-            font-size: 4rem;
             text-align: center;
+            font-size: calculate-rem(40);
+
+            @if $device == "tablet" {
+                font-size: calculate-rem(50);
+            }
+
+            @if $device == "pc" {
+                font-size: calculate-rem(60);
+            }
         }
     }
 
@@ -411,6 +424,11 @@
         overflow: hidden;
         padding: 40px;
         text-align: justify;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         .myth-info-img {
             margin-top: 20px;

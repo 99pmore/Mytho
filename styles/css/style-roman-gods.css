@@ -200,7 +200,7 @@ body {
       position: relative;
       display: flex;
       align-items: center;
-      box-shadow: 0 50px 50px -60px var(--details);
+      box-shadow: 0 50px 50px -60px #827397;
       transition: 0.4s ease-out; }
       body main .card:before {
         content: "";
@@ -338,6 +338,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         flex-direction: row; }
         body .main-header .logo h1 {
           margin-left: 35px; }
@@ -399,6 +400,7 @@ body {
       body .nav .menu-open {
         left: 0;
         transition: all 0.5s;
+        width: 100vw;
         width: 420px; } }
   @media only screen and (min-width: 900px) {
     body .main-header {
@@ -422,6 +424,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         flex-direction: row; }
         body .main-header .logo h1 {
           margin-left: 35px; }
@@ -515,6 +518,7 @@ body {
       body .nav .menu-open {
         left: 0;
         transition: all 0.5s;
+        width: 100vw;
         width: 0px;
         left: -420px; } }
 
