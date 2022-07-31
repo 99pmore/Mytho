@@ -82,27 +82,19 @@
     
     transition: all 0.5s;
 
-    .nav-mob {
+    .nav-bur {
         height: 50px;
-        width: 100%;
         padding: 10px 20px;
-    
-        background-color: rgba(54, 48, 98, 0.75);
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
+
         color: white;
     
         display: flex;
         align-items: center;
         position: relative;
         z-index: 900;
-
-        @if $device == "pc" {
-            display: none;
-        }
     }
     
-    .nav-pc {
+    .menu {
         font-size: calculate-rem(22);
         background: rgba(54, 48, 98, 0.85);
         backdrop-filter: blur(4px);
@@ -123,21 +115,17 @@
         transition: all 0.5s;
 
         .nav-logo {
-            display: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
 
-            @if $device == "pc" {
-                display: flex;
-                justify-content: left;
-                align-items: center;
-                cursor: pointer;
-
-                h2 {
-                    font-family: $font-logo;
-                    color: white;
-                    font-size: calculate-rem(20);
-                    letter-spacing: 2.5px;
-                    margin-left: 8px;
-                }
+            h2 {
+                font-family: $font-logo;
+                color: white;
+                font-size: calculate-rem(40);
+                letter-spacing: 2.5px;
+                margin-left: 16px;
             }
         }
         
@@ -149,41 +137,15 @@
             align-items: center;
             flex-direction: column;
 
-            @if $device == "pc" {
-                width: 60%;
+            a {
+                color: white;
+                text-decoration: none;
+                transition: transform 0.3s;
 
-                justify-content: space-between;
-                flex-direction: row;
-
-                a {
-                    color: white;
-                    text-decoration: none;
-
-                    &:hover {
-                        text-shadow: 0 0 6px $main;
-                        transform: scale(1.075);
-                    }
+                &:hover {
+                    transform: scale(1.2);
                 }
             }
-        }
-
-        @if $device == "pc" {
-            font-size: calculate-rem(17);
-            height: 50px;
-            width: 100%;
-            padding: 10px 30px;
-        
-            background-color: rgba(54, 48, 98, 0.75);
-            backdrop-filter: blur(2px);
-            -webkit-backdrop-filter: blur(2px);
-            color: white;
-    
-            position: sticky;
-    
-            justify-content: space-between;
-            flex-direction: row;
-    
-            transition: none;
         }
     }
 
@@ -192,15 +154,9 @@
         transition: all 0.5s;
         width: 100vw;
 
-        @if $device == "tablet" {
-            width: 420px;
+        @if $device == "tablet" or $device == "pc" {
+            width: 400px;
         }
-
-        @if $device == "pc" {
-            width: 0px;
-            left: -420px;
-        }
-
     }
 }
 
@@ -210,7 +166,7 @@
 
 @mixin create-footer($image: "url()") {
     background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), $image no-repeat center / cover;
-    // background-attachment: fixed;
+    background-attachment: fixed;
     color: white;
     box-shadow: 0 0 20px $main;
     height: 150px;

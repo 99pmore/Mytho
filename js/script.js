@@ -1,10 +1,10 @@
 const toggleMenu = () => {
-  document.getElementById("nav-pc").classList.toggle("menu-open");
-  document.getElementById("burger").classList.toggle("is-active");
-  document.getElementById("darkbg").classList.toggle("visible");
+    document.getElementById("menu").classList.toggle("menu-open");
+    document.getElementById("burger").classList.toggle("is-active");
+    document.getElementById("darkbg").classList.toggle("visible");
 };
 
-var prevScrollpos = window.pageYOffset;
+/*var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
@@ -13,4 +13,4 @@ window.onscroll = function() {
         document.getElementById("nav").style.top = "-80px";
     }
     prevScrollpos = currentScrollPos;
-}
+}*/
