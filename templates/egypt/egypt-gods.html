@@ -31,7 +31,7 @@
     </header>
 
     <nav id="nav" class="nav">
-        <div class="nav-mob">
+        <div class="nav-bur">
             <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -39,19 +39,27 @@
             </button>
         </div>
 
-        <div id="nav-pc" class="nav-pc">
+        <div id="menu" class="menu">
             <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="40px" width="24.44">
+                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
                 <h2>Mytho</h2>
             </div>
             <div class="nav-links">
-                <a href="#egipcia">Egipcia</a>
-                <a href="#nordica">Nórdica</a>
-                <a href="#griega">Griega</a>
-                <a href="#romana">Romana</a>
-                <a href="#azteca">Azteca</a>
-                <a href="#maya">Maya</a>
-                <a href="#sumeria">Sumeria</a>
+                <details>
+                    <summary>Mitologías</summary>
+                    <div class="links">
+                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
+                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
+                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
+                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
+                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
+                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
+                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
+                    </div>
+                </details>
+            </div>
+            <div class="contact-link">
+                <a href="contact.html">Contacto</a>
             </div>
         </div>
     </nav>
@@ -62,7 +70,6 @@
             <div class="card-info">
                 <h3>Ra</h3>
                 <p>Dios del Sol</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -70,7 +77,6 @@
             <div class="card-info">
                 <h3>Osiris</h3>
                 <p>Dios de la resurrección</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -78,7 +84,6 @@
             <div class="card-info">
                 <h3>Isis</h3>
                 <p>Diosa de la magia y la sabiduría</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -86,7 +91,6 @@
             <div class="card-info">
                 <h3>Neftis</h3>
                 <p>Diosa de la oscuridad</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -94,7 +98,6 @@
             <div class="card-info">
                 <h3>Horus</h3>
                 <p>Dios del cielo</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -102,7 +105,6 @@
             <div class="card-info">
                 <h3>Seth</h3>
                 <p>Dios del mal</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -110,7 +112,6 @@
             <div class="card-info">
                 <h3>Bastet</h3>
                 <p>Diosa protectora el hogar</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -118,7 +119,6 @@
             <div class="card-info">
                 <h3>Hathor</h3>
                 <p>Diosa del amor y la felicidad</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -126,7 +126,6 @@
             <div class="card-info">
                 <h3>Anubis</h3>
                 <p>Dios de la momificación y la muerte</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -134,7 +133,6 @@
             <div class="card-info">
                 <h3>Thot</h3>
                 <p>Dios de la sabiduría y la escritura</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -142,7 +140,6 @@
             <div class="card-info">
                 <h3>Tauret</h3>
                 <p>Diosa de la fertilidad y protectora de las mujeres</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -150,7 +147,6 @@
             <div class="card-info">
                 <h3>Sejmet</h3>
                 <p>Diosa de la guerra</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -158,7 +154,6 @@
             <div class="card-info">
                 <h3>Hapi</h3>
                 <p>Dios de la inundación</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -166,7 +161,6 @@
             <div class="card-info">
                 <h3>Sobek</h3>
                 <p>Dios de los cocodrilos</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -174,7 +168,6 @@
             <div class="card-info">
                 <h3>Geb</h3>
                 <p>Dios creador</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -182,7 +175,6 @@
             <div class="card-info">
                 <h3>Nut</h3>
                 <p>Diosa del cielo, creadora del universo</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -190,7 +182,6 @@
             <div class="card-info">
                 <h3>Shu</h3>
                 <p>Dios del aire y la luz</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -198,7 +189,6 @@
             <div class="card-info">
                 <h3>Ptah</h3>
                 <p>Dios creador y de los artesanos</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -206,7 +196,6 @@
             <div class="card-info">
                 <h3>Maat</h3>
                 <p>Diosa de la verdad, justicia y armonía</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -214,7 +203,6 @@
             <div class="card-info">
                 <h3>Jepri</h3>
                 <p>Dios solar autocreado</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -222,7 +210,6 @@
             <div class="card-info">
                 <h3>Jnum</h3>
                 <p>Dios de la creación</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -230,7 +217,6 @@
             <div class="card-info">
                 <h3>Amon</h3>
                 <p>Dios creador</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -238,7 +224,6 @@
             <div class="card-info">
                 <h3>Atum</h3>
                 <p>Dios solar creador</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -246,7 +231,6 @@
             <div class="card-info">
                 <h3>Josnu</h3>
                 <p>Dios lunar y protector de los enfermos</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -254,7 +238,6 @@
             <div class="card-info">
                 <h3>Apofis</h3>
                 <p>Representación del mal y el caos</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 

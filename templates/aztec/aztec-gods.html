@@ -31,7 +31,7 @@
     </header>
 
     <nav id="nav" class="nav">
-        <div class="nav-mob">
+        <div class="nav-bur">
             <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -39,19 +39,27 @@
             </button>
         </div>
 
-        <div id="nav-pc" class="nav-pc">
+        <div id="menu" class="menu">
             <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="40px" width="24.44">
+                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
                 <h2>Mytho</h2>
             </div>
             <div class="nav-links">
-                <a href="#egipcia">Egipcia</a>
-                <a href="#nordica">Nórdica</a>
-                <a href="#griega">Griega</a>
-                <a href="#romana">Romana</a>
-                <a href="#azteca">Azteca</a>
-                <a href="#maya">Maya</a>
-                <a href="#sumeria">Sumeria</a>
+                <details>
+                    <summary>Mitologías</summary>
+                    <div class="links">
+                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
+                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
+                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
+                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
+                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
+                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
+                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
+                    </div>
+                </details>
+            </div>
+            <div class="contact-link">
+                <a href="contact.html">Contacto</a>
             </div>
         </div>
     </nav>
@@ -62,7 +70,6 @@
             <div class="card-info">
                 <h3>Huitzilopochtli</h3>
                 <p>Dios principal</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -70,7 +77,6 @@
             <div class="card-info">
                 <h3>Tláloc</h3>
                 <p>Dios de la lluvia</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -78,7 +84,6 @@
             <div class="card-info">
                 <h3>Tezcatlipoca</h3>
                 <p>Dios del cielo y la tierra</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -86,7 +91,6 @@
             <div class="card-info">
                 <h3>Tonatiuh</h3>
                 <p>Dios del sol</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -94,7 +98,6 @@
             <div class="card-info">
                 <h3>Centéotl</h3>
                 <p>Dios del maíz</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -102,7 +105,6 @@
             <div class="card-info">
                 <h3>Chalchiuhtlicue</h3>
                 <p>Diosa del agua y los nacimientos</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -110,7 +112,6 @@
             <div class="card-info">
                 <h3>Xipe Totec</h3>
                 <p>Dios de la fertilidad agrícola</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -118,7 +119,6 @@
             <div class="card-info">
                 <h3>Quetzalcoatl</h3>
                 <p>Dios del viento y el aprendizaje</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -126,7 +126,6 @@
             <div class="card-info">
                 <h3>Tlaltecuhtli</h3>
                 <p>Dios de la tierra</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -134,7 +133,6 @@
             <div class="card-info">
                 <h3>Mayahuel</h3>
                 <p>Diosa de la fecundidad</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -142,7 +140,6 @@
             <div class="card-info">
                 <h3>Metzli</h3>
                 <p>Diosa de la luna</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -150,7 +147,6 @@
             <div class="card-info">
                 <h3>Yacatecuhtli</h3>
                 <p>Dios del comercio y los viajeros</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -158,7 +154,6 @@
             <div class="card-info">
                 <h3>Ixtlilton</h3>
                 <p>Dios de la medicina</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -166,7 +161,6 @@
             <div class="card-info">
                 <h3>Mictlantecuhtli</h3>
                 <p>Dios del inframundo</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 

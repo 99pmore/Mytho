@@ -30,7 +30,7 @@
     </header>
 
     <nav id="nav" class="nav">
-        <div class="nav-mob">
+        <div class="nav-bur">
             <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -38,19 +38,27 @@
             </button>
         </div>
 
-        <div id="nav-pc" class="nav-pc">
+        <div id="menu" class="menu">
             <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="40px" width="24.44">
+                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
                 <h2>Mytho</h2>
             </div>
             <div class="nav-links">
-                <a href="#egipcia">Egipcia</a>
-                <a href="#nordica">Nórdica</a>
-                <a href="#griega">Griega</a>
-                <a href="#romana">Romana</a>
-                <a href="#azteca">Azteca</a>
-                <a href="#maya">Maya</a>
-                <a href="#sumeria">Sumeria</a>
+                <details>
+                    <summary>Mitologías</summary>
+                    <div class="links">
+                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
+                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
+                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
+                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
+                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
+                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
+                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
+                    </div>
+                </details>
+            </div>
+            <div class="contact-link">
+                <a href="contact.html">Contacto</a>
             </div>
         </div>
     </nav>
@@ -61,7 +69,6 @@
             <div class="card-info">
                 <h3>Júpiter</h3>
                 <p>Padre de los dioses y los hombres</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -69,7 +76,6 @@
             <div class="card-info">
                 <h3>Juno</h3>
                 <p>Diosa del matrimonio y reina de los dioses</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -77,7 +83,6 @@
             <div class="card-info">
                 <h3>Neptuno</h3>
                 <p>Dios del mar</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -85,7 +90,6 @@
             <div class="card-info">
                 <h3>Minerva</h3>
                 <p>Diosa de la sabiduría</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -93,7 +97,6 @@
             <div class="card-info">
                 <h3>Marte</h3>
                 <p>Dios de la guerra</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -101,7 +104,6 @@
             <div class="card-info">
                 <h3>Venus</h3>
                 <p>Diosa del amor y la belleza</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -109,7 +111,6 @@
             <div class="card-info">
                 <h3>Febo</h3>
                 <p>Dios de la poesía, la música y la medicina</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -117,7 +118,6 @@
             <div class="card-info">
                 <h3>Diana</h3>
                 <p>Diosa de la caza</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -125,7 +125,6 @@
             <div class="card-info">
                 <h3>Mercurio</h3>
                 <p>Dios del comercio</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -133,7 +132,6 @@
             <div class="card-info">
                 <h3>Baco</h3>
                 <p>Dios de la fertilidad y el vino</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -141,7 +139,6 @@
             <div class="card-info">
                 <h3>Vulcano</h3>
                 <p>Dios del fuego</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -149,7 +146,6 @@
             <div class="card-info">
                 <h3>Plutón</h3>
                 <p>Dios del inframundo</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -157,7 +153,6 @@
             <div class="card-info">
                 <h3>Saturno</h3>
                 <p>Dios de la agricultura y la cosecha</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -165,7 +160,6 @@
             <div class="card-info">
                 <h3>Ceres</h3>
                 <p>Diosa de la agricultura y la fecundidad</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -173,7 +167,6 @@
             <div class="card-info">
                 <h3>Vesta</h3>
                 <p>Diosa del hogar</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -181,7 +174,6 @@
             <div class="card-info">
                 <h3>Proserpina</h3>
                 <p>Reina del inframundo</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -189,7 +181,6 @@
             <div class="card-info">
                 <h3>Cupido</h3>
                 <p>Dios del amor</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -197,7 +188,6 @@
             <div class="card-info">
                 <h3>Cibeles</h3>
                 <p>Diosa de la tierra</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -205,7 +195,6 @@
             <div class="card-info">
                 <h3>Flora</h3>
                 <p>Diosa de las flores, los jardines y la primavera</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -213,7 +202,6 @@
             <div class="card-info">
                 <h3>Jano</h3>
                 <p>Dios protector del estado</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
 
@@ -221,7 +209,6 @@
             <div class="card-info">
                 <h3>Juventas</h3>
                 <p>Diosa de la juventud</p>
-                <button class="card-button">Más</button>
             </div>
         </div>
         

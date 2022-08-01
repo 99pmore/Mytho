@@ -80,20 +80,20 @@ body {
     /*** M A I N ***/
 
     main {
-        .dark-bg {
-            background: black;
+        .nav-main-bg {
+            background: #827397;
             position: absolute;
-            top: 500;
+            top: 0;
             left: 0;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
-            z-index: 700;
+            z-index: 500;
             opacity: 0;
             width: 0;
         }
 
         .visible {
-            opacity: 0.7;
+            opacity: 0.5;
             width: 100%;
             transition: opacity ease-in 0.5s;
             display: block;

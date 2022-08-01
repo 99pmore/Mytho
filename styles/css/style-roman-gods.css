@@ -229,6 +229,8 @@ body {
               transition: transform 0.3s; }
               body nav .menu .nav-links details .links a:hover {
                 transform: scale(1.2); }
+              body nav .menu .nav-links details .links a span {
+                margin-right: 8px; }
       body nav .menu .contact-link a:hover {
         color: #ff9d59; }
     body nav .menu-open {
@@ -291,18 +293,6 @@ body {
           font-size: 1.1rem;
           margin: 5px 0 15px 0;
           text-align: center; }
-        body main .card .card-info .card-button {
-          padding: 10px;
-          outline: none;
-          border: none;
-          border-radius: 5px;
-          background-color: #fbfbfb;
-          color: #1b1b1b;
-          transition: 0.3s ease; }
-          body main .card .card-info .card-button:hover {
-            background-color: white;
-            color: #1b1b1b;
-            text-shadow: 0 0 0.1px #827397; }
     body main #jupiter {
       background: white url(../../img/roman/gods/jupiter.webp) no-repeat center/cover; }
     body main #juno {
@@ -480,6 +470,8 @@ body {
                 transition: transform 0.3s; }
                 body .nav .menu .nav-links details .links a:hover {
                   transform: scale(1.2); }
+                body .nav .menu .nav-links details .links a span {
+                  margin-right: 8px; }
         body .nav .menu .contact-link a:hover {
           color: #ff9d59; }
       body .nav .menu-open {
@@ -604,6 +596,8 @@ body {
                 transition: transform 0.3s; }
                 body .nav .menu .nav-links details .links a:hover {
                   transform: scale(1.2); }
+                body .nav .menu .nav-links details .links a span {
+                  margin-right: 8px; }
         body .nav .menu .contact-link a:hover {
           color: #ff9d59; }
       body .nav .menu-open {

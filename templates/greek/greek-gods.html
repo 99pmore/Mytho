@@ -31,7 +31,7 @@
     </header>
 
     <nav id="nav" class="nav">
-        <div class="nav-mob">
+        <div class="nav-bur">
             <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -39,19 +39,27 @@
             </button>
         </div>
 
-        <div id="nav-pc" class="nav-pc">
+        <div id="menu" class="menu">
             <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="40px" width="24.44">
+                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
                 <h2>Mytho</h2>
             </div>
             <div class="nav-links">
-                <a href="#egipcia">Egipcia</a>
-                <a href="#nordica">Nórdica</a>
-                <a href="#griega">Griega</a>
-                <a href="#romana">Romana</a>
-                <a href="#azteca">Azteca</a>
-                <a href="#maya">Maya</a>
-                <a href="#sumeria">Sumeria</a>
+                <details>
+                    <summary>Mitologías</summary>
+                    <div class="links">
+                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
+                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
+                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
+                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
+                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
+                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
+                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
+                    </div>
+                </details>
+            </div>
+            <div class="contact-link">
+                <a href="contact.html">Contacto</a>
             </div>
         </div>
     </nav>
@@ -68,7 +76,6 @@
                     <div class="card-info">
                         <h3>Zeus</h3>
                         <p>Dios del cielo</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -76,7 +83,6 @@
                     <div class="card-info">
                         <h3>Poseidón</h3>
                         <p>Dios del mar</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -84,7 +90,6 @@
                     <div class="card-info">
                         <h3>Hades</h3>
                         <p>Dios del inframundo</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -92,7 +97,6 @@
                     <div class="card-info">
                         <h3>Hermes</h3>
                         <p>Dios mensajero y de las fronteras</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -100,7 +104,6 @@
                     <div class="card-info">
                         <h3>Hera</h3>
                         <p>Diosa de la familia, el matrimonio, la maternidad y las mujeres</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -108,7 +111,6 @@
                     <div class="card-info">
                         <h3>Hefesto</h3>
                         <p>Dios del fuego y la forja</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -116,7 +118,6 @@
                     <div class="card-info">
                         <h3>Dioniso</h3>
                         <p>Dios de la fertilidad y del vino</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -124,7 +125,6 @@
                     <div class="card-info">
                         <h3>Atenea</h3>
                         <p>Diosa de la sabiduría</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -132,7 +132,6 @@
                     <div class="card-info">
                         <h3>Apolo</h3>
                         <p>Dios del sol</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -140,7 +139,6 @@
                     <div class="card-info">
                         <h3>Artemisa</h3>
                         <p>Diosa de la caza</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -148,7 +146,6 @@
                     <div class="card-info">
                         <h3>Ares</h3>
                         <p>Dios de la guerra</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
                 
@@ -156,7 +153,6 @@
                     <div class="card-info">
                         <h3>Afrodita</h3>
                         <p>Diosa de la belleza y del amor</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -164,7 +160,6 @@
                     <div class="card-info">
                         <h3>Deméter</h3>
                         <p>Diosa de la agricultura</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -172,7 +167,6 @@
                     <div class="card-info">
                         <h3>Hestia</h3>
                         <p>Diosa del hogar</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -180,7 +174,6 @@
                     <div class="card-info">
                         <h3>Perséfone</h3>
                         <p>Reina del inframundo</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -188,7 +181,6 @@
                     <div class="card-info">
                         <h3>Tánatos</h3>
                         <p>Dios de la muerte no violenta</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -196,7 +188,6 @@
                     <div class="card-info">
                         <h3>Morfeo</h3>
                         <p>Dios de los sueños</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -204,7 +195,6 @@
                     <div class="card-info">
                         <h3>Pan</h3>
                         <p>Dios de los pastores y rebaños</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -212,7 +202,6 @@
                     <div class="card-info">
                         <h3>Hebe</h3>
                         <p>Diosa de la juventud</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
         
@@ -220,7 +209,6 @@
                     <div class="card-info">
                         <h3>Eirene</h3>
                         <p>Diosa de la paz</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -228,7 +216,6 @@
                     <div class="card-info">
                         <h3>Niké</h3>
                         <p>Diosa de la victoria</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
             </div>
@@ -242,7 +229,6 @@
                     <div class="card-info">
                         <h3>Caos</h3>
                         <p>Estado más primigenio del cosmos</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -250,7 +236,6 @@
                     <div class="card-info">
                         <h3>Gea</h3>
                         <p>Tierra Madre</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -258,7 +243,6 @@
                     <div class="card-info">
                         <h3>Tártaro</h3>
                         <p>Región más profunda del mundo</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -266,7 +250,6 @@
                     <div class="card-info">
                         <h3>Eros</h3>
                         <p>Dios de la atracción sexual, el amor y el sexo</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -274,7 +257,6 @@
                     <div class="card-info">
                         <h3>Urano</h3>
                         <p>Titán del cielo</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
             </div>
@@ -288,7 +270,6 @@
                     <div class="card-info">
                         <h3>Océano</h3>
                         <p>Río Mundial</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -296,7 +277,6 @@
                     <div class="card-info">
                         <h3>Ceo</h3>
                         <p>Titán de la inteligencia</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -304,7 +284,6 @@
                     <div class="card-info">
                         <h3>Crio</h3>
                         <p>Titán de los rebaños y las manadas</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -312,7 +291,6 @@
                     <div class="card-info">
                         <h3>Hiperión</h3>
                         <p>Titán de la observación</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -320,7 +298,6 @@
                     <div class="card-info">
                         <h3>Jápeto</h3>
                         <p>Titán de la mortal vida útil</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -328,7 +305,6 @@
                     <div class="card-info">
                         <h3>Crono</h3>
                         <p>Rey de los titanes</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -336,7 +312,6 @@
                     <div class="card-info">
                         <h3>Febe</h3>
                         <p>Titánide del intelecto y profecías</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -344,7 +319,6 @@
                     <div class="card-info">
                         <h3>Mnemósine</h3>
                         <p>Titánide de la memoria</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -352,7 +326,6 @@
                     <div class="card-info">
                         <h3>Rea</h3>
                         <p>Reina de los titanes</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -360,7 +333,6 @@
                     <div class="card-info">
                         <h3>Temis</h3>
                         <p>Titánide del orden divino, las leyes y las costumbres</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -368,7 +340,6 @@
                     <div class="card-info">
                         <h3>Tetis</h3>
                         <p>Titánide del mar</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -376,7 +347,6 @@
                     <div class="card-info">
                         <h3>Tea</h3>
                         <p>Titánide de la vista</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
             </div>
@@ -390,7 +360,6 @@
                     <div class="card-info">
                         <h3>Atlas</h3>
                         <p>Titán responsable de sujetar el peso de los cielos</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -398,7 +367,6 @@
                     <div class="card-info">
                         <h3>Circe</h3>
                         <p>Diosa hechicera</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -406,7 +374,6 @@
                     <div class="card-info">
                         <h3>Hécate</h3>
                         <p>Titánide de la magia y brujería</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -414,7 +381,6 @@
                     <div class="card-info">
                         <h3>Helios</h3>
                         <p>Titán del sol</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -422,7 +388,6 @@
                     <div class="card-info">
                         <h3>Selene</h3>
                         <p>Titánide de la luna</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -430,7 +395,6 @@
                     <div class="card-info">
                         <h3>Leto</h3>
                         <p>Titánide de la noche</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
 
@@ -438,7 +402,6 @@
                     <div class="card-info">
                         <h3>Prometeo</h3>
                         <p>Titáni amigo de los mortales</p>
-                        <button class="card-button">Más</button>
                     </div>
                 </div>
             </div>
