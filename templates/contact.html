@@ -6,13 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
 
+    <meta name="description" content="Formulario de contacto">
+    <meta name="keywords" content="nombre, apellidos, email, contacto">
+    <meta name="author" content="Pablo Moreno">
+
     <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
-    <link rel="stylesheet" href="../../styles/css/style-egypt-gods.css">
+    <link rel="stylesheet" href="../styles/css/contact.css">
     <link href="../styles/css/hamburgers.css" rel="stylesheet">
 
-    <script async src="../../js/script.js"></script>
+    <script async src="../js/script.js"></script>
 </head>
 <body>
+
+    <nav id="nav" class="nav">
+        <div class="nav-bur">
+            <div id="burger" class="hamburger hamburger--minus" onclick="toggleMenu()">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu" class="menu" onclick="toggleMenu()">
+            <div class="nav-links">
+                <div class="nav-logo" onclick="location.href='index.html'">
+                    <img src="../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
+                    <h2>Mytho</h2>
+                </div>
+                <div class="links">
+                    <a href="#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png" alt="Icono ankh" width="20" height="20"/></span>Egipcia</a>
+                    <a href="#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png" alt="Icono drakkar" width="20" height="20"/></span>Nórdica</a>
+                    <a href="#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png" alt="Icono venus" width="20" height="20"/></span>Griega</a>
+                    <a href="#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png" alt="Icono coliseo" width="20" height="20"/></span>Romana</a>
+                    <a href="#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png" alt="Icono plumas" width="20" height="20"/></span>Azteca</a>
+                    <a href="#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png" alt="Icono piramide" width="20" height="20"/></span>Maya</a>
+                    <a href="#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png" alt="Icono cincel" width="20" height="20"/></span>Sumeria</a>
+                </div>
+                <div class="contact-link">
+                    <a href="contact.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <div id="menu-bg" class="menu-bg" onclick="toggleMenu()"></div>
+
+        <div class="form-container">
+            <h1>Contacta con nosotros</h1>
+
+            <form action="">
+                <div class="nom-ape">
+                    <input class="input" type="text" id="nombre" name="nombre" required placeholder="* Nombre" />
+
+                    <input class="input" type="text" id="apellidos" name="apellidos" required placeholder="* Apellidos" />
+                </div>
+
+                <input class="input" type="email" id="email" name="email" required placeholder="* Email"/>
+
+                <textarea class="input" name="textarea" id="textarea" cols="30" rows="8" placeholder="* Deja aquí tu mensaje"></textarea>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
     
 </body>
 </html>

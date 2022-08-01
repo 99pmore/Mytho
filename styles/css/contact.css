@@ -102,57 +102,28 @@
   scroll-behavior: smooth; }
 
 body {
+  background: linear-gradient(15deg, rgba(0, 0, 0, 0.75) 0%, rgba(54, 48, 98, 0.75) 50%, rgba(130, 115, 151, 0.75) 100%), url(../../img/contact/lava.webp) no-repeat center/cover;
   font-family: "Quicksand", sans-serif;
-  background-color: #fbfbfb;
   color: #1b1b1b;
-  /*** H E A D E R ***/
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
   /*** N A V ***/
   /*** M A I N ***/
-  /*** F O O T E R ***/
   /*** S C R O L L ***/
   /*** M E D I A  Q U E R I E S ***/
   /** Tablet **/
   /** PC **/ }
-  body .main-header {
-    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/nor-gods.webp) no-repeat center/cover;
-    font-family: "Harman Sans", sans-serif;
-    font-size: 1.875rem;
-    letter-spacing: 5px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    z-index: 900;
-    height: 100vh;
-    margin-bottom: 50px;
-    flex-direction: column;
-    box-shadow: 0 0 20px #363062; }
-    body .main-header .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column; }
-      body .main-header .logo img {
-        animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
-      body .main-header .logo h1 {
-        animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
-    body .main-header .arrow {
-      position: absolute;
-      bottom: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    body .main-header h2 {
-      font-family: "Quicksand", sans-serif;
-      font-size: 1.875rem; }
-  body nav {
+  body .nav {
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 500;
     transition: all 0.5s; }
-    body nav .nav-bur {
+    body .nav .nav-bur {
       height: 60px;
       padding: 10px 16px;
       color: white;
@@ -160,7 +131,7 @@ body {
       align-items: center;
       position: relative;
       z-index: 900; }
-    body nav .menu {
+    body .nav .menu {
       font-size: 1.375rem;
       background: rgba(54, 48, 98, 0.85);
       box-shadow: 0 0 20px #363062;
@@ -177,144 +148,126 @@ body {
       align-items: center;
       flex-direction: column;
       transition: all 0.5s; }
-      body nav .menu .nav-links {
+      body .nav .menu .nav-links {
         height: 70%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column; }
-        body nav .menu .nav-links .nav-logo {
+        body .nav .menu .nav-links .nav-logo {
           display: flex;
           justify-content: center;
           align-items: center;
           cursor: pointer; }
-          body nav .menu .nav-links .nav-logo h2 {
+          body .nav .menu .nav-links .nav-logo h2 {
             font-family: "Harman Sans", sans-serif;
             color: white;
             font-size: 2.5rem;
             letter-spacing: 2.5px;
             margin-left: 16px; }
-        body nav .menu .nav-links .links {
+        body .nav .menu .nav-links .links {
           height: 70%;
           display: flex;
           justify-content: space-evenly;
           align-items: center;
           flex-direction: column; }
-          body nav .menu .nav-links .links a {
+          body .nav .menu .nav-links .links a {
             color: white;
             text-decoration: none;
             transition: transform 0.3s; }
-            body nav .menu .nav-links .links a:hover {
+            body .nav .menu .nav-links .links a:hover {
               transform: scale(1.2); }
-            body nav .menu .nav-links .links a span {
+            body .nav .menu .nav-links .links a span {
               margin-right: 8px; }
-        body nav .menu .nav-links .contact-link a {
+        body .nav .menu .nav-links .contact-link a {
           color: white;
           text-decoration: none; }
-          body nav .menu .nav-links .contact-link a:hover {
+          body .nav .menu .nav-links .contact-link a:hover {
             color: #ff9d59; }
-    body nav .menu-open {
+    body .nav .menu-open {
       left: 0;
       transition: all 0.5s;
       width: 100vw; }
+    body .nav .hamburger-inner, body .nav .hamburger-inner::before, body .nav .hamburger-inner::after {
+      background-color: white; }
   body main {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 225px);
-    grid-auto-rows: 350px;
-    gap: 40px;
-    justify-content: space-evenly; }
-    body main .card {
-      position: relative;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 50px 50px -60px #827397;
-      transition: 0.4s ease-out; }
-      body main .card:before {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-        display: flex;
-        transition: 0.3s; }
-      body main .card:hover {
-        transform: translateY(2.5%); }
-        body main .card:hover:before {
-          opacity: 1; }
-      body main .card .card-info {
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        position: relative;
-        z-index: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background: rgba(130, 115, 151, 0.6);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        color: white;
-        opacity: 0;
-        transform: translateY(10%);
-        transition: 0.3s; }
-        body main .card .card-info:hover {
-          opacity: 1;
-          transform: translateY(0); }
-        body main .card .card-info h3 {
-          text-shadow: 0 0 10px #363062;
-          font-size: 2rem;
-          text-align: center; }
-        body main .card .card-info p {
-          text-shadow: 0 0 14px #363062;
-          font-size: 1.1rem;
-          margin: 5px 0 15px 0;
-          text-align: center; }
-    body main #odin {
-      background: white url(../../img/norse/gods/odin.webp) no-repeat center/cover; }
-    body main #thor {
-      background: white url(../../img/norse/gods/thor.webp) no-repeat center/cover; }
-    body main #freyr {
-      background: white url(../../img/norse/gods/freyr.webp) no-repeat center/cover; }
-    body main #freyja {
-      background: white url(../../img/norse/gods/freyja.webp) no-repeat center/cover; }
-    body main #loki {
-      background: white url(../../img/norse/gods/loki.webp) no-repeat center/cover; }
-    body main #baldr {
-      background: white url(../../img/norse/gods/baldr.webp) no-repeat center/cover; }
-    body main #bragi {
-      background: white url(../../img/norse/gods/bragi.webp) no-repeat center/cover; }
-    body main #frigg {
-      background: white url(../../img/norse/gods/frigg.webp) no-repeat center/cover; }
-    body main #tyr {
-      background: white url(../../img/norse/gods/tyr.webp) no-repeat center/cover; }
-    body main #heimdal {
-      background: white url(../../img/norse/gods/heimdal.webp) no-repeat center/cover; }
-    body main #hela {
-      background: white url(../../img/norse/gods/hela.webp) no-repeat center/cover; }
-    body main #idunn {
-      background: white url(../../img/norse/gods/idunn.webp) no-repeat center/cover; }
-    body main #njordr {
-      background: white url(../../img/norse/gods/njordr.webp) no-repeat center/cover; }
-    body main #skadi {
-      background: white url(../../img/norse/gods/skadi.webp) no-repeat center/cover; }
-    body main #ullr {
-      background: white url(../../img/norse/gods/ullr.webp) no-repeat center/cover; }
-  body footer {
-    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/norse/helheim.webp) no-repeat center/cover;
-    background-attachment: fixed;
-    color: white;
-    box-shadow: 0 0 20px #363062;
-    height: 150px;
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    z-index: 500; }
+    flex-direction: column;
+    width: 100%; }
+    body main .menu-bg {
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 400;
+      opacity: 0;
+      width: 0; }
+    body main .visible {
+      position: fixed;
+      opacity: 0.25;
+      width: 100%;
+      transition: opacity ease-in 0.5s;
+      display: block; }
+    body main .form-container {
+      max-width: 90%;
+      padding: 20px; }
+      body main .form-container .nom-ape {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column; }
+        body main .form-container .nom-ape input {
+          margin: 20px 0;
+          padding: 20px 10px; }
+      body main .form-container h1 {
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px; }
+      body main .form-container form {
+        max-width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        body main .form-container form input, body main .form-container form textarea {
+          background-color: rgba(255, 255, 255, 0);
+          background-color: rgba(0, 0, 0, 0.1);
+          color: white;
+          font-size: 0.875rem;
+          font-family: "Quicksand", sans-serif;
+          margin: 20px 0;
+          padding: 20px 10px;
+          width: 100%;
+          border: none;
+          border-bottom: 1.5px solid white;
+          outline: none; }
+        body main .form-container form input::placeholder, body main .form-container form textarea::placeholder {
+          color: #fbfbfb;
+          font-size: 0.875rem;
+          font-family: "Quicksand", sans-serif; }
+        body main .form-container form input:focus {
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1.5px solid white; }
+        body main .form-container form input[type=submit] {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: #fbfbfb;
+          font-size: 1.125rem;
+          font-family: "Quicksand", sans-serif;
+          border: none; }
+          body main .form-container form input[type=submit]:hover {
+            background-color: rgba(255, 255, 255, 0.2); }
+        body main .form-container form textarea {
+          border: 1.5px solid white;
+          resize: vertical; }
+          body main .form-container form textarea:focus {
+            background-color: rgba(255, 255, 255, 0.1); }
   body::-webkit-scrollbar {
     background-color: transparent;
     width: 8px; }
@@ -323,43 +276,6 @@ body {
     body::-webkit-scrollbar-thumb:hover {
       background-color: #d38045; }
   @media only screen and (min-width: 600px) {
-    body .main-header {
-      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/nor-gods.webp) no-repeat center/cover;
-      font-family: "Harman Sans", sans-serif;
-      font-size: 1.875rem;
-      letter-spacing: 5px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: sticky;
-      z-index: 900;
-      height: 100vh;
-      margin-bottom: 50px;
-      flex-direction: column;
-      box-shadow: 0 0 20px #363062;
-      font-size: 2.5rem; }
-      body .main-header .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-direction: row; }
-        body .main-header .logo h1 {
-          margin-left: 35px; }
-        body .main-header .logo img {
-          animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
-        body .main-header .logo h1 {
-          animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
-      body .main-header .arrow {
-        position: absolute;
-        bottom: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-      body .main-header h2 {
-        font-family: "Quicksand", sans-serif;
-        font-size: 2.5rem; }
     body .nav {
       width: 100%;
       position: fixed;
@@ -431,46 +347,17 @@ body {
         left: 0;
         transition: all 0.5s;
         width: 100vw;
-        width: 400px; } }
+        width: 400px; }
+    body main .form-container {
+      max-width: 80%; }
+      body main .form-container .nom-ape {
+        flex-direction: row;
+        gap: 20px; }
+      body main .form-container h1 {
+        font-size: 3rem; }
+      body main .form-container form {
+        max-width: 100%; } }
   @media only screen and (min-width: 900px) {
-    body .main-header {
-      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/nor-gods.webp) no-repeat center/cover;
-      font-family: "Harman Sans", sans-serif;
-      font-size: 1.875rem;
-      letter-spacing: 5px;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: sticky;
-      z-index: 900;
-      height: 100vh;
-      margin-bottom: 50px;
-      flex-direction: column;
-      box-shadow: 0 0 20px #363062;
-      font-size: 3.125rem;
-      background-attachment: fixed; }
-      body .main-header .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-direction: row; }
-        body .main-header .logo h1 {
-          margin-left: 35px; }
-        body .main-header .logo img {
-          animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
-        body .main-header .logo h1 {
-          animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
-      body .main-header .arrow {
-        position: absolute;
-        bottom: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-      body .main-header h2 {
-        font-family: "Quicksand", sans-serif;
-        font-size: 3.125rem; }
     body .nav {
       width: 100%;
       position: fixed;
@@ -542,6 +429,15 @@ body {
         left: 0;
         transition: all 0.5s;
         width: 100vw;
-        width: 400px; } }
+        width: 400px; }
+    body main .form-container {
+      max-width: 70%; }
+      body main .form-container .nom-ape {
+        flex-direction: row;
+        gap: 20px; }
+      body main .form-container h1 {
+        font-size: 4rem; }
+      body main .form-container form {
+        max-width: 100%; } }
 
-/*# sourceMappingURL=style-norse-gods.css.map */
+/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,221 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(15deg, rgba(0,0,0,0.75) 0%, rgba(54, 48, 98, 0.75) 50%, rgba(130,115,151,0.75) 100%), url(../../img/contact/lava.webp) no-repeat center / cover;
+    font-family: $font;
+    color: $text;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+
+
+    /*** N A V ***/
+
+    .nav {
+        @include create-nav(movil);
+        // position: static;
+
+        .nav-bur {
+            // position: static;
+        }
+
+        .hamburger-inner {
+            &, &::before, &::after {
+              background-color: white;
+            }
+        }
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        @include nav-bg();
+
+        .form-container {
+            max-width: 90%;
+            padding: 20px;
+
+            .nom-ape {
+                width: 100%;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+
+                input {
+                    margin: 20px 0;
+                    padding: 20px 10px;
+                }
+            }
+
+            h1 {
+                color: white;
+                font-size: calculate-rem(32);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            form {
+                max-width: 100%;
+                margin: auto;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                %input {
+                    background-color: rgba(255, 255, 255, 0);
+                    background-color: rgba(0, 0, 0, 0.1);
+                    color: white;
+                    font-size: calculate-rem(14);
+                    font-family: $font;
+
+                    margin: 20px 0;
+                    padding: 20px 10px;
+                    width: 100%;
+
+                    border: none;
+                    border-bottom: 1.5px solid white;
+                    outline: none;
+                }
+                
+                %placeholder {
+                    color: $text-darkbg;
+                    font-size: calculate-rem(14);
+                    font-family: $font;
+                }
+
+                input {
+                    @extend %input;
+
+                    &::placeholder {
+                        @extend %placeholder;
+                    }
+
+                    &:focus {
+                        background-color: rgba(255, 255, 255, 0.1);
+                        border: 1.5px solid white;
+                    }
+
+                    &[type = submit] {
+                        background-color: rgba(255, 255, 255, 0.1);
+                        color: $text-darkbg;
+                        font-size: calculate-rem(18);
+                        font-family: $font;
+
+                        border: none;
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+                }
+
+                textarea {
+                    @extend %input;
+                    border: 1.5px solid white;
+
+                    resize: vertical;
+
+                    &::placeholder {
+                        @extend %placeholder;
+                    }
+
+                    &:focus {
+                        background-color: rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .nav {
+            @include create-nav(tablet);
+        }
+
+        main {
+            .form-container {
+                max-width: 80%;
+
+                .nom-ape {
+                    flex-direction: row;
+                    gap: 20px;
+                }
+
+                h1 {
+                    font-size: calculate-rem(48);
+                }
+
+                form {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .nav {
+            @include create-nav(pc);
+        }
+
+        main {
+            .form-container {
+                max-width: 70%;
+
+                .nom-ape {
+                    flex-direction: row;
+                    gap: 20px;
+                }
+
+                h1 {
+                    font-size: calculate-rem(64);
+                }
+
+                form {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
