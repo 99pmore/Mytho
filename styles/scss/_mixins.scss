@@ -84,7 +84,7 @@
 
     .nav-bur {
         height: 60px;
-        padding: 10px 20px;
+        padding: 10px 16px;
 
         color: white;
     
@@ -95,8 +95,8 @@
     }
     
     .menu {
-        font-size: calculate-rem(22);
         background: rgba(54, 48, 98, 0.85);
+        box-shadow: 0 0 20px $main;
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
         width: 0;
@@ -108,100 +108,65 @@
         top: 0;
     
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
     
         transition: all 0.5s;
 
-        .nav-logo {
-            margin: 25% 0 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-
-            h2 {
-                font-family: $font-logo;
-                color: white;
-                font-size: calculate-rem(40);
-                letter-spacing: 2.5px;
-                margin-left: 16px;
-            }
-        }
-        
         .nav-links {
+            height: 70%;
+
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-evenly;
             align-items: center;
             flex-direction: column;
 
-            details {
-                margin-bottom: 25%;
-                color: white;
+            .nav-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 cursor: pointer;
-
-                &[open] {
-                    summary {
-                        &::before {
-                            content:"\1F853";
-                            font-weight: 800;
-                            margin-right: 8px;
-                            color: $orange;
-                        }
-                    }
+    
+                h2 {
+                    font-family: $font-logo;
+                    color: white;
+                    font-size: calculate-rem(40);
+                    letter-spacing: 2.5px;
+                    margin-left: 16px;
                 }
+            }
 
-                summary {
-                    list-style: none;
-
-                    &::before { 
-                        content:"\01F852";
-                        font-weight: 800;
-                        margin-right: 8px;
-                        color: $orange; 
-                    }
-
-                    padding: 20px 0;
-
+            .links {
+                height: 70%;
+                font-size: calculate-rem(22);
+    
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-direction: column;
+    
+                a {
+                    color: white;
+                    text-decoration: none;
+                    transition: transform 0.3s;
+    
                     &:hover {
-                        // text-decoration: line-through;
-                        // text-decoration-color: $orange;
-                        color: $orange;
+                        transform: scale(1.2);
                     }
-                }
-
-                .links {
-                    display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    flex-direction: column;
-
-                    a {
-                        padding: 20px 0;
-                        color: white;
-                        text-decoration: none;
-                        transition: transform 0.3s;
-        
-                        &:hover {
-                            transform: scale(1.2);
-                        }
-
-                        span {
-                            margin-right: 8px;
-                        }
+    
+                    span {
+                        margin-right: 8px;
                     }
                 }
             }
-        }
-
-        .contact-link {
-            a {
-
-                &:hover {
-                    // text-decoration: line-through;
-                    // text-decoration-color: $orange;
-                    color: $orange;
+    
+            .contact-link {
+                font-size: calculate-rem(24);
+                a {
+                    &:hover {
+                        color: $orange;
+                    }
                 }
             }
         }

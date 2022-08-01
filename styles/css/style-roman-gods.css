@@ -38,9 +38,9 @@
   margin: 0;
   overflow: visible; }
   .hamburger:hover {
-    opacity: 0.8; }
+    opacity: 0.6; }
   .hamburger.is-active:hover {
-    opacity: 0.8; }
+    opacity: 0.6; }
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
@@ -159,15 +159,15 @@ body {
     transition: all 0.5s; }
     body nav .nav-bur {
       height: 60px;
-      padding: 10px 20px;
+      padding: 10px 16px;
       color: white;
       display: flex;
       align-items: center;
       position: relative;
       z-index: 900; }
     body nav .menu {
-      font-size: 1.375rem;
       background: rgba(54, 48, 98, 0.85);
+      box-shadow: 0 0 20px #363062;
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       width: 0;
@@ -177,62 +177,46 @@ body {
       left: -100vw;
       top: 0;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-evenly;
       align-items: center;
       flex-direction: column;
       transition: all 0.5s; }
-      body nav .menu .nav-logo {
-        margin: 25% 0 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer; }
-        body nav .menu .nav-logo h2 {
-          font-family: "Harman Sans", sans-serif;
-          color: white;
-          font-size: 2.5rem;
-          letter-spacing: 2.5px;
-          margin-left: 16px; }
       body nav .menu .nav-links {
+        height: 70%;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column; }
-        body nav .menu .nav-links details {
-          margin-bottom: 25%;
-          color: white;
+        body nav .menu .nav-links .nav-logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           cursor: pointer; }
-          body nav .menu .nav-links details[open] summary::before {
-            content: "\1F853";
-            font-weight: 800;
-            margin-right: 8px;
+          body nav .menu .nav-links .nav-logo h2 {
+            font-family: "Harman Sans", sans-serif;
+            color: white;
+            font-size: 2.5rem;
+            letter-spacing: 2.5px;
+            margin-left: 16px; }
+        body nav .menu .nav-links .links {
+          height: 70%;
+          font-size: 1.375rem;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column; }
+          body nav .menu .nav-links .links a {
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s; }
+            body nav .menu .nav-links .links a:hover {
+              transform: scale(1.2); }
+            body nav .menu .nav-links .links a span {
+              margin-right: 8px; }
+        body nav .menu .nav-links .contact-link {
+          font-size: 1.5rem; }
+          body nav .menu .nav-links .contact-link a:hover {
             color: #ff9d59; }
-          body nav .menu .nav-links details summary {
-            list-style: none;
-            padding: 20px 0; }
-            body nav .menu .nav-links details summary::before {
-              content: "\01F852";
-              font-weight: 800;
-              margin-right: 8px;
-              color: #ff9d59; }
-            body nav .menu .nav-links details summary:hover {
-              color: #ff9d59; }
-          body nav .menu .nav-links details .links {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-direction: column; }
-            body nav .menu .nav-links details .links a {
-              padding: 20px 0;
-              color: white;
-              text-decoration: none;
-              transition: transform 0.3s; }
-              body nav .menu .nav-links details .links a:hover {
-                transform: scale(1.2); }
-              body nav .menu .nav-links details .links a span {
-                margin-right: 8px; }
-      body nav .menu .contact-link a:hover {
-        color: #ff9d59; }
     body nav .menu-open {
       left: 0;
       transition: all 0.5s;
@@ -400,15 +384,15 @@ body {
       transition: all 0.5s; }
       body .nav .nav-bur {
         height: 60px;
-        padding: 10px 20px;
+        padding: 10px 16px;
         color: white;
         display: flex;
         align-items: center;
         position: relative;
         z-index: 900; }
       body .nav .menu {
-        font-size: 1.375rem;
         background: rgba(54, 48, 98, 0.85);
+        box-shadow: 0 0 20px #363062;
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
         width: 0;
@@ -418,62 +402,46 @@ body {
         left: -100vw;
         top: 0;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
         transition: all 0.5s; }
-        body .nav .menu .nav-logo {
-          margin: 25% 0 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer; }
-          body .nav .menu .nav-logo h2 {
-            font-family: "Harman Sans", sans-serif;
-            color: white;
-            font-size: 2.5rem;
-            letter-spacing: 2.5px;
-            margin-left: 16px; }
         body .nav .menu .nav-links {
+          height: 70%;
           display: flex;
-          justify-content: flex-start;
+          justify-content: space-evenly;
           align-items: center;
           flex-direction: column; }
-          body .nav .menu .nav-links details {
-            margin-bottom: 25%;
-            color: white;
+          body .nav .menu .nav-links .nav-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer; }
-            body .nav .menu .nav-links details[open] summary::before {
-              content: "\1F853";
-              font-weight: 800;
-              margin-right: 8px;
+            body .nav .menu .nav-links .nav-logo h2 {
+              font-family: "Harman Sans", sans-serif;
+              color: white;
+              font-size: 2.5rem;
+              letter-spacing: 2.5px;
+              margin-left: 16px; }
+          body .nav .menu .nav-links .links {
+            height: 70%;
+            font-size: 1.375rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column; }
+            body .nav .menu .nav-links .links a {
+              color: white;
+              text-decoration: none;
+              transition: transform 0.3s; }
+              body .nav .menu .nav-links .links a:hover {
+                transform: scale(1.2); }
+              body .nav .menu .nav-links .links a span {
+                margin-right: 8px; }
+          body .nav .menu .nav-links .contact-link {
+            font-size: 1.5rem; }
+            body .nav .menu .nav-links .contact-link a:hover {
               color: #ff9d59; }
-            body .nav .menu .nav-links details summary {
-              list-style: none;
-              padding: 20px 0; }
-              body .nav .menu .nav-links details summary::before {
-                content: "\01F852";
-                font-weight: 800;
-                margin-right: 8px;
-                color: #ff9d59; }
-              body .nav .menu .nav-links details summary:hover {
-                color: #ff9d59; }
-            body .nav .menu .nav-links details .links {
-              display: flex;
-              justify-content: space-evenly;
-              align-items: center;
-              flex-direction: column; }
-              body .nav .menu .nav-links details .links a {
-                padding: 20px 0;
-                color: white;
-                text-decoration: none;
-                transition: transform 0.3s; }
-                body .nav .menu .nav-links details .links a:hover {
-                  transform: scale(1.2); }
-                body .nav .menu .nav-links details .links a span {
-                  margin-right: 8px; }
-        body .nav .menu .contact-link a:hover {
-          color: #ff9d59; }
       body .nav .menu-open {
         left: 0;
         transition: all 0.5s;
@@ -526,15 +494,15 @@ body {
       transition: all 0.5s; }
       body .nav .nav-bur {
         height: 60px;
-        padding: 10px 20px;
+        padding: 10px 16px;
         color: white;
         display: flex;
         align-items: center;
         position: relative;
         z-index: 900; }
       body .nav .menu {
-        font-size: 1.375rem;
         background: rgba(54, 48, 98, 0.85);
+        box-shadow: 0 0 20px #363062;
         backdrop-filter: blur(4px);
         -webkit-backdrop-filter: blur(4px);
         width: 0;
@@ -544,62 +512,46 @@ body {
         left: -100vw;
         top: 0;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
         transition: all 0.5s; }
-        body .nav .menu .nav-logo {
-          margin: 25% 0 20px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer; }
-          body .nav .menu .nav-logo h2 {
-            font-family: "Harman Sans", sans-serif;
-            color: white;
-            font-size: 2.5rem;
-            letter-spacing: 2.5px;
-            margin-left: 16px; }
         body .nav .menu .nav-links {
+          height: 70%;
           display: flex;
-          justify-content: flex-start;
+          justify-content: space-evenly;
           align-items: center;
           flex-direction: column; }
-          body .nav .menu .nav-links details {
-            margin-bottom: 25%;
-            color: white;
+          body .nav .menu .nav-links .nav-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer; }
-            body .nav .menu .nav-links details[open] summary::before {
-              content: "\1F853";
-              font-weight: 800;
-              margin-right: 8px;
+            body .nav .menu .nav-links .nav-logo h2 {
+              font-family: "Harman Sans", sans-serif;
+              color: white;
+              font-size: 2.5rem;
+              letter-spacing: 2.5px;
+              margin-left: 16px; }
+          body .nav .menu .nav-links .links {
+            height: 70%;
+            font-size: 1.375rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column; }
+            body .nav .menu .nav-links .links a {
+              color: white;
+              text-decoration: none;
+              transition: transform 0.3s; }
+              body .nav .menu .nav-links .links a:hover {
+                transform: scale(1.2); }
+              body .nav .menu .nav-links .links a span {
+                margin-right: 8px; }
+          body .nav .menu .nav-links .contact-link {
+            font-size: 1.5rem; }
+            body .nav .menu .nav-links .contact-link a:hover {
               color: #ff9d59; }
-            body .nav .menu .nav-links details summary {
-              list-style: none;
-              padding: 20px 0; }
-              body .nav .menu .nav-links details summary::before {
-                content: "\01F852";
-                font-weight: 800;
-                margin-right: 8px;
-                color: #ff9d59; }
-              body .nav .menu .nav-links details summary:hover {
-                color: #ff9d59; }
-            body .nav .menu .nav-links details .links {
-              display: flex;
-              justify-content: space-evenly;
-              align-items: center;
-              flex-direction: column; }
-              body .nav .menu .nav-links details .links a {
-                padding: 20px 0;
-                color: white;
-                text-decoration: none;
-                transition: transform 0.3s; }
-                body .nav .menu .nav-links details .links a:hover {
-                  transform: scale(1.2); }
-                body .nav .menu .nav-links details .links a span {
-                  margin-right: 8px; }
-        body .nav .menu .contact-link a:hover {
-          color: #ff9d59; }
       body .nav .menu-open {
         left: 0;
         transition: all 0.5s;

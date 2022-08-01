@@ -50,35 +50,31 @@
             </button>
         </div>
 
-        <div id="menu" class="menu">
-            <div class="nav-logo" onclick="location.href='#header'">
-                <img src="../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
-                <h2>Mytho</h2>
-            </div>
+        <div id="menu" class="menu" onclick="toggleMenu()">
             <div class="nav-links">
-                <details>
-                    <summary>Mitologías</summary>
-                    <div class="links">
-                        <a href="#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
-                        <a href="#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
-                        <a href="#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
-                        <a href="#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
-                        <a href="#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
-                        <a href="#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
-                        <a href="#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
-                    </div>
-                </details>
-            </div>
-            <div class="contact-link">
-                <a href="contact.html">Contacto</a>
+                <div class="nav-logo" onclick="location.href='#header'">
+                    <img src="../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
+                    <h2>Mytho</h2>
+                </div>
+                <div class="links">
+                    <a href="#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png" alt="Icono ankh" width="20" height="20"/></span>Egipcia</a>
+                    <a href="#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png" alt="Icono drakkar" width="20" height="20"/></span>Nórdica</a>
+                    <a href="#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png" alt="Icono venus" width="20" height="20"/></span>Griega</a>
+                    <a href="#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png" alt="Icono coliseo" width="20" height="20"/></span>Romana</a>
+                    <a href="#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png" alt="Icono plumas" width="20" height="20"/></span>Azteca</a>
+                    <a href="#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png" alt="Icono piramide" width="20" height="20"/></span>Maya</a>
+                    <a href="#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png" alt="Icono cincel" width="20" height="20"/></span>Sumeria</a>
+                </div>
+                <div class="contact-link">
+                    <a href="contact.html">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main id="main">
-        <!-- <div id="darkbg" class="nav-main-bg" onclick="toggleMenu()"></div> -->
-        <div id="darkbg" class="nav-main-bg visible"></div>
-        
+        <div id="menu-bg" class="menu-bg" onclick="toggleMenu()"></div>
+
         <section id="mitologia" class="mytho-container">
             <header>
                 <h2>Mitología</h2>

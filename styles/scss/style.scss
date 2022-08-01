@@ -15,6 +15,8 @@ body {
     background-color: $bg;
     color: $text;
 
+    position: relative;
+
     a {
         text-decoration: none;
         color: $text-darkbg;
@@ -80,29 +82,30 @@ body {
     /*** M A I N ***/
 
     main {
-        .nav-main-bg {
-            background: #827397;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .menu-bg {
+            background: white;
             position: absolute;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            z-index: 500;
+            z-index: 400;
             opacity: 0;
             width: 0;
         }
-
+          
         .visible {
-            opacity: 0.5;
+            position: fixed;
+            opacity: 0.25;
             width: 100%;
             transition: opacity ease-in 0.5s;
             display: block;
         }
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
 
         #mitologia {
             padding: 80px 0;
@@ -210,7 +213,7 @@ body {
         .main-header {
             @include create-header(url(../../img/index/odin.webp), pc);
             .birds {
-                animation: birds 4s linear;
+                animation: birds 5s linear;
 
                 .fog {
                     animation: fog 10s linear infinite;
