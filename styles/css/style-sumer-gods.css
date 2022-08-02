@@ -227,6 +227,7 @@ body {
     body main .card {
       position: relative;
       display: flex;
+      justify-content: center;
       align-items: center;
       box-shadow: 0 50px 50px -60px #827397;
       transition: 0.4s ease-out; }
@@ -254,9 +255,9 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: rgba(130, 115, 151, 0.6);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
+        background: rgba(54, 48, 98, 0.5);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
         color: white;
         opacity: 0;
         transform: translateY(10%);
@@ -265,12 +266,12 @@ body {
           opacity: 1;
           transform: translateY(0); }
         body main .card .card-info h3 {
-          text-shadow: 0 0 10px #363062;
+          text-shadow: 0 4px 6px #363062;
           font-size: 2rem;
           text-align: center; }
         body main .card .card-info p {
-          text-shadow: 0 0 14px #363062;
-          font-size: 1.1rem;
+          text-shadow: 0 4px 6px #363062;
+          font-size: 1.25rem;
           margin: 5px 0 15px 0;
           text-align: center; }
     body main #anu {

@@ -34,40 +34,53 @@
 
     <nav id="nav" class="nav">
         <div class="nav-bur">
-            <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div id="burger" class="hamburger hamburger--minus" onclick="toggleMenu()">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
         </div>
 
-        <div id="menu" class="menu">
-            <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
-                <h2>Mytho</h2>
-            </div>
+        <div id="menu" class="menu" onclick="toggleMenu()">
             <div class="nav-links">
-                <details>
-                    <summary>Mitologías</summary>
-                    <div class="links">
-                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
-                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
-                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
-                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
-                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
-                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
-                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
-                    </div>
-                </details>
-            </div>
-            <div class="contact-link">
-                <a href="contact.html">Contacto</a>
+                <div class="nav-logo" onclick="location.href='../index.html'">
+                    <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
+                    <h2>Mytho</h2>
+                </div>
+                <div class="links">
+                    <a href="../index.html#egipcia"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png" alt="Icono ankh" width="20"
+                                height="20" /></span>Egipcia</a>
+                    <a href="../index.html#nordica"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png" alt="Icono drakkar"
+                                width="20" height="20" /></span>Nórdica</a>
+                    <a href="../index.html#griega"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"
+                                alt="Icono venus" width="20" height="20" /></span>Griega</a>
+                    <a href="../index.html#romana"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png" alt="Icono coliseo"
+                                width="20" height="20" /></span>Romana</a>
+                    <a href="../index.html#azteca"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png" alt="Icono plumas"
+                                width="20" height="20" /></span>Azteca</a>
+                    <a href="../index.html#maya"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png" alt="Icono piramide"
+                                width="20" height="20" /></span>Maya</a>
+                    <a href="../index.html#sumeria"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/nail.png" alt="Icono cincel" width="20"
+                                height="20" /></span>Sumeria</a>
+                </div>
+                <div class="contact-link">
+                    <a href="../contact.html">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <section class="myth-section">
+        <div id="menu-bg" class="menu-bg" onclick="toggleMenu()"></div>
+
+        <section class="myth-section" id="creacion">
             <header>
                 <h2>La creación</h2>
             </header>
@@ -88,16 +101,16 @@
                 accusamus? Fugiat delectus itaque ad iusto omnis asperiores nostrum illo corrupti architecto. Omnis
                 quasi ullam cum, molestias eaque debitis. Nobis vero alias assumenda reiciendis enim illum inventore
                 repellendus voluptatum.
-
-                <div class="myth-info-img">
-                    <img src="../../img/egypt/myths/creation.jpg" alt="Papiro donde se representa el mito de la creación según los egipcios">
-                </div>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/egypt/myths/creation.jpg"
+                    alt="Papiro donde se representa el mito de la creación según los egipcios">
             </div>
         </section>
 
-        <section class="myth-section">
+        <section class="myth-section" id="osiris">
             <header>
-                <h2>Osiris</h2>
+                <h2>Muerte de Osiris</h2>
             </header>
             <div class="myth-info">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quis perspiciatis, ab commodi nostrum
@@ -124,14 +137,13 @@
                 quidem. Tenetur modi, sequi consectetur facilis, atque est quasi dicta, repellendus aperiam praesentium
                 magni dolorum non fugiat libero distinctio esse saepe eligendi accusamus quam at? Perspiciatis earum
                 magnam id fugit optio necessitatibus, cumque ab perferendis unde odio?
-
-                <div class="myth-info-img">
-                    <img src="../../img/egypt/myths/osiris.png" alt="Pintura en la que se representa el mito de Osiris">
-                </div>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/egypt/myths/osiris.png" alt="Pintura en la que se representa el mito de Osiris">
             </div>
         </section>
 
-        <section class="myth-section">
+        <section class="myth-section" id="ra">
             <header>
                 <h2>Nombre secreto de Ra</h2>
             </header>
@@ -160,12 +172,91 @@
                 quidem. Tenetur modi, sequi consectetur facilis, atque est quasi dicta, repellendus aperiam praesentium
                 magni dolorum non fugiat libero distinctio esse saepe eligendi accusamus quam at? Perspiciatis earum
                 magnam id fugit optio necessitatibus, cumque ab perferendis unde odio?
-
-                <div class="myth-info-img">
-                    <img src="../../img/egypt/myths/ra.webp" alt="Pintura en la que se representa al dios Ra">
-                </div>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/egypt/myths/ra.webp" alt="Pintura en la que se representa al dios Ra">
             </div>
         </section>
+
+        <section class="myth-section" id="juicio">
+            <header>
+                <h2>Juicio de Osiris</h2>
+            </header>
+            <div class="myth-info">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quis perspiciatis, ab commodi nostrum
+                laboriosam modi facilis libero, mollitia voluptates nihil distinctio corrupti quos, delectus debitis
+                neque culpa? Praesentium quae tempore perferendis odit, quam consectetur. Esse iusto quos ad a
+                laboriosam beatae saepe unde nemo error quibusdam tempora neque delectus odit similique commodi sequi
+                ipsum consectetur, eius corporis, aliquam alias illum consequatur assumenda? Magni, excepturi
+                necessitatibus! Similique enim debitis pariatur molestiae velit in doloribus! Expedita quod eaque
+                delectus nobis minima nesciunt. Similique consectetur deserunt, accusamus earum quia sit modi vel esse
+                provident consequatur quam? Voluptates porro soluta ullam, nam consectetur tempora iste veniam sint
+                mollitia? Nemo magnam explicabo reprehenderit natus officia assumenda vel voluptates harum porro, ullam
+                eum dolore dolorum nostrum deleniti aliquam iure officiis voluptate nobis velit quidem nisi quo
+                consequatur minus eligendi? Recusandae officia nemo incidunt debitis vel laborum dolor, facere voluptas
+                necessitatibus doloribus temporibus eligendi totam est? Hic ab vel beatae quos, quod numquam, ipsum
+                doloribus ducimus dolorem, consectetur quam corporis ad odit omnis molestiae sit fugiat debitis
+                accusamus? Fugiat delectus itaque ad iusto omnis asperiores nostrum illo corrupti architecto. Omnis
+                quasi ullam cum, molestias eaque debitis. Nobis vero alias assumenda reiciendis enim illum inventore
+                repellendus voluptatum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam molestiae commodi sapiente, officia, ab
+                voluptatibus animi excepturi obcaecati a, ratione labore hic in neque vero tempore ipsa porro distinctio
+                quisquam minima cumque totam delectus! Nesciunt, eum. Repellendus provident, voluptatem modi iure esse
+                doloribus odit quo? Nam, provident blanditiis sint, molestiae voluptates reprehenderit quod, quis
+                assumenda nobis aliquid repellat a consequuntur ullam eveniet sapiente commodi numquam dolorum doloribus
+                soluta suscipit temporibus tempore amet delectus non? Quidem, nostrum non eum beatae dolores similique
+                ratione accusantium dolor nihil neque asperiores perferendis quos tenetur. Eos, possimus sapiente. Quo
+                in odio suscipit alias ut natus molestiae, quas perspiciatis. Illum ipsum ipsa iste, dolorem suscipit
+                nihil mollitia vero consectetur vitae, hic, a magni nemo praesentium explicabo quis pariatur fuga sequi
+                veniam sapiente ratione animi minima voluptate! Unde ratione, pariatur odit voluptates temporibus
+                doloribus quam iusto magni? Eligendi cumque quae nulla minus nesciunt aliquid natus perferendis
+                recusandae, accusantium maiores enim id beatae cum? Est sint minus fugiat aliquid distinctio placeat
+                blanditiis suscipit aliquam quae, officia soluta cumque consequuntur, ullam maxime architecto aperiam
+                veniam iste necessitatibus ex accusantium velit. Unde, animi asperiores totam maxime esse fugiat
+                voluptates repellat natus numquam necessitatibus alias, quas maiores harum consectetur, molestias magni!
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/egypt/myths/creation.jpg"
+                    alt="">
+            </div>
+        </section>
+
+        <section class="myth-section" id="nut">
+            <header>
+                <h2>Los hijos de Nut</h2>
+            </header>
+            <div class="myth-info">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quis perspiciatis, ab commodi nostrum
+                laboriosam modi facilis libero, mollitia voluptates nihil distinctio corrupti quos, delectus debitis
+                neque culpa? Praesentium quae tempore perferendis odit, quam consectetur. Esse iusto quos ad a
+                laboriosam beatae saepe unde nemo error quibusdam tempora neque delectus odit similique commodi sequi
+                ipsum consectetur, eius corporis, aliquam alias illum consequatur assumenda? Magni, excepturi
+                necessitatibus! Similique enim debitis pariatur molestiae velit in doloribus! Expedita quod eaque
+                delectus nobis minima nesciunt. Similique consectetur deserunt, accusamus earum quia sit modi vel esse
+                provident consequatur quam? Voluptates porro soluta ullam, nam consectetur tempora iste veniam sint
+                mollitia? Nemo magnam explicabo reprehenderit natus officia assumenda vel voluptates harum porro, ullam
+                eum dolore dolorum nostrum deleniti aliquam iure officiis voluptate nobis velit quidem nisi quo
+                consequatur minus eligendi? Recusandae officia nemo incidunt debitis vel laborum dolor, facere voluptas
+                necessitatibus doloribus temporibus eligendi totam est? Hic ab vel beatae quos, quod numquam, ipsum
+                doloribus ducimus dolorem, consectetur quam corporis ad odit omnis molestiae sit fugiat debitis
+                accusamus? Fugiat delectus itaque ad iusto omnis asperiores nostrum illo corrupti architecto. Omnis
+                quasi ullam cum, molestias eaque debitis. Nobis vero alias assumenda reiciendis enim illum inventore
+                repellendus voluptatum.
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/egypt/myths/creation.jpg"
+                    alt="">
+            </div>
+        </section>
+
+        <div class="arrow-to-top">
+            <a href="#header">
+                <script async src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/eflfmgmj.json" trigger="loop" delay="2500"
+                    colors="primary:#ff9d59" style="width:50px;height:50px">
+                </lord-icon>
+            </a>
+        </div>
     </main>
 
     <footer>
@@ -173,4 +264,5 @@
     </footer>
 
 </body>
+
 </html>

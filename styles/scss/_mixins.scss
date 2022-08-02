@@ -1,13 +1,12 @@
 @import "variables";
 @import "functions";
 
-
-
 /*** H E A D E R ***/
 
 @mixin create-header($image: "url()", $device: "movil") {
-    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), $image no-repeat center / cover;
-    
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)),
+        $image no-repeat center / cover;
+
     font-family: $font-logo;
     font-size: calculate-rem(30);
     letter-spacing: 5px;
@@ -16,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     position: sticky;
     z-index: 900;
 
@@ -54,7 +53,7 @@
         img {
             animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07);
         }
-        
+
         h1 {
             animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07);
         }
@@ -63,14 +62,12 @@
     .arrow {
         position: absolute;
         bottom: 40px;
-    
+
         display: flex;
         justify-content: center;
         align-items: center;
-    }   
+    }
 }
-
-
 
 /*** N A V ***/
 
@@ -79,7 +76,7 @@
     position: fixed;
     top: 0;
     z-index: 500;
-    
+
     transition: all 0.5s;
 
     .nav-bur {
@@ -87,13 +84,13 @@
         padding: 10px 16px;
 
         color: white;
-    
+
         display: flex;
         align-items: center;
         position: relative;
         z-index: 900;
     }
-    
+
     .menu {
         font-size: calculate-rem(22);
         background: rgba(54, 48, 98, 0.85);
@@ -102,17 +99,17 @@
         -webkit-backdrop-filter: blur(4px);
         width: 0;
         height: 100vh;
-    
+
         position: fixed;
         z-index: 800;
         left: -100vw;
         top: 0;
-    
+
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-    
+
         transition: all 0.5s;
 
         .nav-links {
@@ -128,7 +125,7 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
-    
+
                 h2 {
                     font-family: $font-logo;
                     color: white;
@@ -140,32 +137,32 @@
 
             .links {
                 height: 70%;
-    
+
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 flex-direction: column;
-    
+
                 a {
                     color: white;
                     text-decoration: none;
                     transition: transform 0.3s;
-    
+
                     &:hover {
                         transform: scale(1.2);
                     }
-    
+
                     span {
                         margin-right: 8px;
                     }
                 }
             }
-    
+
             .contact-link {
                 a {
                     color: white;
                     text-decoration: none;
-                    
+
                     &:hover {
                         color: $orange;
                     }
@@ -185,12 +182,11 @@
     }
 }
 
-
-
 /*** F O O T E R ***/
 
 @mixin create-footer($image: "url()") {
-    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), $image no-repeat center / cover;
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)),
+        $image no-repeat center / cover;
     background-attachment: fixed;
     color: white;
     box-shadow: 0 0 20px $main;
@@ -198,13 +194,11 @@
     margin-top: 50px;
 
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     position: sticky;
     z-index: 500;
 }
-
-
 
 /*** S C R O L L ***/
 
@@ -223,8 +217,6 @@
     }
 }
 
-
-
 /*** C A R D  L I N K ***/
 
 @mixin create-card-link($device: "movil") {
@@ -242,18 +234,18 @@
         width: 100%;
         height: 100%;
         opacity: 0.75;
-    
+
         aspect-ratio: 3/2;
         object-fit: cover;
         object-position: center center;
-    
+
         filter: brightness(90%) grayscale(40%) blur(2px);
         transform: scale(1.03);
         transition: transform 0.3s;
 
         &:hover {
             opacity: 0.85;
-        
+
             filter: grayscale(5%);
             transform: scale(1.1);
         }
@@ -261,7 +253,7 @@
 
     .card-text {
         position: absolute;
-    
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -284,20 +276,19 @@
         &:first-child {
             animation: img-entry-l 1s cubic-bezier(0.175, 0.885, 0.32, 1.065);
         }
-        
+
         &:last-child {
             animation: img-entry-r 1s cubic-bezier(0.175, 0.885, 0.32, 1.065);
         }
     }
 }
 
-
-
 /*** C A R D ***/
 
 @mixin create-card() {
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
 
     box-shadow: 0 50px 50px -60px $details;
@@ -308,14 +299,14 @@
         content: "";
         width: 100%;
         height: 100%;
-    
+
         position: absolute;
         top: 0;
         left: 0;
         z-index: 2;
-    
+
         display: flex;
-    
+
         transition: 0.3s;
     }
 
@@ -328,23 +319,24 @@
     }
 
     .card-info {
-        width: 100%; height: 100%;
+        width: 100%;
+        height: 100%;
         padding: 10px;
-    
+
         position: relative;
         z-index: 3;
-    
+
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    
-        background: rgba(130, 115, 151, 0.6);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
+
+        background: rgba(54, 48, 98, 0.5);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
         color: white;
         opacity: 0;
-    
+
         transform: translateY(10%);
         transition: 0.3s;
 
@@ -354,41 +346,42 @@
         }
 
         h3 {
-            text-shadow: 0 0 10px $main;
-            font-size: 2rem;
+            text-shadow: 0 4px 6px $main;
+            font-size: calculate-rem(32);
             text-align: center;
         }
-           
+
         p {
-            text-shadow: 0 0 14px $main;
-            font-size: 1.1rem;
+            text-shadow: 0 4px 6px $main;
+            font-size: calculate-rem(20);
             margin: 5px 0 15px 0;
             text-align: center;
         }
     }
 }
 
-
-
 /*** M Y T H ***/
 
 @mixin create-myth($device: "movil") {
-    background-color: white;
+    // background-color: white;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../img/index/pergamino.webp) no-repeat center / cover;
+    box-shadow: 0 0 20px $sec;
+
     padding: 50px 0;
-    box-shadow: 0 0 8px $sec;
     width: 100%;
+    height: 100%;
     margin: auto;
 
-    @if $device == "tablet" {
-        width: 90%;
-    }
-
-    @if $device == "pc" {
-        width: 75%;
-    }
-
     header {
-        padding: 40px;
+        padding: 20px;
+
+        @if $device == "tablet" {
+            padding: 30px;
+        }
+
+        @if $device == "pc" {
+            padding: 40px;
+        }
 
         h2 {
             color: $title;
@@ -406,34 +399,67 @@
     }
 
     .myth-info {
-        overflow: hidden;
-        padding: 40px;
-        text-align: justify;
+        overflow: auto;
+        padding: 20px;
+        max-height: 500px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        @if $device == "tablet" {
+            padding: 30px;
+        }
+
+        @if $device == "pc" {
+            padding: 40px;
+        }
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            width: 8px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: #eeeeee;
+    
+            &:hover {
+                background-color: #e4e4e4;
+            }
+        }
+    }
+
+    .myth-info-img {
+        padding: 20px;
+        margin-top: 20px;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
 
-        .myth-info-img {
-            margin-top: 20px;
+        @if $device == "tablet" {
+            padding: 30px;
+        }
 
-            img {
-                opacity: 0.9;
-                width: 100%;
-                
-                object-fit: cover;
-                object-position: center center;
+        @if $device == "pc" {
+            padding: 40px;
+        }
 
-                &:hover {
-                    opacity: 1;
-                }
+        img {
+            opacity: 0.9;
+            width: 100%;
+            height: 100%;
+
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            object-position: center center;
+
+            &:hover {
+                opacity: 1;
             }
         }
     }
 }
-
-
 
 /*** N A V  B G ***/
 
@@ -449,7 +475,7 @@
         opacity: 0;
         width: 0;
     }
-      
+
     .visible {
         position: fixed;
         opacity: 0.25;

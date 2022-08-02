@@ -13,6 +13,8 @@
 body {
     font-family: $font;
     background-color: $bg;
+    // background: linear-gradient(rgba(54, 48, 98, 0.25), rgba(255, 255, 255, 0.25)), url(../../img/index/clouds.webp) no-repeat center / cover;
+    // background-attachment: fixed;
     color: $text;
     
     img {
@@ -46,12 +48,25 @@ body {
     /*** M A I N ***/
 
     main {
+        @include nav-bg();
+
+        padding: 40px 0;
+        width: 90%;
+        margin: auto;
+
         display: grid;
         grid-template-columns: repeat(1, minmax(200px, 1fr));
         gap: 20px;
 
+        justify-content: start;
+        align-items: start;
+        
         .myth-section {
             @include create-myth(movil);
+        }
+
+        .arrow-to-top {
+            display: none;
         }
     }
 
@@ -90,6 +105,8 @@ body {
         }
 
         main {
+            width: 85%;
+
             .myth-section {
                 @include create-myth(tablet);
             }
@@ -113,8 +130,39 @@ body {
         }
 
         main {
+            width: 85%;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+    
+            grid-template-areas:
+                "creacion osiris"
+                "juicio juicio"
+                "ra nut";
+    
+            #creacion { grid-area: creacion; }
+              
+            #osiris { grid-area: osiris; }
+              
+            #ra { grid-area: ra; }
+    
+            #juicio { grid-area: juicio; }
+    
+            #nut { grid-area: nut; }
+
             .myth-section {
                 @include create-myth(pc);
+            }
+
+            /*** T O  T O P ***/
+
+            .arrow-to-top {
+                display: block;
+                position: fixed;
+                bottom: 40px;
+                right: 30px;
+                z-index: 100;
             }
         }
     }

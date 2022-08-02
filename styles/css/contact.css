@@ -222,11 +222,11 @@ body {
         align-items: center;
         flex-direction: column; }
         body main .form-container .nom-ape input {
-          margin: 20px 0;
-          padding: 20px 10px; }
+          margin: 12px 0;
+          padding: 12px 6px; }
       body main .form-container h1 {
         color: white;
-        font-size: 2rem;
+        font-size: 1.625rem;
         text-align: center;
         margin-bottom: 20px; }
       body main .form-container form {
@@ -240,13 +240,13 @@ body {
           background-color: rgba(255, 255, 255, 0);
           background-color: rgba(0, 0, 0, 0.1);
           color: white;
-          font-size: 0.875rem;
+          font-size: 1rem;
           font-family: "Quicksand", sans-serif;
-          margin: 20px 0;
-          padding: 20px 10px;
+          margin: 12px 0;
+          padding: 12px 6px;
           width: 100%;
           border: none;
-          border-bottom: 1.5px solid white;
+          border-bottom: 1.25px solid rgba(255, 255, 255, 0.75);
           outline: none; }
         body main .form-container form input::placeholder, body main .form-container form textarea::placeholder {
           color: #fbfbfb;
@@ -254,7 +254,7 @@ body {
           font-family: "Quicksand", sans-serif; }
         body main .form-container form input:focus {
           background-color: rgba(255, 255, 255, 0.1);
-          border: 1.5px solid white; }
+          border: 1.25px solid white; }
         body main .form-container form input[type=submit] {
           background-color: rgba(255, 255, 255, 0.1);
           color: #fbfbfb;
@@ -264,7 +264,7 @@ body {
           body main .form-container form input[type=submit]:hover {
             background-color: rgba(255, 255, 255, 0.2); }
         body main .form-container form textarea {
-          border: 1.5px solid white;
+          border: 1.25px solid rgba(255, 255, 255, 0.75);
           resize: vertical; }
           body main .form-container form textarea:focus {
             background-color: rgba(255, 255, 255, 0.1); }
@@ -353,10 +353,16 @@ body {
       body main .form-container .nom-ape {
         flex-direction: row;
         gap: 20px; }
+        body main .form-container .nom-ape input {
+          margin: 20px 0;
+          padding: 20px 10px; }
       body main .form-container h1 {
-        font-size: 3rem; }
+        font-size: 2.75rem; }
       body main .form-container form {
-        max-width: 100%; } }
+        max-width: 100%; }
+        body main .form-container form input, body main .form-container form textarea {
+          margin: 20px 0;
+          padding: 20px 10px; } }
   @media only screen and (min-width: 900px) {
     body .nav {
       width: 100%;
@@ -435,9 +441,15 @@ body {
       body main .form-container .nom-ape {
         flex-direction: row;
         gap: 20px; }
+        body main .form-container .nom-ape input {
+          margin: 20px 0;
+          padding: 20px 10px; }
       body main .form-container h1 {
-        font-size: 4rem; }
+        font-size: 3.75rem; }
       body main .form-container form {
-        max-width: 100%; } }
+        max-width: 100%; }
+        body main .form-container form input, body main .form-container form textarea {
+          margin: 20px 0;
+          padding: 20px 10px; } }
 
 /*# sourceMappingURL=contact.css.map */
