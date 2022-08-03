@@ -49,6 +49,8 @@ body {
         gap: 40px;
         justify-content: space-evenly;
 
+        @include nav-bg();
+
         .card {
             @include create-card();
         }

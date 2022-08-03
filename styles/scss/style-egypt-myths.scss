@@ -13,13 +13,11 @@
 body {
     font-family: $font;
     background-color: $bg;
-    // background: linear-gradient(rgba(54, 48, 98, 0.25), rgba(255, 255, 255, 0.25)), url(../../img/index/clouds.webp) no-repeat center / cover;
-    // background-attachment: fixed;
     color: $text;
     
     img {
-        max-width: 1000px;
-        max-height: 800px;
+        max-width: 1900px;
+        max-height: 1900px;
     }
 
 
@@ -48,8 +46,6 @@ body {
     /*** M A I N ***/
 
     main {
-        @include nav-bg();
-
         padding: 40px 0;
         width: 90%;
         margin: auto;
@@ -60,6 +56,8 @@ body {
 
         justify-content: start;
         align-items: start;
+
+        @include nav-bg();
         
         .myth-section {
             @include create-myth(movil);

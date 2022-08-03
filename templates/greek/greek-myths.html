@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Griega Mitos</title>
+
     <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
-    <link rel="stylesheet" href="../../css/style-greek-myths.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/css/style-greek-myths.css">
+    <link href="../styles/css/hamburgers.css" rel="stylesheet">
+
+    <script async src="../../js/script.js"></script>
 </head>
+
 <body>
 
     <header id="header" class="main-header">
@@ -31,40 +34,205 @@
 
     <nav id="nav" class="nav">
         <div class="nav-bur">
-            <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div id="burger" class="hamburger hamburger--minus" onclick="toggleMenu()">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
         </div>
 
-        <div id="menu" class="menu">
-            <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
-                <h2>Mytho</h2>
-            </div>
+        <div id="menu" class="menu" onclick="toggleMenu()">
             <div class="nav-links">
-                <details>
-                    <summary>Mitologías</summary>
-                    <div class="links">
-                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
-                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
-                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
-                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
-                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
-                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
-                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
-                    </div>
-                </details>
-            </div>
-            <div class="contact-link">
-                <a href="contact.html">Contacto</a>
+                <div class="nav-logo" onclick="location.href='../index.html'">
+                    <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
+                    <h2>Mytho</h2>
+                </div>
+                <div class="links">
+                    <a href="../index.html#egipcia"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png" alt="Icono ankh" width="20"
+                                height="20" /></span>Egipcia</a>
+                    <a href="../index.html#nordica"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png" alt="Icono drakkar"
+                                width="20" height="20" /></span>Nórdica</a>
+                    <a href="../index.html#griega"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"
+                                alt="Icono venus" width="20" height="20" /></span>Griega</a>
+                    <a href="../index.html#romana"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png" alt="Icono coliseo"
+                                width="20" height="20" /></span>Romana</a>
+                    <a href="../index.html#azteca"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png" alt="Icono plumas"
+                                width="20" height="20" /></span>Azteca</a>
+                    <a href="../index.html#maya"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png" alt="Icono piramide"
+                                width="20" height="20" /></span>Maya</a>
+                    <a href="../index.html#sumeria"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/nail.png" alt="Icono cincel" width="20"
+                                height="20" /></span>Sumeria</a>
+                </div>
+                <div class="contact-link">
+                    <a href="../contact.html">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        
+        <div id="menu-bg" class="menu-bg" onclick="toggleMenu()"></div>
+
+        <section class="myth-section" id="creacion">
+            <header>
+                <h2>El origen del Universo</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    En el principio existía el Caos (el Vacío primordial). Después se formaron las potencias
+                    elementales: Gea (la Tierra) y Eros (el Amor). Caos engendró a Érebos (las Tinieblas) y a Nix (la
+                    Noche), y estos engendraron a Éter (la Luminosidad) y Hémera (el Día).
+                </p>
+                <p>
+                    Gea engendró por sí misma a Urano (el Cielo), a las Ninfas (las Montañas) y a Ponto (el orden
+                    marino). Luego, se unió a Urano y nacieron seis titanes (Océano, Ceo, Crío, Hiperión, Jápeto y
+                    Crono) y seis titánides (Tía, Rea, Temis, Mnemósine, Febe y Tetis). Ambos formaron también a los
+                    cíclopes, vinculados con los rayos y los truenos, de nombre Arges, Estéropes y Brontes. Urano
+                    engendró a los hecatonquiros Coto, Briareo y Giges, seres gigantes y violentos de cien cabezas.
+                </p>
+                <p>
+                    Pero Urano, el Cielo, odiaba a sus hijos, y los mantenía ocultos en el seno de la madre Tierra,
+                    causándole gran sufrimiento. Gea deseaba vengarse, así que liberó a sus hijos y les pidió ayuda para
+                    matarlo. Ninguno accedió, excepto Crono, a quien Gea le fabricó una hoz. Cuando Urano envolvió a Gea
+                    en la noche, Crono lo castró y arrojó sus organos detrás de él. La sangre cayó sobre la Tierra y la
+                    fecundó, formando a las Erineas, las Ninfas de los fresnos y los Gigantes.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/greek/myths/creacion.webp" alt="Creación según los griegos">
+            </div>
+        </section>
+
+        <section class="myth-section" id="pandora">
+            <header>
+                <h2>La caja de Pandora</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Pandora fue la primera mujer humana, creada por Hefesto por orden de Zeus y siendo dotada por los
+                    diferentes dioses de algunas de sus mayores cualidades y virtudes, pero también incluyendo la
+                    capacidad de seducir y mentir. Su creación obedece al deseo del rey del Olimpo de vengarse de
+                    Prometeo y los suyos.
+                </p>
+                <p>
+                    El dios hizo que Pandora y el hermano de Prometeo, Epimeteo, se conocieran, y propició que con el
+                    tiempo se casaran. Pero Pandora recibió también una caja destinada a su marido, en la cual estaban
+                    encerrados todos los males del mundo, con instrucciones de no abrirla jamás. Sin embargo uno de los
+                    dones que había recibido Pandora era el de la curiosidad. Un día, la mujer abrió la caja para mirar
+                    qué había dentro, algo que provocaría que todos los males salieran de la caja y se repartieran por
+                    el mundo. Asustada, Pandora cerró la caja, pero en ella solo quedaba la esperanza. Entonces Pandora
+                    se dedicó a ofrecer la esperanza a los hombres, con el fin de ayudarles a soportar los males y
+                    vicisitudes del mundo.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/greek/myths/pandora.webp" alt="Cuadro de la caja de Pandora">
+            </div>
+        </section>
+
+        <section class="myth-section" id="afrodita">
+            <header>
+                <h2>El nacimiento de Afrodita</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    La diosa del amor y la pasión, Afrodita es una deidad muy reconocida dentro del panteón griego y fue
+                    ampliamente venerada en el pasado. Sin embargo, al contrario que otras deidades no fue una hija
+                    natural de ningún dios, sino que tal y como insinúa su nombre surgió de la espuma del mar. El mito
+                    de su nacimiento, el cual nos llega de Hesíodo, es el siguiente.
+                </p>
+                <p>
+                    Gea, la madre Tierra, dió a luz por sí misma a Urano, los cielos. Junto a él engendraría y daría a
+                    luz a numerosos hijos, que sin embargo serían sepultados en su madre debido al odio y temor que
+                    Urano le tenía a su prole. Un día el hijo menor, Cronos (titán que se convertiría en el padre de los
+                    dioses Olímpicos, a los cuales devoraría), con la ayuda de una hoz proporcionada por su madre,
+                    castró a su padre Urano cortándole los genitales.
+                </p>
+                <p>
+                    Los restos de dichos genitales cayeron al mar, donde la sangre y el semen se mezclarían con las
+                    aguas formando una espuma de la cual terminaría por nacer una deidad, Afrodita, ya totalmente adulta
+                    desde su nacimiento.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/greek/myths/afrodita.webp" alt="Cuadro del nacimiento de Venus de Botticelli">
+            </div>
+        </section>
+
+        <section class="myth-section" id="perseo">
+            <header>
+                <h2>Perseo y Medusa</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Perseo era un semidiós, hijo de Zeus y de la mortal Dánae. Polidectes, que se había enamorado de
+                    Dánae, pensó que Perseo estorbaba a sus planes y amenazó a este con cortar la cabeza de su madre si
+                    no le traía la cabeza de la Medusa, una de las tres gorgonas que habitaban en la isla de Sérifos.
+                </p>
+                <p>
+                    Los dioses decidieron ayudar a Perseo en su difícil empresa, Atenea le dio un escudo que era un
+                    espejo, Hades le dio un casco que lo haría invisible cuando lo usara, Hermes le dio unas sandalias
+                    que se convertirían en alas para volar, y Hefesto le dio una espada indestructible.
+                </p>
+                <p>
+                    La Medusa era un monstruo que convertía en piedra a todo el que la mirase, por lo que Perseo utilizó
+                    el escudo como espejo para no mirar a Medusa directamente y así alcanzó a cortar la cabeza de la
+                    gorgona. Perseo pudo escapar haciéndose invisible con el casco que le había dado Hades, dios del
+                    inframundo de los muertos.
+                </p>
+                <p>
+                    Después, Perseo, empleando la cabeza de la Medusa convirtió en piedra a Atlas, a Fineo, a Polidectes
+                    y a todos cuantos se opusieron contra él.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/greek/myths/perseo.webp" alt="Perseo levantando la cabeza cortada de Medusa">
+            </div>
+        </section>
+
+        <section class="myth-section" id="medusa">
+            <header>
+                <h2>El origen de Medusa</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Medusa fue una vez una joven y hermosa mujer, una sacerdotisa de Atenea cuya belleza era admirada
+                    por todo aquel que la mirara y que gozaba de múltiples pretendientes. Un día el dios Poseidón
+                    observó a la joven y cayó prendado de ella. El dios de los mares decidió raptar a Medusa y tomarla
+                    en contra de su voluntad en el templo de Atenas.
+                </p>
+                <p>
+                    Este hecho provocó la ira de Atenea, que decidió maldecir a la mujer transformando su hermosa
+                    cabellera en furiosas serpientes, además de haciendo que en adelante cualquier persona que la mirara
+                    fijamente a los ojos se convirtiera en piedra.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/greek/myths/medusa.webp" alt="Medusa">
+            </div>
+        </section>
+
+        <div class="arrow-to-top">
+            <a href="#header">
+                <script async src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/eflfmgmj.json" trigger="loop" delay="2500"
+                    colors="primary:#ff9d59" style="width:50px;height:50px">
+                </lord-icon>
+            </a>
+        </div>
     </main>
+
+    <footer>
+        <p>© Mytho | Todos los derechos reservados</p>
+    </footer>
+
 </body>
+
 </html>

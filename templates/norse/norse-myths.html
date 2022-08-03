@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nórdica Mitos</title>
     <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
-    <link rel="stylesheet" href="../../css/style-norse-myths.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/css/style-norse-myths.css">
+    <link href="../styles/css/hamburgers.css" rel="stylesheet">
+
+    <script async src="../../js/script.js"></script>
 </head>
+
 <body>
 
     <header id="header" class="main-header">
@@ -31,40 +33,310 @@
 
     <nav id="nav" class="nav">
         <div class="nav-bur">
-            <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div id="burger" class="hamburger hamburger--minus" onclick="toggleMenu()">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
         </div>
 
-        <div id="menu" class="menu">
-            <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
-                <h2>Mytho</h2>
-            </div>
+        <div id="menu" class="menu" onclick="toggleMenu()">
             <div class="nav-links">
-                <details>
-                    <summary>Mitologías</summary>
-                    <div class="links">
-                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
-                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
-                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
-                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
-                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
-                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
-                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
-                    </div>
-                </details>
-            </div>
-            <div class="contact-link">
-                <a href="contact.html">Contacto</a>
+                <div class="nav-logo" onclick="location.href='../index.html'">
+                    <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
+                    <h2>Mytho</h2>
+                </div>
+                <div class="links">
+                    <a href="../index.html#egipcia"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png" alt="Icono ankh" width="20"
+                                height="20" /></span>Egipcia</a>
+                    <a href="../index.html#nordica"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png" alt="Icono drakkar"
+                                width="20" height="20" /></span>Nórdica</a>
+                    <a href="../index.html#griega"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"
+                                alt="Icono venus" width="20" height="20" /></span>Griega</a>
+                    <a href="../index.html#romana"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png" alt="Icono coliseo"
+                                width="20" height="20" /></span>Romana</a>
+                    <a href="../index.html#azteca"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png" alt="Icono plumas"
+                                width="20" height="20" /></span>Azteca</a>
+                    <a href="../index.html#maya"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png" alt="Icono piramide"
+                                width="20" height="20" /></span>Maya</a>
+                    <a href="../index.html#sumeria"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/nail.png" alt="Icono cincel" width="20"
+                                height="20" /></span>Sumeria</a>
+                </div>
+                <div class="contact-link">
+                    <a href="../contact.html">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        
+        <div id="menu-bg" class="menu-bg" onclick="toggleMenu()"></div>
+
+        <section class="myth-section" id="mundos">
+            <header>
+                <h2>Los nueve mundos</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    El universo estaba organizado en nueve mundos, cuatro que se encontraban en oposición a otros cuatro
+                    más Midgard, el reino donde habitaban los hombres. Todos estos se encontraban atravesados y
+                    sostenidos por un árbol gigantesco, llamado Ygdrassil. Los nueve mundos son los siguientes:
+                </p>
+                <p>
+                    <b>Vanaheim:</b> también conocido como Vanaheimr, es el mundo donde habitan los Vanir, uno de los
+                    clanes de
+                    los dioses nórdicos. Este aparece en la Saga de los Ynglingos escrita por Snorri Sturluson, donde
+                    está relacionado con el río Don y donde se muestra como un lugar pasado.
+                </p>
+                <p>
+                    <b>Asgard:</b> también conocido como Ásgarðr, es el mundo donde Æsir (dioses), el cual era gobernado
+                    por
+                    Odín y Frigg, su esposa. Asgard se encontraba rodeado de una muralla construida por Hrimthurs, y en
+                    su interior se encontraba el Valhalla, una enorme sala donde descansaban la mitad de los guerreros
+                    caídos en combate, mientras la otra mitad iba a Fólkvangr. Este mundo estaba unido al Mdgard por un
+                    el puente arco iris (Bifröst).
+                </p>
+                <p>
+                    <b>Álfheim:</b> también conocido como Ljusalfheim o Alfheim, era el mundo donde habitaban los Elfos,
+                    diferenciados en dos tipos distintos: ljósálfar, los elfos luminosos, y svartálfar, los elfos
+                    oscuros.
+                </p>
+                <p>
+                    <b>Muspelheim:</b> también conocido como Muespel, era el mundo del fuego, en el cual habitaban los
+                    gigantes
+                    de fuego. Este mundo era gobernado por Surt, y se creía que estaba por encima de Asgard en cuanto a
+                    elevación del terreno.
+                </p>
+                <p>
+                    <b>Jötunheim</b> opuesto a Vanaheim, es el mundo donde habitan los gigantes de roca y hielo,
+                    conocidas
+                    conjuntamente: como jötunn, gobernados por Þrymr. Estos amenazan constantemente a los seres humanos,
+                    que viven en Midgard, y a los dioses, que viven en Asgard, pero no pueden llegar a estos porque les
+                    es imposible atravesar el río Iving.
+                </p>
+                <p>
+                    <b>Hel:</b> también conocido como Helehim, es el mundo opuesto a Asgard, conocido por ser el reino
+                    de la
+                    muerte. Este estaba gobernado por Hela, hija de Loki y diosa de la muerte, y protegido por el perro
+                    Garm. Según se cuenta, Helehim se encontraba en lo más profundo de Niflheim, y era el lugar al que
+                    iban las almas de los que habían muerto por vejez, enfermedad, o que había cometido algún crimen,
+                    quienes eran enviado al Nastrand (o Naströnd, playa de los cadáveres). Se decía que ni los mismos
+                    dioses podían escapar de aquí debido a la corriente del río Gjöll.
+                </p>
+                <p>
+                    <b>Niðavellir:</b> también conocido como Svartálfaheim o Nidavellir, es el mundo donde viven los
+                    enanos,
+                    algunas veces confundido con el reino de los elfos oscuros.
+                </p>
+                <p>
+                    <b>Niflheim:</b> es el mundo de la niebla, la oscuridad y las tinieblas donde habitaba el dragón
+                    Níðhöggr,
+                    quien masticaba las raíces del árbol Yggdrassil para hacerlo caer. Se decía que, una vez terminara
+                    el Ragnarök, esta bestia atormentaría a las almas que quedaran todavía en el mundo.
+                </p>
+                <p>
+                    <b>Midgard:</b> es el mundo donde viven los seres humanos, unido a Asgard por el puente Bifröst. El
+                    nombre
+                    de este reino puede traducirse el asentamiento del medio o del centro, pues mid se puede traducir
+                    como medio y -gard como residencia. Según se cuenta, la tierra fue creada con la
+                    piel del gigante Ymir, las aguas fueron creadas por el sudor y la sangre de este mismo, las rocas y
+                    las montañas con sus huesos, los acantilados con sus dientes, la vegetación con sus vellos y los
+                    límites del mar con sus cejas.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/norse/myths/mundos.webp" alt="Yggdrasil y los nueve mundos">
+            </div>
+        </section>
+
+        <section class="myth-section" id="martillo">
+            <header>
+                <h2>El robo del martillo de Thor</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    El rey Þrymr, rey de los gigantes de la escarcha, robó el martillo de Thor como extorsión a los
+                    dioses, ya que quería por esposa a la diosa Freyja. Para recuperarlo, Heimdall tuvo la idea de
+                    disfrazar a Thor con las ropas de la diosa y enviarlo con Þrymr para engañarlo. Aunque él no estaba
+                    muy de acuerdo, aceptó y se disfrazó de novia, no sin antes llevarse a Loki con él disfrazado de
+                    dama de compañía.
+                </p>
+                <p>
+                    Cuando Þrymr los vio llegar organizó un banquete con su familia, jubiloso y celebrando su triunfo.
+                    Cuando Thor vio toda la comida delante de él por poco queda al descubierto, pues comenzó a engullir
+                    sin miramientos. El gigante sospechó que algo ocurría, pero rápidamente Loki intervino y le dijo que
+                    el hambre de Freyja se debía a la emoción de estar casada con el rey de los gigantes.
+                </p>
+                <p>
+                    Þrymr quedó conforme con la respuesta, pero cuando quiso quitarle el velo de novia a Freyja para
+                    besarla, Thor tumbó al gigante con el intenso brillo de sus ojos. Ante esto, Loki se apresuró a
+                    decir que se debía a la emoción y felicidad de su mirada.
+                </p>
+                <p>
+                    Entonces, Þrymr anunció “que el martillo de Thor selle este compromiso”, develando el Mjölnir y
+                    dejándolo cerca de este. Así, el astuto Thor se lo arrebató de un golpe, se quitó el disfraz de
+                    novia y se convirtió en el verdadero dios del trueno. Toda la sala se llenó de relámpagos, pues
+                    había recuperado su preciada arma.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/norse/myths/martillo.webp" alt="El martillo de Thor">
+            </div>
+        </section>
+
+        <section class="myth-section" id="manzanas">
+            <header>
+                <h2>Las manzanas de la inmortalidad</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    En la mitología nórdica, las manzanas doradas les otorgan a los dioses la inmortalidad. Cada vez que
+                    se sentían cansados, viejos, y que sus cabellos comenzaban a encanecer, acudían a la diosa Idunn,
+                    quien guardaba estas manzanas en un cofre de madera, y comían del fruto hasta que les devolvía la
+                    juventud y vitalidad.
+                </p>
+                <p>
+                    Un día, mientras Thor, Loki, y Hoenir paseaban por el campo, vieron un águila gigantesca posada en
+                    la copa de un árbol. Los dioses se disponían a disfrutar de una suculenta carne asada cuando unos
+                    vientos muy fuertes comenzaron a soplar, impidiéndoselo. Así que, a petición de Loki, el águila les
+                    ayudó un poco. Sacudió sus enormes alas con fuerza y avivó el fuego. Así pues, lograron comer y
+                    saciarse. El águila quiso participar del banquete, pero Loki intentó impedírselo, a lo que esta
+                    respondió con un forcejeo. El ave estaba ganando cuando Loki imploró clemencia. El animal lo dejó
+                    libre, pero con una condición: las manzanas de la diosa Idunn.
+                </p>
+                <p>
+                    Loki aceptó sin saber cuál sería la consecuencia, y, engañando a la diosa, la hizo llegar a las
+                    garras del águila. Cuando los dioses se dieron cuenta, se enfurecieron con Loki, ya que, sin las
+                    manzanas de la inmortalidad, comenzaron a hacerse ancianos. Entonces, obligaron a Loki a recuperar a
+                    Idunn y, con ella, su cofre de manzanas. Este tuvo que convertirse en un ave para rescatar a la
+                    diosa y lograr sortear al águila, quien no era nadie más que un gigante disfrazado.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/norse/myths/manzanas.webp" alt="Idunn con una cesta de manzanas">
+            </div>
+        </section>
+
+        <section class="myth-section" id="serpiente">
+            <header>
+                <h2>La serpiente de Midgard</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Conocida como la enorme serpiente que ronda Midgard hasta el día del Ragnarok. Se trata de un
+                    monstruo cuyo padre es el dios Loki, y cuya madre es la giganta Angrboda. Cuando los dioses se
+                    enteraron de esto y vieron las cosas horribles que el monstruo haría a través de la adivinación,
+                    decidieron eliminarlo. Odín lo lanzó al mar que rodea Midgard para que se quedara allí hasta el
+                    Ragnarok, el día de la destrucción. La serpiente creció tanto que, si se mordiera la cola, podría
+                    abrazar toda la Tierra.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/norse/myths/serpiente.webp" alt="La serpiente de Midgard atacando a Thor">
+            </div>
+        </section>
+
+        <section class="myth-section" id="ragnarok">
+            <header>
+                <h2>El Ragnarok</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Ragnarök es la batalla del fin del mundo. Esta batalla será supuestamente
+                    emprendida entre los dioses, los Æsir, liderados por Odín y los jotuns liderados por Loki. No sólo
+                    los dioses, gigantes, y monstruos perecerán en esta conflagración apocalíptica, sino que casi todo
+                    en el universo será destruido.
+                </p>
+                <p>
+                    La llegada de Ragnarok estaría precedida por el invierno llamado Fimbulvetr, con inmensas nevadas,
+                    hielos y vientos gélidos en todas las direcciones. Después de tres inviernos seguidos, sin ningún
+                    verano de por medio, el sol no sería capaz de acabar con las heladas, el mundo estaría sumido en
+                    grandes batallas con los hermanos matándose entre sí.
+                </p>
+                <p>
+                    Los lobos que perseguían los carros del Sol y de la Luna por fin los alcanzarían y los devorarían,
+                    las estrellas se precipitarían del cielo y la tierra sufriría grandes temblores que provocarían el
+                    derrumbe de las montañas sobre Midgard. A continución, el relato del fin del mundo describe otra
+                    serie de desgracias. El lobo Fenris se soltará de sus cadenas y abrirá su boca expulsando fuego
+                    hasta tocar el cielo y la tierra. Las aguas inundarán la tierra. La serpiente de Midgard se
+                    revolverá con furor y saltará a la tierra, escupiendo veneno. Se rasgará el cielo y vendrán
+                    cabalgando los hijos de Muspellheim, precedidos por Sutur y su brillante espada, cuando cabalguen
+                    sobre Bifrost se romperá. A la llanura de Vigrid también llegarán Loki, seguido por todas las
+                    criaturas del infierno, Hrym y todos los gigantes de hielo. Heimdall se levantará y, después de
+                    soplar tres veces su cuerno, despertará a todos los dioses que se reunirá en asambleas. Odín
+                    cabalgará hasta el puente de Mimir y le pedirá el consejo. Entonces temblará Yggdrasil, el fresno
+                    del mundo, y no habrá nadie que no tenga miedo.
+                </p>
+                <p>
+                    Los asios y los guerreros del Valhall vestirán sus armas y cabalgarán hasta el llano. Primero irá
+                    Odín con su yelmo, su coraza de oro y su lanza Gungnir, y lo atacará el lobo Fenris, Thor no le
+                    podrá ayudar pues tendrá que enfrentarse a la serpiente Midgard. Frey luchará contra Sutur, pero
+                    morirá por no tener la espada que le dio Skirnir. Entonces soltarán al perro Garm, el más temido de
+                    los monstruos, que está atado en Gripahell y luchará contra Tyr, ambos morirán.
+                </p>
+                <p>
+                    Thor dará el golpe de muerte a la serpiente Midgard y entonces retrocederá nueve pasos y morirá
+                    ahogado por el veneno de ésta. El lobo se tragará a Odín, y así morirá el padre de todos. Pero Vidar
+                    pisará la mandíbula de Fenris con su zapato y se la romperá al tirar de la mandíbula superior. Loki
+                    luchará con Heimdall y los dos morirán, entonces Sutur arrojará fuego sobre los nueve mundos.
+                </p>
+                <p>
+                    Pero no todo morirá. Sobrevivirán Vidar y Vali, a quienes el fuego de Sutur no consigue dañar,
+                    estos dos dioses habitarán en Idavellir, en el mismo lugar donde antes estuvo Asgard, hasta allí
+                    también irán Magni y Modi, los hijos de Thor, portando a Mjollnir, el martillo de su padre. Y del
+                    infierno vendrán Balder y Horder, y hablarán de las viejas runas, y encontrarán en la hierba los
+                    escaques de oro que algún día pertenecieron a los asios.
+                </p>
+                <p>
+                    En un bosque llamado Hoddmimir, escondidos del fuego, estarán dos hombres, Lif y Leifthrasir, que
+                    se alimentarán algún tiempo de rocío siendo los padres de una descendencia que habitará todos los
+                    mundos.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/norse/myths/ragnarok.webp" alt="EL fin del mundo o Ragnarok">
+            </div>
+        </section>
+
+        <section class="myth-section" id="odin">
+            <header>
+                <h2>El ojo de Odín</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Mímir era un gigante, tío por parte materna de Odín, que cuida las fuentes de la sabiduría ubicadas
+                    en las raíces del árbol Yggdrasil. Odín hizo un viaje desde Asgard hasta allí para pedirle a su tío
+                    que le permitiera beber de las aguas de las fuentes, pero él se negó, pues era el único que podía
+                    hacerlo. Sin embargo, Odín insistió ofreciéndole cualquier cosa a cambio. Mímir le pidió un ojo, a
+                    lo que el dios aceptó. Así, este quedó tuerto, pero se volvió infinitamente sabio.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/norse/myths/odin.webp" alt="Odín con el gigante Mimir">
+            </div>
+        </section>
+
+        <div class="arrow-to-top">
+            <a href="#header">
+                <script async src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/eflfmgmj.json" trigger="loop" delay="2500"
+                    colors="primary:#ff9d59" style="width:50px;height:50px">
+                </lord-icon>
+            </a>
+        </div>
     </main>
+
+    <footer>
+        <p>© Mytho | Todos los derechos reservados</p>
+    </footer>
+
 </body>
+
 </html>

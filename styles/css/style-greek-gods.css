@@ -123,7 +123,7 @@ body {
     justify-content: center;
     align-items: center;
     position: sticky;
-    z-index: 900;
+    z-index: 800;
     height: 100vh;
     margin-bottom: 50px;
     flex-direction: column;
@@ -150,7 +150,7 @@ body {
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 500;
+    z-index: 900;
     transition: all 0.5s; }
     body nav .nav-bur {
       height: 60px;
@@ -159,7 +159,7 @@ body {
       display: flex;
       align-items: center;
       position: relative;
-      z-index: 900; }
+      z-index: 400; }
     body nav .menu {
       font-size: 1.375rem;
       background: rgba(54, 48, 98, 0.85);
@@ -169,7 +169,6 @@ body {
       width: 0;
       height: 100vh;
       position: fixed;
-      z-index: 800;
       left: -100vw;
       top: 0;
       display: flex;
@@ -219,6 +218,22 @@ body {
       width: 100vw; }
   body main {
     padding: 40px; }
+    body main .menu-bg {
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 800;
+      opacity: 0;
+      width: 0; }
+    body main .visible {
+      position: fixed;
+      opacity: 0.25;
+      width: 100%;
+      transition: opacity ease-in 0.5s;
+      display: block; }
     body main .sub-header {
       text-align: center;
       margin-bottom: 50px; }
@@ -403,7 +418,7 @@ body {
       justify-content: center;
       align-items: center;
       position: sticky;
-      z-index: 900;
+      z-index: 800;
       height: 100vh;
       margin-bottom: 50px;
       flex-direction: column;
@@ -434,7 +449,7 @@ body {
       width: 100%;
       position: fixed;
       top: 0;
-      z-index: 500;
+      z-index: 900;
       transition: all 0.5s; }
       body .nav .nav-bur {
         height: 60px;
@@ -443,7 +458,7 @@ body {
         display: flex;
         align-items: center;
         position: relative;
-        z-index: 900; }
+        z-index: 400; }
       body .nav .menu {
         font-size: 1.375rem;
         background: rgba(54, 48, 98, 0.85);
@@ -453,7 +468,6 @@ body {
         width: 0;
         height: 100vh;
         position: fixed;
-        z-index: 800;
         left: -100vw;
         top: 0;
         display: flex;
@@ -515,7 +529,7 @@ body {
       justify-content: center;
       align-items: center;
       position: sticky;
-      z-index: 900;
+      z-index: 800;
       height: 100vh;
       margin-bottom: 50px;
       flex-direction: column;
@@ -547,7 +561,7 @@ body {
       width: 100%;
       position: fixed;
       top: 0;
-      z-index: 500;
+      z-index: 900;
       transition: all 0.5s; }
       body .nav .nav-bur {
         height: 60px;
@@ -556,7 +570,7 @@ body {
         display: flex;
         align-items: center;
         position: relative;
-        z-index: 900; }
+        z-index: 400; }
       body .nav .menu {
         font-size: 1.375rem;
         background: rgba(54, 48, 98, 0.85);
@@ -566,7 +580,6 @@ body {
         width: 0;
         height: 100vh;
         position: fixed;
-        z-index: 800;
         left: -100vw;
         top: 0;
         display: flex;
