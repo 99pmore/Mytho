@@ -3,3 +3,6 @@ Disallow: /nogooglebot/
 
 User-agent: *
 Allow: /
+Disallow: /README.md
+
+Sitemap: http://www.mytho.com/sitemap.xml
