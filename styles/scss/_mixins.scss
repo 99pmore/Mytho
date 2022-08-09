@@ -60,12 +60,62 @@
     }
 
     .arrow {
+        display: none;
+
+        @if $device == "pc" or $device == "tablet" {
+            position: absolute;
+            bottom: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .to-myths {
         position: absolute;
         bottom: 40px;
+        right: 40px;
 
         display: flex;
         justify-content: center;
         align-items: center;
+
+        a {
+            text-decoration: none;
+            font-size: calculate-rem(18);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    .to-gods {
+        position: absolute;
+        bottom: 40px;
+        left: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            font-size: calculate-rem(18);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .flecha {
+                transform: scaleX(-1);
+            }
+        }
     }
 }
 
