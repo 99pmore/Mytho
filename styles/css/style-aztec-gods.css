@@ -317,6 +317,10 @@ body {
       background: white url(../../img/aztec/gods/ixtlilton.webp) no-repeat center/cover; }
     body main #mictlantecuhtli {
       background: white url(../../img/aztec/gods/mictlantecuhtli.webp) no-repeat center/cover; }
+    body main #malinalxochitl {
+      background: white url(../../img/aztec/gods/malinalxochitl.webp) no-repeat center/cover; }
+    body main #huehuecoyotl {
+      background: white url(../../img/aztec/gods/huehuecoyotl.webp) no-repeat center/cover; }
   body footer {
     background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/aztec/mictlan.webp) no-repeat center/cover;
     background-attachment: fixed;
@@ -328,8 +332,7 @@ body {
     justify-content: center;
     align-items: center;
     position: sticky;
-    z-index: 500;
-    background-position: 0 80%; }
+    z-index: 500; }
   body::-webkit-scrollbar {
     background-color: transparent;
     width: 8px; }

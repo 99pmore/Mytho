@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azteca Mitos</title>
+
     <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
-    <link rel="stylesheet" href="../../css/style-aztec-myths.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/css/style-aztec-myths.css">
+    <link href="../styles/css/hamburgers.css" rel="stylesheet">
+
+    <script async src="../../js/script.js"></script>
 </head>
+
 <body>
 
     <header id="header" class="main-header">
@@ -31,40 +34,240 @@
 
     <nav id="nav" class="nav">
         <div class="nav-bur">
-            <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div id="burger" class="hamburger hamburger--minus" onclick="toggleMenu()">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
         </div>
 
-        <div id="menu" class="menu">
-            <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
-                <h2>Mytho</h2>
-            </div>
+        <div id="menu" class="menu" onclick="toggleMenu()">
             <div class="nav-links">
-                <details>
-                    <summary>Mitologías</summary>
-                    <div class="links">
-                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
-                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
-                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
-                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
-                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
-                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
-                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
-                    </div>
-                </details>
-            </div>
-            <div class="contact-link">
-                <a href="contact.html">Contacto</a>
+                <div class="nav-logo" onclick="location.href='../index.html'">
+                    <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
+                    <h2>Mytho</h2>
+                </div>
+                <div class="links">
+                    <a href="../index.html#egipcia"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png" alt="Icono ankh" width="20"
+                                height="20" /></span>Egipcia</a>
+                    <a href="../index.html#nordica"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png" alt="Icono drakkar"
+                                width="20" height="20" /></span>Nórdica</a>
+                    <a href="../index.html#griega"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"
+                                alt="Icono venus" width="20" height="20" /></span>Griega</a>
+                    <a href="../index.html#romana"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png" alt="Icono coliseo"
+                                width="20" height="20" /></span>Romana</a>
+                    <a href="../index.html#azteca"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png" alt="Icono plumas"
+                                width="20" height="20" /></span>Azteca</a>
+                    <a href="../index.html#maya"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png" alt="Icono piramide"
+                                width="20" height="20" /></span>Maya</a>
+                    <a href="../index.html#sumeria"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/nail.png" alt="Icono cincel" width="20"
+                                height="20" /></span>Sumeria</a>
+                </div>
+                <div class="contact-link">
+                    <a href="../contact.html">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        
+        <div id="menu-bg" class="menu-bg" onclick="toggleMenu()"></div>
+
+        <section class="myth-section" id="cocodrilo">
+            <header>
+                <h2>Quetzalcóatl, Tezcatlicopa y el cocodrilo Cipactli</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Los dioses rivales Quetzalcóatl y Tezcatlicopa se unieron para el bien mayor: crear la tierra en un
+                    mundo cubierto de agua.
+                </p>
+                <p>
+                    Sabían que la única forma de hacer esto era crear la tierra de Cipactli, un cocodrilo gigante. Para
+                    atraerla a su trampa, Tezcatlipoca colgó su pie en el agua para atraerla, y ella rápidamente lo
+                    mordió. Los dos dioses entonces capturaron el cocodrilo y crearon la tierra.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/aztec/myths/cocodrilo.webp" alt="Quetzalcóatl y Tezcatlicopa luchando">
+            </div>
+        </section>
+
+        <section class="myth-section" id="sol">
+            <header>
+                <h2>La creación del sol</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Al comienzo del mundo, los dioses celebraron una reunión para crear un nuevo sol. Un dios tendría
+                    que lanzarse a las llamas para renacer como el sol, por lo que obviamente era un riesgo y un
+                    sacrificio.
+                </p>
+                <p>
+                    Nanahuatzin, el más humilde de los dioses con un rostro cubierto de costras y llagas, se ofreció a
+                    las llamas, y renació como el sol. Pero su sacrificio tenía un problema y era que no se podía mover.
+                </p>
+                <p>
+                    Carecía de la energía que necesitaba para moverse por el cielo. Así que los dioses ofrecieron su
+                    propia sangre y corazones al fuego, esperando que su sacrificio le diera la energía que necesitaba
+                    para hacer su trabajo en el cielo.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/aztec/myths/sol.webp" alt="Creación del sol">
+            </div>
+        </section>
+
+        <section class="myth-section" id="quetzalcoatl">
+            <header>
+                <h2>Quetzalcóatl ebrio</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Una noche, su hermano y rival Tezcatlipoca consiguió que Quetzalcóatl se bebiera ridículamente del
+                    pulque, la bebida de los aztecas. Mientras su hermano estaba ebrio y sin sentido, el dios
+                    Tezcatlipoca procedió a engañar a Quetzalcoatl para que tuviera relaciones sexuales con su hermana,
+                    la diosa Quetzalpetlatl.
+                </p>
+                <p>
+                    Cuando se despertó a la mañana siguiente, Quetzalcóatl estaba comprensiblemente molesto y
+                    avergonzado por el incestuoso giro de los acontecimientos, por lo que zarpó en una balsa de
+                    serpientes. Los aztecas creían que Quetzalcóatl volvería a ellos algún día, por lo que anticiparon
+                    su segunda venida.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/aztec/myths/quetzalcoatl.webp" alt="Quetzalcoatl bebiendo">
+            </div>
+        </section>
+
+        <section class="myth-section" id="corazon">
+            <header>
+                <h2>Huitzilopochtli y el corazón</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    Durante los continuos viajes de los aztecas en busca de una patria, supuestamente fueron guiados por
+                    su dios Huitzilopochtli. Sin embargo, las tensiones en la tribu errante estallaron cuando la hermana
+                    de Huitzilopochtli, la diosa Malinalxochitl, hizo que las cosas fueran incómodas al practicar
+                    brujería.
+                </p>
+                <p>
+                    Bajo las órdenes de Huitzilopochtli, los aztecas abandonaron a Malinalxochitl y sus seguidores en la
+                    noche, cubriendo su rastro para que no pudieran ser seguidos. Años más tarde, el hijo de
+                    Malinalxochitl, el semi dios Copil, empeñado en vengar a su madre abandonada, localizó a
+                    Huitzilopochtli y sus seguidores. Aunque comenzaron a pelear, Huitzilopochtli era un gran guerrero y
+                    no podía ser derrotado.
+                </p>
+                <p>
+                    Por lo tanto, cuando llegó a Copil, arrancó el corazón del niño que aún latía de su pecho y lo
+                    arrojó al lago cercano, donde aterrizó en una isla. Un cactus brotó de la sangre del corazón de
+                    Copil y un águila con una serpiente en la boca se encaramo sobre el cactus.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/aztec/myths/corazon.webp" alt="Huitzilopochtli arrancando un corazón">
+            </div>
+        </section>
+
+        <section class="myth-section" id="piel">
+            <header>
+                <h2>Huitzilopochtli y el saco de piel de la princesa</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    En medio de sus viajes según los mitos aztecas, Huitzilopochtli y sus seguidores llegaron a la
+                    ciudad de Culhuacan. El rey Achitometl, estaba encantado de tener un dios en su corte. Pero
+                    Huitzilopochtli, siendo un dios de la guerra, quería comenzar problemas con los pacíficos
+                    culhuacanos. Entonces, decidió jugar un truco cruel al rey.
+                </p>
+                <p>
+                    Huitzilopochtli se ofreció a casarse con la hija del rey para que ella se convirtiera en una diosa.
+                    Achitometl no podía creer su buena fortuna y aceptó con entusiasmo, inmediatamente despidió a la
+                    princesa con el dios. Huitzilopochtli la llevó al templo; pero en lugar de casarse con ella, la
+                    sacrificó, la desolló y le dio su piel a un sacerdote para que se la pusiera.
+                </p>
+                <p>
+                    Cuando los aztecas invitaron a Achitometl, que esperaba una boda, al templo, vio que la piel de su
+                    hija colgaba suelta del sacerdote, salió corriendo de la horrible escena y ordenó a sus tropas que
+                    atacaran a los aztecas.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/aztec/myths/piel.webp" alt="ritual de Huitzilopochtli">
+            </div>
+        </section>
+
+        <section class="myth-section" id="tlaloc">
+            <header>
+                <h2>Tlaloc desató una lluvia de muerte para destruir el mundo</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    El mundo fue creado y destruido varias veces. Durante el llamado "tercer sol" o tercer mundo,
+                    Tezcatlipoca secuestró a Xochiquetzal, la esposa de Tlaloc, dios de la lluvia. Este estaba
+                    obsesionado con ella desde el momento en que la vio. Aunque trató de cortejarla, ella se negó
+                    educadamente, ya que estaba enamorada de su marido. Tezcatlipoca no aceptó un no por
+                    respuesta; él agarró a Xochiquetzal y la llevó al inframundo, donde la violó brutalmente. Mientras
+                    Tezcatlipoca descansaba después del terrible acto, Xochiquetzal logró escapar y regresar a la
+                    tierra.
+                </p>
+                <p>
+                    Tlaloc estaba tan devastado que no le dio lluvia a la tierra; en cambio, llovió fuego sobre la
+                    tierra, destruyó el mundo una vez más y obligó a los dioses a crear uno nuevo mundo.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/aztec/myths/tlaloc.webp" alt="Dios de la lluvia Tlaloc">
+            </div>
+        </section>
+
+        <section class="myth-section" id="baile">
+            <header>
+                <h2>Tezcatlipoca y el baile de la muerte</h2>
+            </header>
+            <div class="myth-info">
+                <p>
+                    El travieso dios Tezcatlipoca existió en la tierra en muchas formas, incluido un guerrero viril y
+                    fuerte. Después de que su pueblo intentó engañarlo y matarlo, se le ocurrió una manera creativamente
+                    y terrible de actuar como venganza.
+                </p>
+                <p>
+                    Reunió a la gente del pueblo para un banquete y exigió que todos bailaran a tiempo con una canción
+                    que cantaba. Así que bailaron al ritmo, luchando por mantenerse al ritmo mientras aceleraba la
+                    canción.
+                </p>
+                <p>
+                    Los mantuvo bailando vigorosamente, incluso cuando la horda de bailarines se acercaba más y más al
+                    borde de un acantilado, finalmente cayendo a su muerte.
+                </p>
+            </div>
+            <div class="myth-info-img">
+                <img src="../../img/aztec/myths/baile.webp" alt="Tezcatlipoca">
+            </div>
+        </section>
+
+        <div class="arrow-to-top">
+            <a href="#header">
+                <script async src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/eflfmgmj.json" trigger="loop" delay="2500"
+                    colors="primary:#ff9d59" style="width:50px;height:50px">
+                </lord-icon>
+            </a>
+        </div>
     </main>
+
+    <footer>
+        <p>© Mytho | Todos los derechos reservados</p>
+    </footer>
+
 </body>
+
 </html>

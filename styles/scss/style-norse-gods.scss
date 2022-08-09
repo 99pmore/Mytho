@@ -78,6 +78,7 @@ body {
 
     footer {
         @include create-footer(url(../../img/norse/helheim.webp));
+        background-position: 0 300px;
     }
 
 

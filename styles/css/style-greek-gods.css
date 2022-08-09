@@ -399,7 +399,8 @@ body {
     justify-content: center;
     align-items: center;
     position: sticky;
-    z-index: 500; }
+    z-index: 500;
+    background-position: 0 400px; }
   body::-webkit-scrollbar {
     background-color: transparent;
     width: 8px; }

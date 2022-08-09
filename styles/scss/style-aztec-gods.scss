@@ -69,6 +69,8 @@ body {
         #yacatecuhtli { background: white url(../../img/aztec/gods/yacatecuhtli.webp) no-repeat center / cover; }
         #ixtlilton { background: white url(../../img/aztec/gods/ixtlilton.webp) no-repeat center / cover; }
         #mictlantecuhtli { background: white url(../../img/aztec/gods/mictlantecuhtli.webp) no-repeat center / cover; }
+        #malinalxochitl { background: white url(../../img/aztec/gods/malinalxochitl.webp) no-repeat center / cover; }
+        #huehuecoyotl { background: white url(../../img/aztec/gods/huehuecoyotl.webp) no-repeat center / cover; }
     }
 
 
@@ -77,7 +79,6 @@ body {
 
     footer {
         @include create-footer(url(../../img/aztec/mictlan.webp));
-        background-position: 0 80%;
     }
 
 

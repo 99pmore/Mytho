@@ -1,0 +1,651 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@font-face {
+  font-family: 'Harman Sans';
+  src: url("../../fonts/Harman-Sans.otf");
+  font-display: swap; }
+@font-face {
+  font-family: 'Harman Sans';
+  src: url("../../fonts/Harman-Sans.otf");
+  font-display: swap; }
+/*** H E A D E R ***/
+/*** N A V ***/
+/*** F O O T E R ***/
+/*** S C R O L L ***/
+/*** C A R D  L I N K ***/
+/*** C A R D ***/
+/*** M Y T H ***/
+/*** N A V  B G ***/
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+@use "sass:math";
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.6; }
+  .hamburger.is-active:hover {
+    opacity: 0.6; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #ffffff; }
+
+.hamburger-box {
+  width: 36px;
+  height: 21px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: 0px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 36px;
+    height: 3px;
+    background-color: #363062;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -9px; }
+  .hamburger-inner::after {
+    bottom: -9px; }
+
+/*
+ * Arrow
+ */
+.hamburger--arrow.is-active .hamburger-inner::before {
+  transform: translate3d(-7.2px, 0, 0) rotate(-45deg) scale(0.7, 1); }
+.hamburger--arrow.is-active .hamburger-inner::after {
+  transform: translate3d(-7.2px, 0, 0) rotate(45deg) scale(0.7, 1); }
+
+/*
+ * Minus
+ */
+.hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+.hamburger--minus.is-active .hamburger-inner::before {
+  top: 0; }
+.hamburger--minus.is-active .hamburger-inner::after {
+  bottom: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #fbfbfb;
+  color: #1b1b1b;
+  /*** H E A D E R ***/
+  /*** N A V ***/
+  /*** M A I N ***/
+  /*** F O O T E R ***/
+  /*** S C R O L L ***/
+  /*** M E D I A  Q U E R I E S ***/
+  /** Tablet **/
+  /** PC **/ }
+  body img {
+    max-width: 1900px;
+    max-height: 1900px; }
+  body .main-header {
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/sum-myth.webp) no-repeat center/cover;
+    font-family: "Harman Sans", sans-serif;
+    font-size: 1.875rem;
+    letter-spacing: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 800;
+    height: 100vh;
+    margin-bottom: 50px;
+    flex-direction: column;
+    box-shadow: 0 0 20px #363062; }
+    body .main-header .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      body .main-header .logo img {
+        animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+      body .main-header .logo h1 {
+        animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+    body .main-header .arrow {
+      position: absolute;
+      bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body .main-header h2 {
+      font-family: "Quicksand", sans-serif;
+      font-size: 1.875rem; }
+  body nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 900;
+    transition: all 0.5s; }
+    body nav .nav-bur {
+      height: 60px;
+      padding: 10px 16px;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 400; }
+    body nav .menu {
+      font-size: 1.375rem;
+      background: rgba(54, 48, 98, 0.85);
+      box-shadow: 0 0 20px #363062;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      width: 0;
+      height: 100vh;
+      position: fixed;
+      left: -100vw;
+      top: 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      transition: all 0.5s; }
+      body nav .menu .nav-links {
+        height: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column; }
+        body nav .menu .nav-links .nav-logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer; }
+          body nav .menu .nav-links .nav-logo h2 {
+            font-family: "Harman Sans", sans-serif;
+            color: white;
+            font-size: 2.5rem;
+            letter-spacing: 2.5px;
+            margin-left: 16px; }
+        body nav .menu .nav-links .links {
+          height: 70%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column; }
+          body nav .menu .nav-links .links a {
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s; }
+            body nav .menu .nav-links .links a:hover {
+              transform: scale(1.2); }
+            body nav .menu .nav-links .links a span {
+              margin-right: 8px; }
+        body nav .menu .nav-links .contact-link a {
+          color: white;
+          text-decoration: none; }
+          body nav .menu .nav-links .contact-link a:hover {
+            color: #ff9d59; }
+    body nav .menu-open {
+      left: 0;
+      transition: all 0.5s;
+      width: 100vw; }
+  body main {
+    padding: 40px 0;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: start;
+    align-items: start; }
+    body main .menu-bg {
+      background: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 800;
+      opacity: 0;
+      width: 0; }
+    body main .visible {
+      position: fixed;
+      opacity: 0.25;
+      width: 100%;
+      transition: opacity ease-in 0.5s;
+      display: block; }
+    body main .myth-section {
+      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../img/index/pergamino.webp) no-repeat center/cover;
+      box-shadow: 0 0 20px #E9D5DA;
+      padding: 50px 0;
+      width: 100%;
+      height: 100%;
+      margin: auto; }
+      body main .myth-section header {
+        padding: 20px; }
+        body main .myth-section header h2 {
+          color: #4D4C7D;
+          text-align: center;
+          font-size: 2.5rem; }
+      body main .myth-section .myth-info {
+        overflow: auto;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px; }
+        body main .myth-section .myth-info::-webkit-scrollbar {
+          background-color: transparent;
+          width: 8px; }
+        body main .myth-section .myth-info::-webkit-scrollbar-thumb {
+          background-color: #eeeeee; }
+          body main .myth-section .myth-info::-webkit-scrollbar-thumb:hover {
+            background-color: #e4e4e4; }
+      body main .myth-section .myth-info-img {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 3/2; }
+        body main .myth-section .myth-info-img img {
+          opacity: 0.9;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.3s ease-in-out; }
+          body main .myth-section .myth-info-img img:hover {
+            opacity: 1;
+            box-shadow: 0 50px 50px -50px #827397; }
+      body main .myth-section img {
+        object-position: top; }
+    body main .arrow-to-top {
+      display: none; }
+  body footer {
+    background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/sumer/kur.webp) no-repeat center/cover;
+    background-attachment: fixed;
+    color: white;
+    box-shadow: 0 0 20px #363062;
+    height: 150px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 500;
+    background-position: 0 350px; }
+  body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px; }
+  body::-webkit-scrollbar-thumb {
+    background-color: #ff9d59; }
+    body::-webkit-scrollbar-thumb:hover {
+      background-color: #d38045; }
+  @media only screen and (min-width: 600px) {
+    body .main-header {
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/sum-myth.webp) no-repeat center/cover;
+      font-family: "Harman Sans", sans-serif;
+      font-size: 1.875rem;
+      letter-spacing: 5px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      z-index: 800;
+      height: 100vh;
+      margin-bottom: 50px;
+      flex-direction: column;
+      box-shadow: 0 0 20px #363062;
+      font-size: 2.5rem; }
+      body .main-header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-direction: row; }
+        body .main-header .logo h1 {
+          margin-left: 35px; }
+        body .main-header .logo img {
+          animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+        body .main-header .logo h1 {
+          animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+      body .main-header .arrow {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      body .main-header h2 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 2.5rem; }
+    body .nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 900;
+      transition: all 0.5s; }
+      body .nav .nav-bur {
+        height: 60px;
+        padding: 10px 16px;
+        color: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 400; }
+      body .nav .menu {
+        font-size: 1.375rem;
+        background: rgba(54, 48, 98, 0.85);
+        box-shadow: 0 0 20px #363062;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        left: -100vw;
+        top: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s; }
+        body .nav .menu .nav-links {
+          height: 70%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column; }
+          body .nav .menu .nav-links .nav-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; }
+            body .nav .menu .nav-links .nav-logo h2 {
+              font-family: "Harman Sans", sans-serif;
+              color: white;
+              font-size: 2.5rem;
+              letter-spacing: 2.5px;
+              margin-left: 16px; }
+          body .nav .menu .nav-links .links {
+            height: 70%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column; }
+            body .nav .menu .nav-links .links a {
+              color: white;
+              text-decoration: none;
+              transition: transform 0.3s; }
+              body .nav .menu .nav-links .links a:hover {
+                transform: scale(1.2); }
+              body .nav .menu .nav-links .links a span {
+                margin-right: 8px; }
+          body .nav .menu .nav-links .contact-link a {
+            color: white;
+            text-decoration: none; }
+            body .nav .menu .nav-links .contact-link a:hover {
+              color: #ff9d59; }
+      body .nav .menu-open {
+        left: 0;
+        transition: all 0.5s;
+        width: 100vw;
+        width: 400px; }
+    body main {
+      width: 85%; }
+      body main .myth-section {
+        background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../img/index/pergamino.webp) no-repeat center/cover;
+        box-shadow: 0 0 20px #E9D5DA;
+        padding: 50px 0;
+        width: 100%;
+        height: 100%;
+        margin: auto; }
+        body main .myth-section header {
+          padding: 20px;
+          padding: 30px; }
+          body main .myth-section header h2 {
+            color: #4D4C7D;
+            text-align: center;
+            font-size: 2.5rem;
+            font-size: 3.125rem; }
+        body main .myth-section .myth-info {
+          overflow: auto;
+          padding: 20px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 16px;
+          padding: 30px; }
+          body main .myth-section .myth-info::-webkit-scrollbar {
+            background-color: transparent;
+            width: 8px; }
+          body main .myth-section .myth-info::-webkit-scrollbar-thumb {
+            background-color: #eeeeee; }
+            body main .myth-section .myth-info::-webkit-scrollbar-thumb:hover {
+              background-color: #e4e4e4; }
+        body main .myth-section .myth-info-img {
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          aspect-ratio: 3/2;
+          padding: 30px; }
+          body main .myth-section .myth-info-img img {
+            opacity: 0.9;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out; }
+            body main .myth-section .myth-info-img img:hover {
+              opacity: 1;
+              box-shadow: 0 50px 50px -50px #827397; } }
+  @media only screen and (min-width: 900px) {
+    body .main-header {
+      background: linear-gradient(rgba(54, 48, 98, 0.75), rgba(0, 0, 0, 0.75)), url(../../img/index/sum-myth.webp) no-repeat center/cover;
+      font-family: "Harman Sans", sans-serif;
+      font-size: 1.875rem;
+      letter-spacing: 5px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      z-index: 800;
+      height: 100vh;
+      margin-bottom: 50px;
+      flex-direction: column;
+      box-shadow: 0 0 20px #363062;
+      font-size: 3.125rem;
+      background-attachment: fixed; }
+      body .main-header .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-direction: row; }
+        body .main-header .logo h1 {
+          margin-left: 35px; }
+        body .main-header .logo img {
+          animation: logo 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+        body .main-header .logo h1 {
+          animation: title 2s cubic-bezier(0.175, 0.885, 0.32, 1.07); }
+      body .main-header .arrow {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      body .main-header h2 {
+        font-family: "Quicksand", sans-serif;
+        font-size: 3.125rem; }
+    body .nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 900;
+      transition: all 0.5s; }
+      body .nav .nav-bur {
+        height: 60px;
+        padding: 10px 16px;
+        color: white;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 400; }
+      body .nav .menu {
+        font-size: 1.375rem;
+        background: rgba(54, 48, 98, 0.85);
+        box-shadow: 0 0 20px #363062;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        left: -100vw;
+        top: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.5s; }
+        body .nav .menu .nav-links {
+          height: 70%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column; }
+          body .nav .menu .nav-links .nav-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; }
+            body .nav .menu .nav-links .nav-logo h2 {
+              font-family: "Harman Sans", sans-serif;
+              color: white;
+              font-size: 2.5rem;
+              letter-spacing: 2.5px;
+              margin-left: 16px; }
+          body .nav .menu .nav-links .links {
+            height: 70%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column; }
+            body .nav .menu .nav-links .links a {
+              color: white;
+              text-decoration: none;
+              transition: transform 0.3s; }
+              body .nav .menu .nav-links .links a:hover {
+                transform: scale(1.2); }
+              body .nav .menu .nav-links .links a span {
+                margin-right: 8px; }
+          body .nav .menu .nav-links .contact-link a {
+            color: white;
+            text-decoration: none; }
+            body .nav .menu .nav-links .contact-link a:hover {
+              color: #ff9d59; }
+      body .nav .menu-open {
+        left: 0;
+        transition: all 0.5s;
+        width: 100vw;
+        width: 400px; }
+    body main {
+      width: 85%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      grid-template-areas: "creacion humanos" "gilgamesh utnapishtim";
+      /*** T O  T O P ***/ }
+      body main #creacion {
+        grid-area: creacion; }
+      body main #humanos {
+        grid-area: humanos; }
+      body main #gilgamesh {
+        grid-area: gilgamesh; }
+      body main #utnapishtim {
+        grid-area: utnapishtim; }
+      body main .myth-section {
+        background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../img/index/pergamino.webp) no-repeat center/cover;
+        box-shadow: 0 0 20px #E9D5DA;
+        padding: 50px 0;
+        width: 100%;
+        height: 100%;
+        margin: auto; }
+        body main .myth-section header {
+          padding: 20px;
+          padding: 40px; }
+          body main .myth-section header h2 {
+            color: #4D4C7D;
+            text-align: center;
+            font-size: 2.5rem;
+            font-size: 3.75rem; }
+        body main .myth-section .myth-info {
+          overflow: auto;
+          padding: 20px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 16px;
+          padding: 40px; }
+          body main .myth-section .myth-info::-webkit-scrollbar {
+            background-color: transparent;
+            width: 8px; }
+          body main .myth-section .myth-info::-webkit-scrollbar-thumb {
+            background-color: #eeeeee; }
+            body main .myth-section .myth-info::-webkit-scrollbar-thumb:hover {
+              background-color: #e4e4e4; }
+        body main .myth-section .myth-info-img {
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          aspect-ratio: 3/2;
+          padding: 40px; }
+          body main .myth-section .myth-info-img img {
+            opacity: 0.9;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out; }
+            body main .myth-section .myth-info-img img:hover {
+              opacity: 1;
+              box-shadow: 0 50px 50px -50px #827397; }
+      body main .arrow-to-top {
+        display: block;
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 100; } }
+
+/*# sourceMappingURL=style-sumer-myths.css.map */

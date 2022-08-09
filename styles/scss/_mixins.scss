@@ -362,7 +362,7 @@
 /*** M Y T H ***/
 
 @mixin create-myth($device: "movil") {
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../img/index/pergamino.webp) no-repeat center / cover;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../img/index/pergamino.webp) no-repeat center / cover;
     box-shadow: 0 0 20px $sec;
 
     padding: 50px 0;
@@ -399,7 +399,6 @@
     .myth-info {
         overflow: auto;
         padding: 20px;
-        // max-height: 500px;
 
         display: flex;
         justify-content: flex-start;
@@ -453,7 +452,7 @@
 
             object-fit: cover;
 
-            transition: all 0.3s;
+            transition: all 0.3s ease-in-out;
 
             &:hover {
                 opacity: 1;

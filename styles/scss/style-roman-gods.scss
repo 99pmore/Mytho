@@ -84,6 +84,7 @@ body {
 
     footer {
         @include create-footer(url(../../img/roman/caronte.webp));
+        background-position: 0 450px;
     }
 
 

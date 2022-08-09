@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romana Mitos</title>
+
     <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
-    <link rel="stylesheet" href="../../css/style-roman-myths.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/css/style-roman-myths.css">
+    <link href="../styles/css/hamburgers.css" rel="stylesheet">
+
+    <script async src="../../js/script.js"></script>
 </head>
+
 <body>
 
     <header id="header" class="main-header">
@@ -31,40 +34,186 @@
 
     <nav id="nav" class="nav">
         <div class="nav-bur">
-            <button id="burger" class="hamburger hamburger--minus" type="button" onclick="toggleMenu()">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+            <div id="burger" class="hamburger hamburger--minus" onclick="toggleMenu()">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </div>
         </div>
 
-        <div id="menu" class="menu">
-            <div class="nav-logo" onclick="location.href='../index.html'">
-                <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
-                <h2>Mytho</h2>
-            </div>
+        <div id="menu" class="menu" onclick="toggleMenu()">
             <div class="nav-links">
-                <details>
-                    <summary>Mitologías</summary>
-                    <div class="links">
-                        <a href="../index.html#egipcia"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png"/></span>Egipcia</a>
-                        <a href="../index.html#nordica"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png"/></span>Nórdica</a>
-                        <a href="../index.html#griega"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"/></span>Griega</a>
-                        <a href="../index.html#romana"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png"/></span>Romana</a>
-                        <a href="../index.html#azteca"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png"/></span>Azteca</a>
-                        <a href="../index.html#maya"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png"/></span>Maya</a>
-                        <a href="../index.html#sumeria"><span><img src="https://img.icons8.com/ios-filled/20/ffffff/nail.png"/></span>Sumeria</a>
-                    </div>
-                </details>
-            </div>
-            <div class="contact-link">
-                <a href="contact.html">Contacto</a>
+                <div class="nav-logo" onclick="location.href='../index.html'">
+                    <img src="../../img/logo.png" alt="Logo del sitio web" height="80px" width="48.88">
+                    <h2>Mytho</h2>
+                </div>
+                <div class="links">
+                    <a href="../index.html#egipcia"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/ankh.png" alt="Icono ankh" width="20"
+                                height="20" /></span>Egipcia</a>
+                    <a href="../index.html#nordica"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/viking-ship.png" alt="Icono drakkar"
+                                width="20" height="20" /></span>Nórdica</a>
+                    <a href="../index.html#griega"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/venus-de-milo--v2.png"
+                                alt="Icono venus" width="20" height="20" /></span>Griega</a>
+                    <a href="../index.html#romana"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/coliseum.png" alt="Icono coliseo"
+                                width="20" height="20" /></span>Romana</a>
+                    <a href="../index.html#azteca"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/aztec-headdress.png" alt="Icono plumas"
+                                width="20" height="20" /></span>Azteca</a>
+                    <a href="../index.html#maya"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/chichen-itza.png" alt="Icono piramide"
+                                width="20" height="20" /></span>Maya</a>
+                    <a href="../index.html#sumeria"><span><img
+                                src="https://img.icons8.com/ios-filled/20/ffffff/nail.png" alt="Icono cincel" width="20"
+                                height="20" /></span>Sumeria</a>
+                </div>
+                <div class="contact-link">
+                    <a href="../contact.html">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        
+        <div id="menu-bg" class="menu-bg" onclick="toggleMenu()"></div>
+
+        <section class="intro">
+            Gran parte de los mitos de la mitología romana es derivada de los mitos griegos. Aún así, a medida que se
+            convertían en un imperio, fueron creándose nuevas leyendas.
+        </section>
+
+        <div class="myths">
+            <section class="myth-section" id="romulo">
+                <header>
+                    <h2>Rómulo y Remo</h2>
+                </header>
+                <div class="myth-info">
+                    <p>
+                        Rhea era una princesa y una mujer mortal que estaba casada con Marte, el dios romano de la
+                        guerra. Rea y Marte tuvieron hijos gemelos y los llamaron Rómulo y Remo. Algunos de los otros
+                        dioses
+                        estaban celosos de Marte y Rea, y planearon matar a Rómulo y Remo.
+                    </p>
+                    <p>
+                        Rhea escucho hablar lo tramaban los otros dioses. Como Marte estaba lejos, ella necesitaba
+                        proteger
+                        a los niños y los puso en una canasta y la dejó flotando río abajo con la esperanza de que los
+                        encontraran. Donde luego fueron hallados por una loba que los crió.
+                    </p>
+                    <p>
+                        Después de que los niños crecieron la loba supo que no podía guardarlos, por lo que los puso
+                        donde
+                        un pastor los encontrara. El pastor y su esposa continuaron criando a Rómulo y Remo. A medida
+                        que
+                        los niños se convirtieron en hombres, decidieron construir una ciudad y gobernarla como su rey.
+                    </p>
+                    <p>
+                        Tenían un concurso para ver quién sería el mejor rey. Cuando parecía que Remo iba a ganar el
+                        concurso, Romulo se enojó tanto que lo mató con una piedra y se convirtió en el primer rey de
+                        Roma.
+                        Esta es una historia importante para los romanos, ya que su ciudad fue iniciada por el hijo de
+                        un
+                        dios, tenía que ser más poderosa que cualquier otra ciudad.
+                    </p>
+                </div>
+                <div class="myth-info-img">
+                    <img src="../../img/roman/myths/romulo.webp" alt="Rómulo y Remo">
+                </div>
+            </section>
+
+            <section class="myth-section" id="jano">
+                <header>
+                    <h2>Jano</h2>
+                </header>
+                <div class="myth-info">
+                    <p>
+                        Jano es uno de los dioses romanos más importantes y era representado como un hombre con dos
+                        rostros. Uno mirando hacia delante y otro hacia atrás. Este mito cuenta que, cuando Jano
+                        gobernaba la civilización de Latium, se encontró con Saturno, el dios de la agricultura, que
+                        había sido desterrado por Júpiter. Jano, al enterarse de tal suceso, le propuso a Saturno que
+                        gobernaran juntos. Y él, en agradecimiento, le concedió a Jano el poder de ver el pasado y el
+                        futuro.
+                    </p>
+                </div>
+                <div class="myth-info-img">
+                    <img src="../../img/roman/myths/jano.webp" alt="Dios Jano">
+                </div>
+            </section>
+
+            <section class="myth-section" id="pico">
+                <header>
+                    <h2>Pico y Ceres</h2>
+                </header>
+                <div class="myth-info">
+                    <p>
+                        Pico, en la mitología romana, era una divinidad profética. Hijo de saturno, padre de Fauno,
+                        esposo de Canente la ninfa y antepasado de Rómulo y Remo, es considerado, en esta leyenda, como
+                        un adivinador de aspecto primitivo que siempre iba acompañado de un pájaro carpintero. La
+                        historia cuenta que, cuando Pico no correspondió el amor de Circe, una hechicera de la Isla de
+                        Eea, esta convirtió a la divinidad en un pájaro carpintero.
+                    </p>
+                </div>
+                <div class="myth-info-img">
+                    <img src="../../img/roman/myths/pico.webp" alt="Pico con la diosa Ceres">
+                </div>
+            </section>
+
+            <section class="myth-section" id="dioscuros">
+                <header>
+                    <h2>Los Dioscuros</h2>
+                </header>
+                <div class="myth-info">
+                    <p>
+                        Los Dioscuros eran dos héroes gemelos llamados Cástor y Pólux, que eran hijos de Leda y,
+                        probablemente, de Zeus. Los mellizos eran muy hábiles montando a caballo y luchando. El mito
+                        cuenta que, en la Batalla del Lago Regilo, aparecieron sobre el manantial del foro de Roma para
+                        ser claves en la victoria romana sobre los latinos. En el lugar donde aparecieron se construyó
+                        un templo en su honor y, desde ese momento, la fuente del manantial fue considerada como
+                        sagrada.
+                    </p>
+                </div>
+                <div class="myth-info-img">
+                    <img src="../../img/roman/myths/dioscuros.webp" alt="Los dioscuros Cástor y Pólux">
+                </div>
+            </section>
+
+            <section class="myth-section" id="tacita">
+                <header>
+                    <h2>Tacita muda</h2>
+                </header>
+                <div class="myth-info">
+                    <p>
+                        Lara era una ninfa del agua que, tras ofender a Júpiter, este le quitó la lengua. Pero en su
+                        regreso a la Tierra, sabiendo que necesitaría protección, le encomendó a Mercurio la tarea de
+                        protegerla y acompañarla. Pero aprovechándose de que no tenía lengua, Mercurio violó a Lara. Y
+                        fruto de ello, la ninfa dio a luz a dos gemelos, conocidos como los dioses Lares, que desde
+                        entonces se encargaron de proteger las fronteras de la ciudad. A raíz de este mito, Lara fue
+                        conocida como Tacita Muda, la diosa del silencio.
+                    </p>
+                </div>
+                <div class="myth-info-img">
+                    <img src="../../img/roman/myths/tacita.webp" alt="La ninfa Lara">
+                </div>
+            </section>
+        </div>
+
+        <div class="arrow-to-top">
+            <a href="#header">
+                <script async src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/eflfmgmj.json" trigger="loop" delay="2500"
+                    colors="primary:#ff9d59" style="width:50px;height:50px">
+                </lord-icon>
+            </a>
+        </div>
     </main>
+
+    <footer>
+        <p>© Mytho | Todos los derechos reservados</p>
+    </footer>
+
 </body>
+
 </html>

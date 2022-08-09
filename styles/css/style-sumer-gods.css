@@ -317,7 +317,7 @@ body {
     align-items: center;
     position: sticky;
     z-index: 500;
-    background-position: 0 70%; }
+    background-position: 0 350px; }
   body::-webkit-scrollbar {
     background-color: transparent;
     width: 8px; }

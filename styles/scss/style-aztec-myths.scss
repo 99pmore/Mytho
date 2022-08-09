@@ -1,0 +1,177 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "hamburgers";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+    background-color: $bg;
+    color: $text;
+    
+    img {
+        max-width: 1900px;
+        max-height: 1900px;
+    }
+
+
+
+    /*** H E A D E R ***/
+
+    .main-header {
+        @include create-header(url(../../img/index/azt-myth.webp), movil);
+
+        h2 {
+            font-family: $font;
+            font-size: calculate-rem(30);
+        }
+    }
+
+
+
+    /*** N A V ***/
+
+    nav {
+        @include create-nav(movil)
+    }
+
+
+
+    /*** M A I N ***/
+
+    main {
+        padding: 40px 0;
+        width: 90%;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        gap: 20px;
+
+        justify-content: start;
+        align-items: start;
+
+        @include nav-bg();
+        
+        .myth-section {
+            @include create-myth(movil);
+
+            img {
+                object-position: top;
+            }
+        }
+
+        .arrow-to-top {
+            display: none;
+        }
+    }
+
+
+
+    /*** F O O T E R ***/
+
+    footer {
+        @include create-footer(url(../../img/aztec/mictlan.webp));
+    }
+
+
+
+    /*** S C R O L L ***/
+
+    @include scroll();
+
+
+    
+    /*** M E D I A  Q U E R I E S ***/
+
+    /** Tablet **/
+
+    @media only screen and (min-width: 600px) {
+        .main-header {
+            @include create-header(url(../../img/index/azt-myth.webp), tablet);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(40);
+            }
+        }
+
+        .nav {
+            @include create-nav(tablet);
+        }
+
+        main {
+            width: 85%;
+
+            .myth-section {
+                @include create-myth(tablet);
+            }
+        }
+    }
+
+    /** PC **/
+    
+    @media only screen and (min-width: 900px) {
+        .main-header {
+            @include create-header(url(../../img/index/azt-myth.webp), pc);
+
+            h2 {
+                font-family: $font;
+                font-size: calculate-rem(50);
+            }
+        }
+
+        .nav {
+            @include create-nav(pc);
+        }
+
+        main {
+            width: 85%;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+    
+            grid-template-areas:
+                "cocodrilo sol"
+                "quetzalcoatl corazon"
+                "piel tlaloc"
+                "baile ."
+                ;
+
+            #quetzalcoatl { grid-area: quetzalcoatl; }
+              
+            #corazon { grid-area: corazon; }
+    
+            #piel { grid-area: piel; }
+    
+            #tlaloc { grid-area: tlaloc; }
+
+            #cocodrilo { grid-area: cocodrilo; }
+
+            #sol { grid-area: sol; }
+
+            #baile { grid-area: baile; }
+
+            .myth-section {
+                @include create-myth(pc);
+            }
+
+            /*** T O  T O P ***/
+
+            .arrow-to-top {
+                display: block;
+                position: fixed;
+                bottom: 40px;
+                right: 30px;
+                z-index: 100;
+            }
+        }
+    }
+}

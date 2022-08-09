@@ -245,7 +245,7 @@ body {
       transition: opacity ease-in 0.5s;
       display: block; }
     body main .myth-section {
-      background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../img/index/pergamino.webp) no-repeat center/cover;
+      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../img/index/pergamino.webp) no-repeat center/cover;
       box-shadow: 0 0 20px #E9D5DA;
       padding: 50px 0;
       width: 100%;
@@ -283,10 +283,12 @@ body {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: all 0.3s; }
+          transition: all 0.3s ease-in-out; }
           body main .myth-section .myth-info-img img:hover {
             opacity: 1;
             box-shadow: 0 50px 50px -50px #827397; }
+      body main .myth-section img {
+        object-position: top; }
     body main .arrow-to-top {
       display: none; }
   body footer {
@@ -300,7 +302,8 @@ body {
     justify-content: center;
     align-items: center;
     position: sticky;
-    z-index: 500; }
+    z-index: 500;
+    background-position: 0 400px; }
   body::-webkit-scrollbar {
     background-color: transparent;
     width: 8px; }
@@ -420,7 +423,7 @@ body {
     body main {
       width: 85%; }
       body main .myth-section {
-        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../img/index/pergamino.webp) no-repeat center/cover;
+        background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../img/index/pergamino.webp) no-repeat center/cover;
         box-shadow: 0 0 20px #E9D5DA;
         padding: 50px 0;
         width: 100%;
@@ -462,7 +465,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.3s; }
+            transition: all 0.3s ease-in-out; }
             body main .myth-section .myth-info-img img:hover {
               opacity: 1;
               box-shadow: 0 50px 50px -50px #827397; } }
@@ -581,7 +584,7 @@ body {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 20px;
-      grid-template-areas: "creacion afrodita" "pandora perseo" "medusa perseo";
+      grid-template-areas: "creacion afrodita" "pandora minotauro" "medusa minotauro" "perseo apolo" "sisifo aracne" "prometeo prometeo";
       /*** T O  T O P ***/ }
       body main #creacion {
         grid-area: creacion; }
@@ -591,14 +594,22 @@ body {
         grid-area: afrodita; }
       body main #perseo {
         grid-area: perseo; }
-        body main #perseo .myth-info-img img {
-          object-position: top; }
       body main #medusa {
         grid-area: medusa; }
-      body main #nut {
-        grid-area: nut; }
+      body main #sisifo {
+        grid-area: sisifo; }
+      body main #minotauro {
+        grid-area: minotauro; }
+        body main #minotauro .myth-info-img {
+          aspect-ratio: 3/4; }
+      body main #apolo {
+        grid-area: apolo; }
+      body main #prometeo {
+        grid-area: prometeo; }
+      body main #aracne {
+        grid-area: aracne; }
       body main .myth-section {
-        background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../img/index/pergamino.webp) no-repeat center/cover;
+        background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(../../img/index/pergamino.webp) no-repeat center/cover;
         box-shadow: 0 0 20px #E9D5DA;
         padding: 50px 0;
         width: 100%;
@@ -640,7 +651,7 @@ body {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: all 0.3s; }
+            transition: all 0.3s ease-in-out; }
             body main .myth-section .myth-info-img img:hover {
               opacity: 1;
               box-shadow: 0 50px 50px -50px #827397; }

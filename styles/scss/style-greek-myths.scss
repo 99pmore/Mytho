@@ -61,6 +61,10 @@ body {
         
         .myth-section {
             @include create-myth(movil);
+
+            img {
+                object-position: top;
+            }
         }
 
         .arrow-to-top {
@@ -74,6 +78,7 @@ body {
 
     footer {
         @include create-footer(url(../../img/greek/hades.webp));
+        background-position: 0 400px;
     }
 
 
@@ -136,8 +141,11 @@ body {
     
             grid-template-areas:
                 "creacion afrodita"
-                "pandora perseo"
-                "medusa perseo"
+                "pandora minotauro"
+                "medusa minotauro"
+                "perseo apolo"
+                "sisifo aracne"
+                "prometeo prometeo"
                 ;
     
             #creacion { grid-area: creacion; }
@@ -146,19 +154,25 @@ body {
               
             #afrodita { grid-area: afrodita; }
     
-            #perseo { 
-                grid-area: perseo;
-
-                .myth-info-img {
-                    img {
-                        object-position: top;
-                    }
-                }
-            }
+            #perseo { grid-area: perseo; }
 
             #medusa { grid-area: medusa; }
     
-            #nut { grid-area: nut; }
+            #sisifo { grid-area: sisifo; }
+
+            #minotauro {
+                grid-area: minotauro;
+
+                .myth-info-img {
+                    aspect-ratio: 3/4;
+                }
+            }
+
+            #apolo { grid-area: apolo; }
+
+            #prometeo { grid-area: prometeo; }
+
+            #aracne { grid-area: aracne; }
 
             .myth-section {
                 @include create-myth(pc);

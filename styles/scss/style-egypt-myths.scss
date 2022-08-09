@@ -74,6 +74,7 @@ body {
 
     footer {
         @include create-footer(url(../../img/index/duat-footer.webp));
+        background-position: 0 300px;
     }
 
 
