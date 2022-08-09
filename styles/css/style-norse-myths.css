@@ -156,7 +156,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px; }
+        gap: 10px;
+        transition: transform 0.3s; }
+        body .main-header .to-myths a:hover {
+          transform: scale(1.15); }
     body .main-header .to-gods {
       position: absolute;
       bottom: 40px;
@@ -171,9 +174,12 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px; }
+        gap: 10px;
+        transition: transform 0.3s; }
         body .main-header .to-gods a .flecha {
           transform: scaleX(-1); }
+        body .main-header .to-gods a:hover {
+          transform: scale(1.15); }
     body .main-header h2 {
       font-family: "Quicksand", sans-serif;
       font-size: 1.875rem; }
@@ -387,7 +393,10 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 10px; }
+          gap: 10px;
+          transition: transform 0.3s; }
+          body .main-header .to-myths a:hover {
+            transform: scale(1.15); }
       body .main-header .to-gods {
         position: absolute;
         bottom: 40px;
@@ -402,9 +411,12 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 10px; }
+          gap: 10px;
+          transition: transform 0.3s; }
           body .main-header .to-gods a .flecha {
             transform: scaleX(-1); }
+          body .main-header .to-gods a:hover {
+            transform: scale(1.15); }
       body .main-header h2 {
         font-family: "Quicksand", sans-serif;
         font-size: 2.5rem; }
@@ -579,7 +591,10 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 10px; }
+          gap: 10px;
+          transition: transform 0.3s; }
+          body .main-header .to-myths a:hover {
+            transform: scale(1.15); }
       body .main-header .to-gods {
         position: absolute;
         bottom: 40px;
@@ -594,9 +609,12 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          gap: 10px; }
+          gap: 10px;
+          transition: transform 0.3s; }
           body .main-header .to-gods a .flecha {
             transform: scaleX(-1); }
+          body .main-header .to-gods a:hover {
+            transform: scale(1.15); }
       body .main-header h2 {
         font-family: "Quicksand", sans-serif;
         font-size: 3.125rem; }
